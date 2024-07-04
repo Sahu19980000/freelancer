@@ -1,0 +1,191 @@
+/* shared css */
+
+.main-heading {
+  font-family: Lato;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: left;
+}
+.main-heading span {
+  color: #0800cf;
+}
+
+.freelancer-dark-btn {
+  width: auto;
+  height: 48px;
+  padding: 12px 24px 12px 24px;
+  gap: 12px;
+  border-radius: 3px 0px 0px 0px;
+  opacity: 0px;
+  background-color: #0800cf;
+  color: #ffffff;
+  border-style: none;
+  margin:10px 0px;
+}
+.freelancer-light-btn {
+  width: auto;
+  height: 48px;
+  padding: 12px 24px 12px 24px;
+  gap: 12px;
+  border: 1px solid #0800cf;
+  border-radius: 3px 0px 0px 0px;
+  opacity: 0px;
+  color: #0800cf;
+  margin:10px 0px;
+}
+.freelancer-light-btn:hover {
+  background-color: #0800cf;
+  color: #ffffff;
+}
+
+.freelancer-category-card {
+  width: auto;
+  height: auto;
+}
+.freelancer-category-card .card-title {
+  margin-left:35px;
+  font-size: 20px;
+}
+
+.freelancer-category-card .card-title span {
+  color: #c39e1c;
+}
+.all-category {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* testimonial cards  css */
+
+.mySwiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  background: #fff;
+}
+.swiper-container {
+  padding: 0px 20px;
+}
+
+.testimonial-cards {
+  padding: 20px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 4px 4px 5px #bdbcbc7a;
+}
+.testimonial-container {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: #f9f9ff;
+}
+
+.testimonial-cards .testimonial-text {
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+.testimonial-cards .profile-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* login css */
+.login-container{
+  padding: 80px 0px;
+}
+.login-box .login-container{
+    border-radius: 10px;
+}
+
+/* sign up css */
+#signup-container{
+  padding:120px 0px;
+}
+.signup_box{
+  position: relative;
+}
+.signup_box .arrow-icon{
+    top:150;
+    width: -webkit-fill-available;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+.uploadFile {
+  width: 100%;
+  background-color: white;
+  border: 2px dashed gray;
+  color: grey;
+  font-size: 16px;
+  line-height: 23px;
+  overflow: hidden;
+  padding: 50px 10px 50px 10px;
+  position: relative;
+  resize: none;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  .inputfile-post-project {
+    cursor: pointer !important;
+    display: block;
+    font-size: 999px;
+    filter: alpha(opacity=0);
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0px;
+    text-align: right;
+    top: 0px;
+    z-index: 1;
+  }
+
+
+/* responsive css */
+
+@media screen and (max-width: 320px) {
+}
+
+@media screen and (min-width: 320px) and (max-width: 375px) {
+}
+
+@media screen and (min-width: 375px) and (max-width: 425px) {
+}
+
+@media screen and (max-width: 767px) {
+  /* main-heading css */
+  .main-heading {
+    font-size: 24px;
+  }
+
+  /* testimonial css */
+  .swiper-container {
+    padding: 0px;
+  }
+
+  /* category css */
+  .freelancer-category-card .card-title{
+    margin:0px;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+
+}
