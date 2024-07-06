@@ -161,9 +161,15 @@
 /* responsive css */
 
 @media screen and (max-width: 320px) {
+  .search_box {
+   width:100%;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 375px) {
+  .search_box {
+    width:100%;
+   }
 }
 
 @media screen and (min-width: 375px) and (max-width: 425px) {
@@ -189,3 +195,17 @@
 @media screen and (min-width: 767px) and (max-width: 1199px) {
 
 }
+
+@media screen and (min-width:1200px) {
+  .search_box{
+    border-style: none;
+    outline: none;
+    background-color: transparent;
+    width: 65%;
+  }
+}
+/* .search_box {
+  padding: 10px;
+  border: 1px solid #80808061;
+  width: 65%;
+} */

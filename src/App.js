@@ -9,7 +9,7 @@ import Signup from "./pages/Signup";
 import WelcomUser from "./pages/WelcomeUser";
 import EmailVarfy from "./pages/EmailVarify";
 import Profile from "./pages/Profile";
-import Dashboard from "./pages/Dashboard";
+import Dashboard from "./pages/dashboard/Dashboard_component";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
