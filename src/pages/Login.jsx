@@ -15,32 +15,27 @@ function Login() {
   const [password, setPassword] = useState("");
 
   const handleSubmit = () => {
-    alert();
-    // console.log({ email, password })
     axios
       .post("https://freelancer.myvakel.com/api/login", {
         email: email,
         password: password,
       })
-
       .then((result) => {
         console.log(result.data);
         localStorage.setItem("token", result.data.data.token);
         navigate("/");
       })
-
       .catch((error) => {
-        alert("service error");
+        alert("Service error");
         console.log(error);
       });
   };
 
   useEffect(() => {
     const storedToken = localStorage.getItem("token");
-    if (!storedToken) {
-      // navigate("/login");
-    } else {
+    if (storedToken) {
       setToken(storedToken);
+      navigate("/"); // Redirect to home if token exists
     }
   }, [navigate]);
 

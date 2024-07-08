@@ -15,7 +15,7 @@ function Signup() {
   useEffect(() => {
     const storedToken = localStorage.getItem("token");
     if (!storedToken) {
-      // navigate("/login");
+      navigate("");
     } else {
       setToken(storedToken);
     }
@@ -54,9 +54,9 @@ function Signup() {
       .catch((err) => {
         console.log(err);
         if (err.response) {
-          // Server responded with a status other than 200 range
+          // Server responded with a status other than 200 range(err.response.data.message || err.response.statusText)
           alert(
-            "Message: " + (err.response.data.message || err.response.statusText)
+            "Message: please check your details "
           );
         } else if (err.request) {
           // Request was made but no response received
