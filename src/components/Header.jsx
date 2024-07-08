@@ -11,7 +11,7 @@ function Header() {
   useEffect(() => {
     const storedToken = localStorage.getItem("token");
     if (!storedToken) {
-      // navigate("/login");
+      navigate("/login");
     } else {
       setToken(storedToken);
     }
@@ -23,7 +23,7 @@ function Header() {
       if (!token) {
       } else {
         axios
-          .get("http://localhost:8000/api/user", {
+          .get("https://freelancer.myvakel.com/api/user", {
             headers: { Authorization: `Bearer ${token}` },
           })
           .then((result) => {

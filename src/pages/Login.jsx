@@ -17,22 +17,22 @@ function Login() {
   const handleSubmit = () => {
     alert();
     // console.log({ email, password })
-    // axios
-    //   .post("http://localhost:8000/api/login", {
-    //     email: email,
-    //     password: password,
-    //   })
+    axios
+      .post("https://freelancer.myvakel.com/api/login", {
+        email: email,
+        password: password,
+      })
 
-    //   .then((result) => {
-    //     console.log(result.data);
-    //     localStorage.setItem("token", result.data.data.token);
-    //     navigate("/");
-    //   })
+      .then((result) => {
+        console.log(result.data);
+        localStorage.setItem("token", result.data.data.token);
+        navigate("/");
+      })
 
-    //   .catch((error) => {
-    //     alert("service error");
-    //     console.log(error);
-    //   });
+      .catch((error) => {
+        alert("service error");
+        console.log(error);
+      });
   };
 
   useEffect(() => {
@@ -48,7 +48,6 @@ function Login() {
     <>
       <div>
         <Header />
-
         <div className="login-container" data-aos="fade-up">
           <div className="container py-5" >
             <div className="row">
@@ -56,7 +55,7 @@ function Login() {
                 <div className="card login-box">
                   <div className="card-body pt-3">
                     <Mainheading title="Sign in to your account" color="#0800CF" />
-                    
+
                     <p>
                       Hey, Enter your details to get sign in to your account{" "}
                     </p>

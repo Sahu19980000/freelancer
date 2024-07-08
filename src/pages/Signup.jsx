@@ -34,7 +34,7 @@ function Signup() {
     console.log(name, email, password, country, joinas);
     axios
 
-      .post("http://localhost:8000/api/register", {
+      .post("https://freelancer.myvakel.com/api/register", {
         name: name,
         email: email,
         password: password,
@@ -45,7 +45,7 @@ function Signup() {
 
       .then((result) => {
         console.log(result.data);
-        // alert("success");
+        alert("success");
 
         localStorage.setItem("token", result.data.data.token);
         navigate("/EmailVarfy");

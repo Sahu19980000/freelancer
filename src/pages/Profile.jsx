@@ -14,11 +14,12 @@ function Profile() {
       navigate("");
     } else {
       axios
-        .get("http://localhost:8000/api/user", {
+        .get("https://freelancer.myvakel.com/api/user", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((response) => {
           const userData = response.data;
+          console.log(userData);
           setID(userData.id);
           setUserName(userData.name);
           setUserEmail(userData.email);
@@ -74,13 +75,14 @@ function Profile() {
     }
 
     axios
-      .post(`http://localhost:8000/api/userprofile_update/${id}`, formData, {
+      .post(`https://freelancer.myvakel.com/api/userprofile_update/${id}`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data",
         },
       })
       .then((result) => {
+        alert("profile update");
         console.log("Profile update:", result.data);
       })
       .catch((err) => {

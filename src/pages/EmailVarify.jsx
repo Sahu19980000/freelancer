@@ -19,7 +19,7 @@ function EmailVarfy() {
       navigate("");
     } else {
       axios
-        .get("http://localhost:8000/api/user", {
+        .get("https://freelancer.myvakel.com/api/user", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((result) => {
@@ -47,7 +47,7 @@ function EmailVarfy() {
     try {
       const token = localStorage.getItem("token"); // Assuming you store your token in localStorage
       const response = await axios.get(
-        `http://localhost:8000/api/send-verify-email/${email}`,
+        `https://freelancer.myvakel.com/api/send-verify-email/${email}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
