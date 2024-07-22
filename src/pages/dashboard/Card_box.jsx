@@ -4,7 +4,7 @@ const Card_box = (props) => {
   return (
     <div href="#" className="card">
       <div className="card-body">
-        <div className="row">
+        <div className="row">                                                                                                                                                                                  
           <div className="col-md-2">
             <a href="#">
               <img

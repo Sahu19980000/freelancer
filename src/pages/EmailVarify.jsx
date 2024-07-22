@@ -12,33 +12,35 @@ function EmailVarfy() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    const hasRefreshed = localStorage.getItem("hasRefreshed");
-    if (!token) {
-      navigate("");
-    } else {
-      axios
-        .get("https://freelancer.myvakel.com/api/user", {
-          headers: { Authorization: `Bearer ${token}` },
-        })
-        .then((result) => {
-          setEmail(result.data.email);
-          console.log("my-testing:", result.data);
 
-          if (result.data.is_email_verified === 1) {
-            navigate("/welcome");
-          } else if (result.data.is_email_verified === 0) {
-            navigate("/EmailVarfy");
-          }
-        })
 
-        .catch((error) => {
-          alert("User not LoggedIn");
-          console.log(error);
-        });
-    }
-  }, [navigate]);
+  // useEffect(() => {
+  //   const token = localStorage.getItem("token");
+  //   const hasRefreshed = localStorage.getItem("hasRefreshed");
+  //   if (!token) {
+  //     navigate("");
+  //   } else {
+  //     axios
+  //       .get("https://freelancer.myvakel.com/api/user", {
+  //         headers: { Authorization: `Bearer ${token}` },
+  //       })
+  //       .then((result) => {
+  //         setEmail(result.data.email);
+  //         console.log("my-testing:", result.data);
+
+  //         if (result.data.is_email_verified === 1) {
+  //           navigate("/welcome");
+  //         } else if (result.data.is_email_verified === 0) {
+  //           navigate("/EmailVarfy");
+  //         }
+  //       })
+
+  //       .catch((error) => {
+  //         alert("User not LoggedIn");
+  //         console.log(error);
+  //       });
+  //   }
+  // }, [navigate]);
 
   const handleVerifyEmail = async () => {
     setLoading(true);

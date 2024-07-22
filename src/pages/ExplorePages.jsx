@@ -147,9 +147,6 @@ function ExplorePages() {
           </div>
         </div>
 
-        <br />
-        <br />
-        <br />
         <div className="container mt-5" data-aos="fade-up">
           <div className="section-title">
             <p></p>

@@ -9,26 +9,26 @@ function WelcomUser() {
 
   const [userName, setUserName] = useState("");
 
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (!token) {
-      navigate("");
-    } else {
-      axios
-        .get("http://localhost:8000/api/user", {
-          headers: { Authorization: `Bearer ${token}` },
-        })
-        .then((result) => {
-          setUserName(result.data.name);
-          console.log(result.data);
-        })
+  // useEffect(() => {
+  //   const token = localStorage.getItem("token");
+  //   if (!token) {
+  //     navigate("");
+  //   } else {
+  //     axios
+  //       .get("http://localhost:8000/api/user", {
+  //         headers: { Authorization: `Bearer ${token}` },
+  //       })
+  //       .then((result) => {
+  //         setUserName(result.data.name);
+  //         console.log(result.data);
+  //       })
         
-        .catch((error) => {
-          alert("User not LoggedIn");
-          console.log(error);
-        });
-    }
-  }, [navigate]);
+  //       .catch((error) => {
+  //         alert("User not LoggedIn");
+  //         console.log(error);
+  //       });
+  //   }
+  // }, [navigate]);
 
   return (
     <>

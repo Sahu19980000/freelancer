@@ -7,6 +7,7 @@ import Login_icon from "../img/Computer login-rafiki 1.png";
 import Mainheading from "../components/Mainheading";
 import Buttton from "../components/Buttton";
 import arrow_icon from "../img/arrow-icon.png";
+import Notification from "../components/Notification";
 
 function Signup() {
   const [token, setToken] = useState(null);
@@ -45,7 +46,7 @@ function Signup() {
 
       .then((result) => {
         console.log(result.data);
-        alert("success");
+        <Notification value_data="success"/>
 
         localStorage.setItem("token", result.data.data.token);
         navigate("/EmailVarfy");
@@ -56,7 +57,7 @@ function Signup() {
         if (err.response) {
           // Server responded with a status other than 200 range(err.response.data.message || err.response.statusText)
           alert(
-            "Message: please check your details "
+            "Message: please check your details " 
           );
         } else if (err.request) {
           // Request was made but no response received
@@ -729,6 +730,8 @@ function Signup() {
                                     <option value="Zimbabwe">Zimbabwe</option>
                                   </select>
                                 </div>
+
+                                
 
                                 <br />
                                 <center>
