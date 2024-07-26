@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import axios from "axios";
 import Button from "../components/Buttton";
 
@@ -14,42 +12,14 @@ function EmailVarfy() {
   const [loading, setLoading] = useState(false);
 
 
-  // useEffect(() => {
-  //   const token = localStorage.getItem("token");
-  //   const hasRefreshed = localStorage.getItem("hasRefreshed");
-  //   if (!token) {
-  //     navigate("");
-  //   } else {
-  //     axios
-  //       .get("https://freelancer.myvakel.com/api/user", {
-  //         headers: { Authorization: `Bearer ${token}` },
-  //       })
-  //       .then((result) => {
-  //         setEmail(result.data.email);
-  //         console.log("my-testing:", result.data);
-
-  //         if (result.data.is_email_verified === 1) {
-  //           navigate("/welcome");
-  //         } else if (result.data.is_email_verified === 0) {
-  //           navigate("/EmailVarfy");
-  //         }
-  //       })
-
-  //       .catch((error) => {
-  //         alert("User not LoggedIn");
-  //         console.log(error);
-  //       });
-  //   }
-  // }, [navigate]);
-
   const handleVerifyEmail = async () => {
     setLoading(true);
     setMessage(""); // Clear any previous message
 
     try {
-      const token = localStorage.getItem("token"); // Assuming you store your token in localStorage
+      const token = localStorage.getItem("token");
       const response = await axios.get(
-        `https://freelancer.myvakel.com/api/send-verify-email/${email}`,
+        `https://ubm.annapurnadhamagro.com/api/send-verify-email/${email}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

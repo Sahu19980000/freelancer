@@ -24,7 +24,7 @@ function Home() {
         <section id="about" className="about bg-white">
 
           {/* <!---upyour work game --> */}
-
+          
           <div className="container my-4" data-aos="fade-up">
             <div className="section-title">
             <Mainheading  title="Up your work game" subtitle="it’s easy"/>
@@ -164,17 +164,14 @@ function Home() {
           <div className="container mt-5" >
             <div className="row">
               <div className="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content">
-
                 <Mainheading  title="Clients" subtitle="Testimonial" textalign="center"/>
                  <div className="py-3">
                  <Slidercard />
                  </div>
-                 
               </div>
             </div>
           </div>
           </div>
-          
 
           <div className="container" data-aos="fade-up">
             <div className="row">

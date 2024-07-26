@@ -32,10 +32,11 @@ function Signup() {
   const [joinas, setJoinas] = useState("");
 
   const handleSubmit = () => {
+    
     console.log(name, email, password, country, joinas);
-    axios
 
-      .post("https://freelancer.myvakel.com/api/register", {
+    axios
+      .post("https://ubm.annapurnadhamagro.com/api/register", {
         name: name,
         email: email,
         password: password,

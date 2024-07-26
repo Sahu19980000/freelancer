@@ -14,7 +14,7 @@ function Profile() {
       navigate("");
     } else {
       axios
-        .get("https://freelancer.myvakel.com/api/user", {
+        .get("https://ubm.annapurnadhamagro.com/api/user", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((response) => {

@@ -10,13 +10,12 @@ import Buttton from "../components/Buttton";
 function Login() {
   const [token, setToken] = useState(null);
   const navigate = useNavigate();
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = () => {
     axios
-      .post("https://freelancer.myvakel.com/api/login", {
+      .post("https://ubm.annapurnadhamagro.com/api/login", {
         email: email,
         password: password,
       })
@@ -50,7 +49,6 @@ function Login() {
                 <div className="card login-box">
                   <div className="card-body pt-3">
                     <Mainheading title="Sign in to your account" color="#0800CF" />
-
                     <p>
                       Hey, Enter your details to get sign in to your account{" "}
                     </p>
@@ -121,7 +119,6 @@ function Login() {
                   </div>
                 </div>
               </div>
-
               <div className="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
                 <img src={Login_icon} className="img-fluid" alt="" />
               </div>

@@ -11,19 +11,22 @@ function Header() {
   useEffect(() => {
     const storedToken = localStorage.getItem("token");
     if (!storedToken) {
-      // navigate("/login");
-    } else {
+      navigate("/login");
+    } 
+    else {
       setToken(storedToken);
     }
   }, [navigate]);
 
   useEffect(
+    
     () => {
       const token = localStorage.getItem("token");
       if (!token) {
-      } else {
+      } 
+      else {
         axios
-          .get("https://freelancer.myvakel.com/api/user", {
+          .get("https://ubm.annapurnadhamagro.com/api/user", {
             headers: { Authorization: `Bearer ${token}` },
           })
           .then((result) => {
