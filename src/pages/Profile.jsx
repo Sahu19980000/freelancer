@@ -58,7 +58,7 @@ function Profile() {
       employees
     );
 
-    alert("Your data updated successfully");
+    // alert("Your data updated successfully");
 
     const token = localStorage.getItem("token");
 
