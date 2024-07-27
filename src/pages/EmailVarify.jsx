@@ -21,12 +21,13 @@ function EmailVarfy() {
       navigate("");
     } else {
       axios
-        .get("https://freelancer.myvakel.com/api/user", {
+        .get("https://ubm.annapurnadhamagro.com/api/user", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((result) => {
           setEmail(result.data.email);
           console.log("my-testing:", result.data);
+          console.log("my-email:", email);
 
           if (result.data.is_email_verified === 1) {
             navigate("/welcome");
@@ -52,6 +53,7 @@ function EmailVarfy() {
         `https://ubm.annapurnadhamagro.com/api/send-verify-email/${email}`,
         {
           headers: {
+            Accept:"application/json",
             Authorization: `Bearer ${token}`,
           },
         }
