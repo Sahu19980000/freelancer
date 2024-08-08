@@ -45,9 +45,10 @@ function ProjectCategoriesOptions({ id }) {
   }, []);
 
   const handleSelect = (index) => {
-    // setSelected(type);
+    setSelected(type);
     //  Setid(index);
   };
+
 
   return (
     <div>
