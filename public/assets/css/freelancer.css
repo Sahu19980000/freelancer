@@ -163,6 +163,16 @@
   height: 100vh;
 }
 
+.programing_skills_box{
+  width: 100%;
+  height: 100%;
+}
+.programming_skills_brif-box{
+  width: 100%;
+  height: fit-content;
+  box-shadow: 2px 5px 5px #b3b1b1;
+}
+
 
 /* responsive css */
 

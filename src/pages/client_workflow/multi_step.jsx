@@ -3,10 +3,13 @@ import { Form, Button, ProgressBar } from 'react-bootstrap';
 import ProjectSelection from './ProjectSelection';
 import ProjectCategoriesOptions from './projectCategoriesOptions';
 import Package_box from './package_show';
+import Programming_skills from './show_programming_sklls';
+import Programming_skills_brif from './programming_skills_brif';
 
 const MultiStepForm = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({});
+  const [id,Setid] = useState(0);
 
   const handleNext = () => {
     setStep(step + 1);
@@ -28,17 +31,23 @@ const MultiStepForm = () => {
 
   return (
     <Form onSubmit={handleSubmit} className='bg-white p-5'>
-      <ProgressBar now={(step / 3) * 100} />
+      <ProgressBar now={(step / 5) * 100} />
       {step === 1 && (
         <div controlId="formStep1">
-            <ProjectSelection />
+            <ProjectSelection id={id} Setid={Setid}/>
         </div>
       )}
       {step === 2 && (
-        <ProjectCategoriesOptions />
+        <ProjectCategoriesOptions id={id}/>
       )}
       {step === 3 && (
        <Package_box />
+      )}
+      {step === 4 && (
+       <Programming_skills />
+      )}
+       {step === 5 && (
+       <Programming_skills_brif />
       )}
       <div className="d-flex justify-content-between">
         {step > 1 && (
@@ -46,7 +55,7 @@ const MultiStepForm = () => {
             Previous
           </Button>
         )}
-        {step < 3 ? (
+        {step < 5 ? (
           <Button variant="primary" onClick={handleNext}>
             Next
           </Button>

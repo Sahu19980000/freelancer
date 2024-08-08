@@ -1,21 +1,60 @@
-import React, { useState } from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 
-const ProjectSelection = () => {
+const ProjectSelection = ({id,Setid}) => {
   const [selected, setSelected] = useState(null);
+  const [store_categories,Setcategories] = useState([]);
 
-  const handleSelect = (type) => {
-    setSelected(type);
-    // onSelect(type);
+  useEffect(() => {
+    const storedToken = localStorage.getItem("token");
+    if (storedToken) {
+      axios.get('https://ubm.annapurnadhamagro.com/api/explore/project',
+      {
+        headers: {
+          Authorization: `Bearer ${storedToken}`,
+          "Content-Type": "multipart/form-data",
+        },
+      })
+      .then((result) => {
+        alert("show categories");
+        Setcategories(result.data);
+        
+      })
+      .catch((err) => {
+        console.log(err);
+        if (err.response) {
+          alert(
+            "Message: " + (err.response.message || err.response.statusText)
+          );
+        } else if (err.request) {
+          alert("Message: No response from server. Please try again later.");
+        } else {
+          alert("Message: " + err.message);
+        }
+      });
+    }
+  
+  }, [])
+  
+
+  const handleSelect = (index) => {
+    // setSelected(type);
+     Setid(index);
+     
   };
 
   return (
     <div>
-      <button className='bg-primary border-0 text-white m-4 p-2 rounded' onClick={() => handleSelect('WEB_DEVELOPMENT')}>Web Development</button>
-      <button className='bg-primary border-0 text-white m-4 p-2 rounded' onClick={() => handleSelect('MOBILE_APP_DEVELOPMENT')}>Mobile App Development</button>
-      <button className='bg-primary border-0 text-white m-4 p-2 rounded' onClick={() => handleSelect('HRMS')}>HRMS</button>
-      <button className='bg-primary border-0 text-white m-4 p-2 rounded' onClick={() => handleSelect('ERP')}>ERP</button>
-      <button className='bg-primary border-0 text-white m-4 p-2 rounded' onClick={() => handleSelect('FINANCE_ACCOUNTING')}>Finance & Accounting</button>
-      <button className='bg-primary border-0 text-white m-4 p-2 rounded' onClick={() => handleSelect('AI')}>AI</button>
+      {
+        store_categories.map((ele,index)=>{
+          return(
+            <>
+              <button id={index} className='bg-primary border-0 text-white m-4 p-2 rounded' onClick={() => handleSelect(index)}>{ele.name}</button>
+              
+            </>
+          )
+        })
+      }
     </div>
   );
 };

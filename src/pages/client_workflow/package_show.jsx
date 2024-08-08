@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import pricingData from './package.json';
 import PlanCard from './plancard';
+import Button from '../../components/Buttton';
 
 const Package_box = () => {
     const [activeTab, setActiveTab] = useState(0);
@@ -11,23 +12,51 @@ const Package_box = () => {
     };
 
   return (
-    <div>
-      <h2>Select Checklist Type</h2>
-      {pricingData.tabs.map((tab, index) => (
-              <button
-                key={index}
-                className={`tab ${index === activeTab ? 'active' : ''} col-lg-4`}
-                onClick={() => handleTabClick(index)}
-              >
-                {tab.categoryname}
-              </button>
-      ))}
-
-      <div className="pricing-table text-center">
-        {/* {pricingData[activeTab].getplans.map((plan, index) => (
-          <PlanCard key={index} plan={plan} />
-        ))} */}
+    <div className='container'>
+     <div className="row">
+     <div className="col-12 p-5">
+     <h2>Package Select</h2>
+     </div>
+      <div className="col-md-4 p-3">
+        <Button classname="bg-primary border-0 text-white p-2 rounded" title="Basic"/>
+        <ul>
+          <li>this is heading</li>
+          <li>this is heading</li>
+          <li>this is heading</li>
+          <li>this is heading</li>
+          <li>this is heading</li>
+          <li>this is heading</li>
+        </ul>
+        <Button classname="bg-primary border-0 text-white p-2 rounded" title="Choose plan"/>
       </div>
+      <div className="col-md-4 p-3">
+        <Button classname="bg-primary border-0 text-white p-2 rounded" title="preminum"/>
+        <ul>
+          <li>this is heading</li>
+          <li>this is heading</li>
+          <li>this is heading</li>
+          <li>this is heading</li>
+          <li>this is heading</li>
+          <li>this is heading</li>
+        </ul>
+        <Button classname="bg-primary border-0 text-white p-2 rounded " title="Choose plan"/>
+      </div>
+      <div className="col-md-4 p-3">
+        <Button classname="bg-primary border-0 text-white p-2 rounded" title="gold"/>
+        <ul className='p-4'>
+          <li>this is heading</li>
+          <li>this is heading</li>
+          <li>this is heading</li>
+          <li>this is heading</li>
+          <li>this is heading</li>
+          <li>this is heading</li>
+        </ul>
+        <Button classname="bg-primary border-0 text-white p-2 rounded" title="Choose plan"/>
+      </div>
+
+     </div>
+     
+      
     </div>
   );
 };
