@@ -5,8 +5,9 @@ import ProjectCategoriesOptions from './projectCategoriesOptions';
 import Package_box from './package_show';
 import Programming_skills from './show_programming_sklls';
 import Programming_skills_brif from './programming_skills_brif';
+import CompanyList from './show_list_company';
 
-const MultiStepForm = () => {
+const Allprocess = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({});
   const [id,Setid] = useState(0);
@@ -31,7 +32,7 @@ const MultiStepForm = () => {
 
   return (
     <Form onSubmit={handleSubmit} className='bg-white p-5'>
-      <ProgressBar now={(step / 5) * 100} />
+      <ProgressBar now={(step / 6) * 100} />
       {step === 1 && (
         <div controlId="formStep1">
             <ProjectSelection id={id} Setid={Setid}/>
@@ -46,8 +47,11 @@ const MultiStepForm = () => {
       {step === 4 && (
        <Programming_skills />
       )}
-       {step === 5 && (
+      {step === 5 && (
        <Programming_skills_brif />
+      )}
+      {step === 6 && (
+       <CompanyList />
       )}
       <div className="d-flex justify-content-between">
         {step > 1 && (
@@ -55,7 +59,7 @@ const MultiStepForm = () => {
             Previous
           </Button>
         )}
-        {step < 5 ? (
+        {step < 6 ? (
           <Button variant="primary" onClick={handleNext}>
             Next
           </Button>
@@ -69,4 +73,4 @@ const MultiStepForm = () => {
   );
 };
 
-export default MultiStepForm;
+export default Allprocess;

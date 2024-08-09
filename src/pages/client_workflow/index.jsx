@@ -3,7 +3,7 @@ import { Link, Outlet, useNavigate } from "react-router-dom";
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import MultiStepForm from "./multi_step";
+import Allprocess from "./all_process";
 
 function ExplorePages() {
   
@@ -34,7 +34,7 @@ function ExplorePages() {
                 Select client flow
               </h1>
               <div>
-              <MultiStepForm />
+              <Allprocess />
               </div>
             
 
