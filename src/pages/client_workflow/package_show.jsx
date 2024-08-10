@@ -63,7 +63,6 @@ const Package_box = ({id}) => {
               title={plan.plan_name} 
               onClick={() => handleTabClick(index)}
             />
-            {activeTab === index && (
               <>
                 <ul>
                   {plan.planitems.map((item) => (
@@ -75,7 +74,6 @@ const Package_box = ({id}) => {
                   title="Choose plan"
                 />
               </>
-            )}
           </div>
         ))}
       </div>
