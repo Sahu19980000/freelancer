@@ -35,14 +35,14 @@ const Allprocess = () => {
       <ProgressBar now={(step / 6) * 100} />
       {step === 1 && (
         <div controlId="formStep1">
-            <ProjectSelection id={id} Setid={Setid}/>
+            <ProjectSelection id={id} Setid={Setid} />
         </div>
       )}
       {step === 2 && (
-        <ProjectCategoriesOptions id={id}/>
+        <ProjectCategoriesOptions id={id} Setid={Setid} />
       )}
       {step === 3 && (
-       <Package_box />
+       <Package_box id={id}/>
       )}
       {step === 4 && (
        <Programming_skills />

@@ -5,7 +5,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import axios from "axios";
 
-function ProjectCategoriesOptions({ id }) {
+function ProjectCategoriesOptions({ id,Setid}) {
   const [subcategories, Setsubcategories] = useState([]);
 
   useEffect(() => {
@@ -46,8 +46,8 @@ function ProjectCategoriesOptions({ id }) {
 
   const handleSelect = (index) => {
     // setSelected(type);
-    // //  Setid(index);
-    alert('show');
+    Setid(index);
+    alert(index);
   };
 
 
@@ -66,7 +66,7 @@ function ProjectCategoriesOptions({ id }) {
                       <button
                         id={index}
                         className="bg-primary border-0 text-white m-4 p-2 rounded"
-                        onClick={() => handleSelect(index)}
+                        onClick={() => handleSelect(++index)}
                       >
                         {ele.name}
                       </button>
