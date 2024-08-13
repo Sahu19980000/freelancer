@@ -6,7 +6,6 @@ import Footer from "../../components/Footer";
 import Allprocess from "./all_process";
 
 function ExplorePages() {
-  
   return (
     <div>
       <Header />
@@ -14,29 +13,21 @@ function ExplorePages() {
         <img
           src="assets/img/explore.png"
           class="img-fluid"
-          alt="Responsive image"
+          alt="Responsive"
         />
         <div className="overlay">
           <div className="overlay-content">
-            <h1>Website Design</h1>
-            <p>
-              Aliquam vitae turpis in diam convallis finibus in at risus. Nullam
-              in scelerisque leo, eget sollicitudin velit bestibulum
-            </p>
+            <h1 style={{fontSize:"48px"}}>Explore Project</h1>
           </div>
         </div>
       </div>
       <section id="about" className="about">
-        <div className="container mt-5" data-aos="fade-up">
+        <div className="container-fluid" data-aos="fade-up">
           <div className="row">
             <div className="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content">
-              <h1 className="mb-5">
-                Select client flow
-              </h1>
               <div>
               <Allprocess />
               </div>
-            
 
               {/* <div className="card-deck mb-2">
                 

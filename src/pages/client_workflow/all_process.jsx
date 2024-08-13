@@ -11,6 +11,8 @@ const Allprocess = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({});
   const [id,Setid] = useState(0);
+  const [planmakeid, setplan] = useState(0);
+  const [plan_type,Setplantype] = useState('');
 
   const handleNext = () => {
     setStep(step + 1);
@@ -42,10 +44,10 @@ const Allprocess = () => {
         <ProjectCategoriesOptions id={id} Setid={Setid} />
       )}
       {step === 3 && (
-       <Package_box id={id}/>
+       <Package_box id={id}  planmakeid={planmakeid} setplan={setplan} Setplantype={Setplantype} plan_type={plan_type}/>
       )}
       {step === 4 && (
-       <Programming_skills />
+       <Programming_skills planmakeid={planmakeid} plan_type={plan_type}/>
       )}
       {step === 5 && (
        <Programming_skills_brif />

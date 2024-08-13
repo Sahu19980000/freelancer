@@ -4,19 +4,20 @@ import PlanCard from './plancard';
 import Button from '../../components/Buttton';
 import { API_URL } from '../../config';
 import axios from 'axios';
+import Mainheading from '../../components/Mainheading';
 
-const Package_box = ({id}) => {
+const Package_box = ({id,Setplantype,planmakeid,setplan,plan_type}) => {
+  
     const [activeTab, setActiveTab] = useState(0);
     // const [pricingData, setPricingData] = useState([]);
     const [showplan, Setshowplan] = useState([]);
 
     useEffect(() => {
       const storedToken = localStorage.getItem("token");
-      alert(id);
       if (storedToken) {
         axios
           .get(
-            `https://ubm.annapurnadhamagro.com/api/explore/project/types/checklist/${id}`,
+            `${API_URL}/api/explore/project/types/checklist/${id}`,
             {
               headers: {
                 Authorization: `Bearer ${storedToken}`,
@@ -46,25 +47,36 @@ const Package_box = ({id}) => {
           });
       }
     }, []);
-    const handleTabClick = (index) => {
-      setActiveTab(index);
+    
+    const handleTabClick = (id,plan_name) => {
+      console.log();
+      Setplantype(plan_name);
+      setplan(id);
+      alert(plan_type);
     };
 
+    useEffect(() => {
+      if (plan_type) {
+        console.log("Updated plan_type: ", plan_type);
+        console.log("Updated plan_type id: ", planmakeid);
+      }
+    }, [plan_type,planmakeid]);
+
   return (
-    <div className='container'>
+    <div className='container-fluid'>
       <div className="row">
-        <div className="col-12 p-5">
-          <h2>Package Select</h2>
+        <div className="col-12 py-5">
+          <Mainheading title="Choose the package" color="#404145" />
         </div>
+        <div className="plan-container my-4">
         {showplan.map((plan, index) => (
-          <div className="col-md-4 p-3" key={plan.id}>
+          <div className="col-md-4 p-3 choose-plan-box" key={plan.id} >
             <Button 
-              classname={`bg-primary border-0 text-white p-2 rounded ${activeTab === index ? 'active' : ''}`} 
+              classname={`bg-primary btn-lg btn-block font-weight-bold text-capitalize border-0 my-2 w-100 text-white p-2 rounded ${activeTab === index ? 'active' : ''}`} 
               title={plan.plan_name} 
-              onClick={() => handleTabClick(index)}
             />
               <>
-                <ul>
+                <ul className='p-2'>
                   {plan.planitems.map((item) => (
                     <li key={item.id}>{item.items}</li>
                   ))}
@@ -72,10 +84,14 @@ const Package_box = ({id}) => {
                 <Button 
                   classname="bg-primary border-0 text-white p-2 rounded" 
                   title="Choose plan"
+                  onclick={() => handleTabClick(++index,plan.plan_name)}
                 />
               </>
           </div>
         ))}
+        </div>
+        
+
       </div>
     </div>
   );
