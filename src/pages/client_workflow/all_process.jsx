@@ -44,10 +44,10 @@ const Allprocess = () => {
         <ProjectCategoriesOptions id={id} Setid={Setid} />
       )}
       {step === 3 && (
-       <Package_box id={id}  planmakeid={planmakeid} setplan={setplan} Setplantype={Setplantype} plan_type={plan_type}/>
+       <Package_box id={id} planmakeid={planmakeid} setplan={setplan} Setplantype={Setplantype} plan_type={plan_type}/>
       )}
       {step === 4 && (
-       <Programming_skills planmakeid={planmakeid} plan_type={plan_type}/>
+       <Programming_skills planmakeid={planmakeid} plan_type={plan_type} />
       )}
       {step === 5 && (
        <Programming_skills_brif />

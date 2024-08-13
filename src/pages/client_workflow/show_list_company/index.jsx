@@ -111,8 +111,9 @@ const CompanyList = () => {
               <Dropdown.Item onClick={() => handleSort('revenue')}>Revenue</Dropdown.Item>
               <Dropdown.Item onClick={() => handleSort('ratings')}>Ratings</Dropdown.Item>
             </DropdownButton>
+
             </div>
-          <div className='col-md-9'>
+            <div className='col-md-9'>
             <h4>Specialized Node.js Companies</h4>
             <div className="row">
               {filteredCompanies.map((company) => (
@@ -159,7 +160,7 @@ const CompanyList = () => {
                 </div>
               ))}
             </div>
-          </div>
+            </div>
           </div>
       </div>
     );
