@@ -1,47 +1,49 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import person from "../img/person-with-headset.webp"
 
 import Header from "../components/Header";
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 import Wallpaper from "../components/Wallpaper";
 import Mainheading from "../components/Mainheading";
-import process from "../img/Process.png"
+import process from "../img/Process.png";
 import Buttton from "../components/Buttton";
-import Icon from "../img/Icon.png"
+import Icon from "../img/Icon.png";
 import Category_card from "../components/Category_card";
 import Slidercard from "../components/Slidercard";
-import arrow_icon from "../img/arrow-right.png"
+import arrow_icon from "../img/arrow-right.png";
 import Brand_card from "../components/Brand_carousal";
+import gif_banner_01 from "../../src/img/gif-banner-01.gif";
+import ProjectSelection from "./client_workflow/ProjectSelection";
+import image_other from "../../src/img/find-great-work.webp"
 
 function Home() {
- 
   return (
     <div>
       <Header />
       <Banner />
       <main id="main">
         <section id="about" className="about bg-white">
-
           {/* <!---upyour work game --> */}
-          
-          <div className="container my-4" data-aos="fade-up">
-            <div className="section-title">
-            <Mainheading  title="Up your work game" subtitle="it’s easy"/>
-            </div>
 
+          <div className="container" data-aos="fade-up">
             <div className="row">
               <div
-                className="col-lg-6 order-1 order-lg-2"
+                className="col-lg-6 order-2 order-lg-1 d-flex align-items-center"
                 data-aos="fade-left"
                 data-aos-delay="100"
               >
-                <img src="assets/img/02.png" className="img-fluid" alt="" />
+                <img src={gif_banner_01} className="" alt="" />
               </div>
-              
-              
-              <div className="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+
+              <div className="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-2 content">
+                <div className="section-title">
                 
+                  <Mainheading title="Up your work game it’s easy" />
+                 
+                </div>
+
                 <h4 className="font-italic">No cost to join</h4>
                 <p>
                   Register and browse professionals, explore projects, or even
@@ -63,19 +65,24 @@ function Home() {
                 </p>
 
                 <div>
-                   <Buttton title="Sign Up For Free" classname="freelancer-light-btn"/>&nbsp;
-                   <Buttton title="Sign Up For Free" classname="freelancer-dark-btn"/>
+                  <Buttton
+                    title="Sign Up For Free"
+                    classname="freelancer-light-btn"
+                  />
+                  &nbsp;
+                  <Buttton
+                    title="More About details"
+                    classname="freelancer-dark-btn"
+                  />
                 </div>
-                
               </div>
 
               {/* <!---end upyour work game --> */}
-
             </div>
           </div>
 
-           {/* <!---video section start --> */}
-          <div
+          {/* <!---video section start --> */}
+          {/* <div
             className="container-fluid"
             data-aos="fade-up"
             style={{ background: "#0800CF" }}
@@ -87,27 +94,25 @@ function Home() {
                 title="video"
               ></iframe>
             </div>
-          </div>
+          </div> */}
 
-           {/* <!---end video section start --> */}
-
+          {/* <!---end video section start --> */}
 
           {/* <!---How it works --> */}
-          <div className="container mt-5" data-aos="fade-up">
+          <div className="container mt-5 how-it-works" data-aos="fade-up">
             <div className="row">
               <div className="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 text-center content">
-
-                <Mainheading  title="How it" subtitle="works?" textalign="center"/>
+                <Mainheading title="How it works?" textalign="center" />
 
                 <div className="card-deck text-center">
-                   <img src={process} className="img-fluid"/>
+                  <img src={process} className="img-fluid foreground-image" />
                 </div>
               </div>
             </div>
           </div>
 
           {/* <!---category --> */}
-          <div className="container mt-5" data-aos="fade-up">
+          {/* <div className="container mt-5" data-aos="fade-up">
             <div className="row">
               <div className="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content">
                 <div className="w-100 d-flex justify-content-md-between">
@@ -156,30 +161,80 @@ function Home() {
                 </div>
               </div>
             </div>
+          </div> */}
+          <div className="container mt-5" data-aos="fade-up">
+            <ProjectSelection />
+          </div>
+          {/* <!--- other section --> */}
+          <div className="container px-4 my-5 bg-dark other-section ">
+            <div className="row align-items-center">
+            <img src={person} className="other-section-img"/>
+              <div className="col-md-6">
+                <div className="bg-dark text-white p-4 rounded">
+                  <Mainheading title="this is heafi" >
+                    This is how good companies find good company.
+                  </Mainheading>
+                  <p className="lead py-2">
+                    Access the top 1% of talent on Upwork, and a full suite of
+                    hybrid workforce management tools.
+                  </p>
+                  <ul className="list-unstyled">
+                    <li className="py-3"><img src='https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/f_auto,q_auto/brontes/for-enterprise/Skills.svg' /> Access expert talent to fill your skill gaps</li>
+                    <li className="py-3">
+                      <img src='https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/f_auto,q_auto/brontes/for-enterprise/Skills.svg' /> Control your workflow: hire, classify and pay your
+                      talent
+                    </li>
+                    <li className="py-3"> 
+                      <img src='https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/f_auto,q_auto/brontes/for-enterprise/Skills.svg' /> Control your workflow: hire, classify and pay your
+                      talent
+                    </li>
+                    <li className="py-3">
+                      <img src='https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/f_auto,q_auto/brontes/for-enterprise/Skills.svg' /> Control your workflow: hire, classify and pay your
+                      talent
+                    </li>
+                    <li className="py-3">
+                      <img src='https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/f_auto,q_auto/brontes/for-enterprise/Skills.svg' /> Control your workflow: hire, classify and pay your
+                      talent
+                    </li>
+              
+                  </ul>
+                  <a href="#" className="btn btn-light btn-lg">
+                    Learn more
+                  </a>
+                </div>
+              </div>
+              <div className="col-md-6 p-0">
+                <img
+                  src={image_other}
+                  alt="Person in wheelchair"
+                  className="img-fluid rounded"
+                />
+              </div>
+            </div>
           </div>
 
           {/* <!---testimonial slider --> */}
 
-          <div className="testimonial-container " data-aos="fade-up">
-          <div className="container mt-5" >
-            <div className="row">
-              <div className="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content">
-                <Mainheading  title="Clients" subtitle="Testimonial" textalign="center"/>
-                 <div className="py-3">
-                 <Slidercard />
-                 </div>
+          <div className="testimonial-container p-5" data-aos="fade-up">
+            <div className="container mt-5">
+              <div className="row">
+                <div className="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                  <Mainheading title="Clients Testimonial" textalign="center" />
+                  <div className="p-5">
+                    <Slidercard />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          </div>
-
+{/* 
           <div className="container" data-aos="fade-up">
             <div className="row">
               <div className="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content">
                 <Wallpaper />
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* <!---brand section  --> */}
 
@@ -192,7 +247,6 @@ function Home() {
               </div>
             </div>
           </div>
-
         </section>
       </main>
       <Footer />

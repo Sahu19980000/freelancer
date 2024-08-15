@@ -11,7 +11,7 @@ const Slidercard = () => {
     <div className="swiper-container">
       <Swiper
         
-        slidesPerView={3}
+        slidesPerView={2}
         spaceBetween={30}
         loop={true}
         pagination={{
@@ -34,7 +34,7 @@ const Slidercard = () => {
             spaceBetween: 20,
           },
           1024: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 30,
           },
         }}

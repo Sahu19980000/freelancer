@@ -1,28 +1,29 @@
 import React from "react";
+import Banner_image from "../../src/img/bg-banner-01.png"
+import Buttton from "../components/Buttton";
 
 function Banner() {
   return (
     <div>
-      <section
-        id="hero"
-        className="d-flex justify-content-center align-items-center"
-      >
-        <div
-          className="container position-relative"
-          data-aos="zoom-in"
-          data-aos-delay="100"
-        >
-          <h1>
-            <span style={{color: "black"}}>Find the Right <span style={{color: "#0800CF"}}>Verified Company</span>
-            <br />
-            Right Away for your Project</span>
-          </h1>
-          <h2 style={{color: "#0800CF"}}>
-            Aliquam vitae turpis in diam convallis finibus in at risus. Nullam
-            in scelerisque leo, eget sollicitudin velit bestibulum.
-          </h2>
+      <section class="banner-section bg-white h-auto">
+    <div class="container">
+        <div class="row align-items-center">
+            {/* <!-- Left Column with Text --> */}
+            <div class="col-lg-6">
+                <div class="animate__animated  animate__fadeInLeftBig">
+                    <h1>Read! In the Name of your Lord</h1>
+                </div>
+                <p class="animate__animated  animate__fadeInRight">We are the best Educational Organization.Let’s know about Islam  And the holy Quran!</p>
+                <Buttton title="Sign Up For Free" classname="freelancer-light-btn"/>
+            </div>
+            
+            {/* <!-- Right Column with Image --> */}
+            <div class="col-lg-6 text-center ">
+                <img src={Banner_image} alt="Image Alt Text" class="img-fluid animate__animated animate__fadeInBottomRight" />
+            </div>
         </div>
-      </section>
+    </div>
+</section>
     </div>
   );
 }

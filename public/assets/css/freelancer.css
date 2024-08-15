@@ -87,6 +87,19 @@
   height: 100%;
   background-color: #f9f9ff;
 }
+.testimonial-container::before{
+  content:"";
+ background-image: url('../img/bg-pattern.jpg');
+ opacity:0.2;
+  position:absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  width:auto;
+  height:auto;
+  z-index:-3;
+}
 
 .testimonial-cards .testimonial-text {
   font-family: Lato;
@@ -204,17 +217,53 @@
   margin: 10px;
   width: 23%;
   border-radius: 10px;
-  background-image: url('../../../src/img/Computer\ login-rafiki\ 1.png');
   background-size: cover;
-  background-image: linear-gradient(120deg, #28286e, #9191b1);
-  
+  background-color:#d6d6e6 ;
+  /* background-image: linear-gradient(120deg, #28286e, #9191b1); */
+  overflow: hidden; /* Ensure content doesn't overflow the card */
 }
-.card-section:hover {
+.card-section .card-title{
+  color: #0c095f;
+}
 
-  transition: 0.5;
-  background: linear-gradient(#1a155f,#000000); /* Dark black background color */
-  border:3px solid #000000;
+.card-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/02.png');
+  background-size: cover;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease; /* Smooth transition */
+  z-index: 1;
+}
+
+.card-section:hover::before {
+  opacity: 0.1; /* Image opacity on hover */
+}
+
+.card-section:hover, .card-section:hover .card-title {
+  transition: 0.8s;
+  background: linear-gradient(#403d64,#000000); /* Dark black background color */
   
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.card-content {
+  position: relative;
+  z-index: 2; /* Ensure content appears above the ::before element */
+  padding: 15px;
+}
+
+.card-image {
+  display: none;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease; /* Smooth transition for opacity change */
 }
 
 .client-web-bg{
@@ -224,6 +273,20 @@
   font-size: 1.0rem;
   font-weight: bold;
   margin-bottom: 15px;
+}
+
+/* home page other-section */
+.other-section {
+ position: relative;
+}
+
+.other-section .other-section-img {
+  z-index: 9;
+  height: 104%;
+  width: 35%;
+  right: -287px;
+  position: absolute;
+  top: 0;
 }
 
 .card-image-container {
@@ -250,6 +313,28 @@
   width: 100%;
 }
 
+.banner-section{
+  background-color: #fff !important;
+  padding: 7em 0px;   
+}
+
+/* how-it-works*/
+.how-it-works::before {
+  content:"";
+ background-image: url('../img/pattern-01.webp');
+ opacity:0.1;
+  position:absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  width:auto;
+  height:auto;
+  z-index:-3;
+}
+.how-it-works{
+  padding: 5em 0;
+}
 
 /* responsive css */
 
@@ -274,6 +359,8 @@
   .main-heading {
     font-size: 24px;
   }
+
+  
 
   /* testimonial css */
   .swiper-container {

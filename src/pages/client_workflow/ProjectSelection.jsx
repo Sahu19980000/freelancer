@@ -45,16 +45,13 @@ const ProjectSelection = ({ id, Setid,setStep,step }) => {
     <div className="container-fluid">
       <div className="row">
         <div className="col-12 my-4">
-          <Mainheading title="Browse by category" color="#0800cf" />
+          <Mainheading title="Browse by category" />
         </div>
         <div className="card-container">
         {categories.map((category, index) => (
+         
           <div className='card-section '>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            
+          
           <div 
             key={index} 
             className="col-lg-12 col-md-12 col-sm-12 col-12 my-5 mx-1 text-black rounded p-3"
@@ -62,7 +59,8 @@ const ProjectSelection = ({ id, Setid,setStep,step }) => {
             style={{ cursor: 'pointer',margin:'10px' }}
           >
             <div className="card-content">
-              <h2 className="card-title text-white h2">{category.name}</h2>
+           
+              <h2 className="card-title h2">{category.name}</h2>
               
             </div>
           </div>
