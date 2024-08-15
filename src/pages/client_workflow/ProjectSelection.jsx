@@ -1,32 +1,34 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import card_one from "../../img/3D Design.webp"
+import card_one from "../../img/3D Design.webp";
+import Mainheading from '../../components/Mainheading';
 
-const ProjectSelection = ({ id, Setid }) => {
-  const [store_categories, Setcategories] = useState([]);
+const ProjectSelection = ({ id, Setid,setStep,step }) => {
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    const storedToken = localStorage.getItem("token");
-    if (storedToken) {
+    const token = localStorage.getItem("token");
+
+    if (token) {
       axios.get('https://ubm.annapurnadhamagro.com/api/explore/project', {
         headers: {
-          Authorization: `Bearer ${storedToken}`,
+          Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",
         },
       })
-      .then((result) => {
-        Setcategories(result.data);
+      .then((response) => {
+        setCategories(response.data);
+        console.log('response categories',response);
       })
-      .catch((err) => {
-        console.log(err);
-        if (err.response) {
-          alert(
-            "Message: " + (err.response.data.message || err.response.statusText)
-          );
-        } else if (err.request) {
+      .catch((error) => {
+        console.error(error);
+
+        if (error.response) {
+          alert(`Message: ${error.response.data.message || error.response.statusText}`);
+        } else if (error.request) {
           alert("Message: No response from server. Please try again later.");
         } else {
-          alert("Message: " + err.message);
+          alert(`Message: ${error.message}`);
         }
       });
     }
@@ -34,33 +36,40 @@ const ProjectSelection = ({ id, Setid }) => {
 
   const handleSelect = (index) => {
     Setid(index);
+    // alert(index);
+    setStep(step + 1);
+    alert(step);
   };
 
   return (
-    <div className='container-fluid'>
+    <div className="container-fluid">
       <div className="row">
-        {store_categories.map((ele, index) => (
-        <div key={index} className="col-md-3 col-12 card-container mx-2 my-4 bg-success text-white rounded p-3">
-          <div className="card-content">
-            <h5 className="card-title ">{ele.name}</h5>
-            <div className="card-image-container">
-              <img
-                src={card_one} // Assuming ele.image_url contains the image URL
-                alt={ele.name}
-                className="card-image img-fluid"
-              />
+        <div className="col-12 my-4">
+          <Mainheading title="Browse by category" color="#0800cf" />
+        </div>
+        <div className="card-container">
+        {categories.map((category, index) => (
+          <div className='card-section '>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            
+          <div 
+            key={index} 
+            className="col-lg-12 col-md-12 col-sm-12 col-12 my-5 mx-1 text-black rounded p-3"
+            onClick={() => handleSelect(category.id)} 
+            style={{ cursor: 'pointer',margin:'10px' }}
+          >
+            <div className="card-content">
+              <h2 className="card-title text-white h2">{category.name}</h2>
+              
             </div>
           </div>
-          <button
-            id={index}
-            className="bg-primary border-0 text-white m-4 p-2 rounded"
-            onClick={() => handleSelect(index)}
-          >
-            Select Categories
-          </button>
+          </div>
+        ))}
         </div>
-      ))}
-        </div>
+      </div>
     </div>
   );
 };

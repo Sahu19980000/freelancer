@@ -4,6 +4,7 @@ import { Link, Outlet, useNavigate } from "react-router-dom";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Allprocess from "./all_process";
+import bg_image from "../../../src/img/bg-gif.gif"
 
 function ExplorePages() {
   return (
@@ -21,10 +22,14 @@ function ExplorePages() {
           </div>
         </div>
       </div>
-      <section id="about" className="about">
+      <section id="about" className="about ">
         <div className="container-fluid" data-aos="fade-up">
           <div className="row">
             <div className="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content">
+              <div className="d-flex justify-content-end ">
+              <img src={bg_image} className="client-web-bg p-4"/>
+              </div>
+              
               <div>
               <Allprocess />
               </div>

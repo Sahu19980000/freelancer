@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import card_one from "../../img/3D Design.webp";
+import Mainheading from "../../components/Mainheading";
 
-function ProjectCategoriesOptions({ id, Setid }) {
+function ProjectCategoriesOptions({ id, Setid,setStep,step }) {
   const [subcategories, Setsubcategories] = useState([]);
 
   useEffect(() => {
@@ -43,7 +44,7 @@ function ProjectCategoriesOptions({ id, Setid }) {
   const handleSelect = (index) => {
     // setSelected(type);
     Setid(index);
-    alert(index);
+    setStep(step+1);
   };
 
   return (
@@ -51,43 +52,26 @@ function ProjectCategoriesOptions({ id, Setid }) {
       <section id="about" className="about">
         <div className="container-fluid" data-aos="fade-up">
           <div className="row">
-            <div className="col-lg-12 order-2 order-lg-1 content">
+            <div className="col-lg-12 order-2 order-lg-1 content my-2">
+              <div className="my-4">
+              <Mainheading title="Browse by Web Devlopement" color="#0800cf" />
+              </div>
+             
               <div className="card-deck">
                 {subcategories.map((ele, index) => {
                   return (
-                    <>
-                      {/* <button
-                        id={index}
-                        className="bg-primary border-0 text-white m-4 p-2 rounded"
-                        onClick={() => handleSelect(++index)}
-                      >
-                        {ele.name}
-
-
-                      </button> */}
+                    <div className="card-section ">
                       <div
                         key={index}
-                        className="col-md-3 col-12 card-container mx-2 my-2 bg-success text-white rounded p-3"
+                        className="col-lg-12 col-md-12 col-sm-12 col-12 my-5 mx-1 text-black rounded p-3"
+                        onClick={() => handleSelect(ele.id)}
+                        style={{ cursor: "pointer" }}
                       >
                         <div className="card-content">
-                          <h5 className="card-title ">{ele.name}</h5>
-                          <div className="card-image-container">
-                            <img
-                              src={card_one} // Assuming ele.image_url contains the image URL
-                              alt={ele.name}
-                              className="card-image img-fluid"
-                            />
-                          </div>
+                          <h5 className="card-title text-white">{ele.name}</h5>
                         </div>
-                        <button
-                          id={index}
-                          className="bg-primary border-0 text-white m-4 p-2 rounded"
-                          onClick={() => handleSelect(++index)}
-                        >
-                          Select Categories
-                        </button>
                       </div>
-                    </>
+                    </div>
                   );
                 })}
                 {/* 

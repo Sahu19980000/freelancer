@@ -33,15 +33,15 @@ const Allprocess = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit} className='bg-white p-5'>
-      <ProgressBar now={(step / 6) * 100} />
+    <Form onSubmit={handleSubmit} className='bg-white p-5 m-0'>
+      {/* <ProgressBar now={(step / 6) * 100} /> */}
       {step === 1 && (
         <div controlId="formStep1">
-            <ProjectSelection id={id} Setid={Setid} />
+            <ProjectSelection id={id} Setid={Setid} setStep={setStep} step={step}/>
         </div>
       )}
       {step === 2 && (
-        <ProjectCategoriesOptions id={id} Setid={Setid} />
+        <ProjectCategoriesOptions id={id} Setid={Setid} setStep={setStep} step={step}/>
       )}
       {step === 3 && (
        <Package_box id={id} planmakeid={planmakeid} setplan={setplan} Setplantype={Setplantype} plan_type={plan_type}/>
@@ -55,7 +55,7 @@ const Allprocess = () => {
       {step === 6 && (
        <CompanyList />
       )}
-      <div className="d-flex justify-content-between">
+      {/* <div className="d-flex justify-content-between">
         {step > 1 && (
           <Button variant="secondary" onClick={handlePrevious}>
             Previous
@@ -70,7 +70,7 @@ const Allprocess = () => {
             Submit
           </Button>
         )}
-      </div>
+      </div> */}
     </Form>
   );
 };

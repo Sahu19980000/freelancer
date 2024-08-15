@@ -157,6 +157,19 @@
     z-index: 1;
   }
 
+  /* about css */
+ .about{
+  width: 100%;
+  height: auto;
+  position: relative;
+ }
+
+  /* category-box css */
+  .category-box{
+    width: 100%;
+  }
+
+
 /* project-categories css */
 .project-categories{
   width: 100%;
@@ -176,13 +189,37 @@
 /* Card.css */
 .card-container {
   width: 100%; /* Adjust width as needed */
-  background-color: #92989d !important; /* Background color similar to the green in the image */
+  /* background-color: #92989d !important; */
   border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+ 
   overflow: hidden;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card-section {
+  position: relative;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: 23%;
+  border-radius: 10px;
+  background-image: url('../../../src/img/Computer\ login-rafiki\ 1.png');
+  background-size: cover;
+  background-image: linear-gradient(120deg, #28286e, #9191b1);
+  
+}
+.card-section:hover {
+
+  transition: 0.5;
+  background: linear-gradient(#1a155f,#000000); /* Dark black background color */
+  border:3px solid #000000;
+  
 }
 
+.client-web-bg{
+  position: absolute;
+}
 .card-title {
   font-size: 1.0rem;
   font-weight: bold;
@@ -252,6 +289,12 @@
   .plan-container {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+  }
+
+  /* card section css */
+  .card-section {
+    margin: 0px 6px;
     width: 100%;
   }
 }
