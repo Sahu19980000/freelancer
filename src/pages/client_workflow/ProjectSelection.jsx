@@ -8,7 +8,6 @@ const ProjectSelection = ({ id, Setid,setStep,step }) => {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-
     if (token) {
       axios.get('https://ubm.annapurnadhamagro.com/api/explore/project', {
         headers: {
@@ -54,7 +53,7 @@ const ProjectSelection = ({ id, Setid,setStep,step }) => {
           
           <div 
             key={index} 
-            className="col-lg-12 col-md-12 col-sm-12 col-12 my-5 mx-1 text-black rounded p-3"
+            className="col-lg-12 col-md-12 col-6 my-5 mx-1 text-black rounded p-3"
             onClick={() => handleSelect(category.id)} 
             style={{ cursor: 'pointer',margin:'10px' }}
           >
