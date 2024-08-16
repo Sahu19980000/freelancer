@@ -81,7 +81,9 @@
 
 /* home page other-section */
 .other-section {
+  background-color: var(--light-bg);
   position: relative;
+  border-radius: 25px;
  }
  
  .other-section .other-section-img {
@@ -93,6 +95,21 @@
    top: 0;
  }
 
+ /* find-talent-container */
+ .find-talent-container::before{
+  background-image: url('../../../src/img/find-talent-2x.jpg');
+  background-size: cover;
+  opacity: 0.4;
+
+ }
+ .find-talent-container .section-card{
+  padding: 25px;
+   background-color: var(--primary-color);
+ }
+
+ .find-talent-container .section-card h4,.find-talent-container .section-card a{
+  color: #fff;
+ }
  
 /* testimonial cards  css */
 
