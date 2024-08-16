@@ -14,7 +14,7 @@ import Category_card from "../components/Category_card";
 import Slidercard from "../components/Slidercard";
 import arrow_icon from "../img/arrow-right.png";
 import Brand_card from "../components/Brand_carousal";
-import gif_banner_01 from "../../src/img/gif-banner-01.gif";
+import gif_banner_01 from "../../src/img/2733655-removebg-preview.png";
 import ProjectSelection from "./client_workflow/ProjectSelection";
 import image_other from "../../src/img/find-great-work.webp"
 
@@ -27,14 +27,15 @@ function Home() {
         <section id="about" className="about bg-white">
           {/* <!---upyour work game --> */}
 
-          <div className="container" data-aos="fade-up">
+          <div className="upwork-game-container container" data-aos="fade-up">
+           
             <div className="row">
               <div
                 className="col-lg-6 order-2 order-lg-1 d-flex align-items-center"
                 data-aos="fade-left"
                 data-aos-delay="100"
               >
-                <img src={gif_banner_01} className="" alt="" />
+                <img src={gif_banner_01} className="img-fluid" alt="" />
               </div>
 
               <div className="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-2 content">
@@ -67,19 +68,22 @@ function Home() {
                 <div>
                   <Buttton
                     title="Sign Up For Free"
-                    classname="freelancer-light-btn"
+                    classname="freelancer-dark-btn"
                   />
+                  &nbsp;
+                  &nbsp;
                   &nbsp;
                   <Buttton
                     title="More About details"
-                    classname="freelancer-dark-btn"
+                    classname="freelancer-light-btn"
                   />
                 </div>
-              </div>
 
               {/* <!---end upyour work game --> */}
             </div>
           </div>
+          </div>
+          
 
           {/* <!---video section start --> */}
           {/* <div
@@ -99,7 +103,7 @@ function Home() {
           {/* <!---end video section start --> */}
 
           {/* <!---How it works --> */}
-          <div className="container mt-5 how-it-works" data-aos="fade-up">
+          <div className=" container mt-5 how-it-works" data-aos="fade-up">
             <div className="row">
               <div className="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 text-center content">
                 <Mainheading title="How it works?" textalign="center" />
@@ -166,14 +170,12 @@ function Home() {
             <ProjectSelection />
           </div>
           {/* <!--- other section --> */}
-          <div className="container px-4 my-5 bg-dark other-section ">
+          <div className="other-section container px-4 my-5 bg-dark rounded">
             <div className="row align-items-center">
             <img src={person} className="other-section-img"/>
               <div className="col-md-6">
                 <div className="bg-dark text-white p-4 rounded">
-                  <Mainheading title="this is heafi" >
-                    This is how good companies find good company.
-                  </Mainheading>
+                  <Mainheading title="this is heafi" />
                   <p className="lead py-2">
                     Access the top 1% of talent on Upwork, and a full suite of
                     hybrid workforce management tools.

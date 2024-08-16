@@ -1,6 +1,7 @@
 import React from "react";
 import Banner_image from "../../src/img/bg-banner-01.png"
 import Buttton from "../components/Buttton";
+import Mainheading from "./Mainheading";
 
 function Banner() {
   return (
@@ -11,7 +12,8 @@ function Banner() {
             {/* <!-- Left Column with Text --> */}
             <div class="col-lg-6">
                 <div class="animate__animated  animate__fadeInLeftBig">
-                    <h1>Read! In the Name of your Lord</h1>
+                  <Mainheading title="Read! In the Name of your Lord" />
+                  
                 </div>
                 <p class="animate__animated  animate__fadeInRight">We are the best Educational Organization.Let’s know about Islam  And the holy Quran!</p>
                 <Buttton title="Sign Up For Free" classname="freelancer-light-btn"/>
