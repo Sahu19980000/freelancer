@@ -1,6 +1,6 @@
 import React from "react";
 import Banner_image from "../../src/img/bg-banner-01.png"
-import Buttton from "../components/Buttton";
+import Buttton from "./Buttton";
 import Mainheading from "./Mainheading";
 
 function Banner() {

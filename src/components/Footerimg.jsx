@@ -3,7 +3,7 @@ import React from "react";
 function FooterImg() {
   return (
     <div>
-      <section
+      {/* <section
         id="footerimg"
         className="d-flex justify-content-center align-items-center"
       >
@@ -12,7 +12,7 @@ function FooterImg() {
           data-aos="zoom-in"
           data-aos-delay="100"
         ></div>
-      </section>
+      </section> */}
     </div>
   );
 }

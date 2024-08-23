@@ -3,7 +3,7 @@ import ExplorePages from "../pages/client_workflow/index";
 import PostProject from "../pages/PostProject";
 import WhyBrand from "../pages/WhyBrand";
 import AboutUs from "../pages/AboutUs";
-import Home from "../pages/Home";
+import Home from "../pages/homepage/Home";
 import Login from "../pages/Login"
 import Signup from "../pages/Signup";
 import WelcomUser from "../pages/WelcomeUser";

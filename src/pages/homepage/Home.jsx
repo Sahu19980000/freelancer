@@ -1,0 +1,134 @@
+import React, { useState, useEffect } from "react";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import Mainheading from "../../components/Mainheading";
+
+import Brand_card from "../../components/Brand_carousal";
+import Howshouldwork from "./howshouldwork";
+import "./home.css";
+import Whychoose from "./why-choose";
+import Popularservices from "./popular-services";
+import Joinvideosection from "./join-video-section";
+import TestimonialSection from "./TestimonialSection";
+
+function Home() {
+  return (
+    <div>
+      <Header />
+      <Howshouldwork />
+      <main id="main">
+        <section id="about" className="about bg-white">
+          {/* <!---upyour work game --> */}
+
+          {/* <!--popular services --> */}
+          <Whychoose />
+          <Popularservices />
+
+          {/* <!---video section start --> */}
+          
+          {
+          /* <div
+            className="container-fluid"
+            data-aos="fade-up"
+            style={{ background: "#0800CF" }}
+          >
+            <div className="container py-2">
+              <iframe
+                className="responsive-iframe"
+                src="https://www.youtube.com/embed/tgbNymZ7vqY" 
+                title="video"
+              ></iframe>
+            </div>
+          </div> */}
+
+          <Joinvideosection />
+
+          {/* <!---end video section start --> */}
+
+          {/* <!--- other section --> */}
+
+          <div class="find-talent-way-container">
+          <div class="row">
+            <div class="col-12">
+                <div class="">
+                  <Mainheading title="Find talent your way" color="#fff" />
+                    <h2 class="section-title text-white"></h2>
+                    <p className="text-white w-25">Work with the largest network of independent professionals and get things done—from quick
+                        turnarounds to big transformations.</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                                <div class="card-body-section">
+                                    <p class="card-title-talent">Post a job and hire a professional</p>
+                                    <p class="card-text-talent">Talent Marketplace™ </p>
+                                </div>
+                        </div>
+                        {/* <div class="col-md-4">
+                                <div class="card-body-section">
+                                    <h5 class="card-title-talent">Browse and buy some projects</h5>
+                                    <p class="card-text">Project Catalog™</p>
+                                </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-body-section">
+                                    <h5 class="card-title-talent">Let us help you find the right talent</h5>
+                                    <p class="card-text">Talent Scout™</p>
+                                </div>
+                            </div>
+                        </div> */}
+                        <div class="col-md-4">
+                                <div class="card-body-section">
+                                    <p class="card-title-talent">Browse and buy some projects</p>
+                                    <p class="card-text-talent">Talent Marketplace™ </p>
+                                </div>
+                        </div>
+                        <div class="col-md-4">
+                                <div class="card-body-section">
+                                    <p class="card-title-talent">Post a job and hire a professional</p>
+                                    <p class="card-text-talent">Talent Marketplace™ </p>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         </div>
+
+          {/* <!---testimonial slider --> */}
+
+          {/* <div className="testimonial-container p-5" data-aos="fade-up">
+            <div className="container mt-5">
+              <div className="row">
+                <div className="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                  <Mainheading title="Clients Testimonial" textalign="center" />
+                  <div className="p-5">
+                    <Slidercard />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> */}
+         <TestimonialSection />
+          
+          {/* 
+
+          {/* <!---brand section  --> */}
+
+          <div className="container mt-5 py-5">
+            <div className="row">
+              <div className="col-md-12">
+                <div className="">
+                  <Brand_card />
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
+export default Home;

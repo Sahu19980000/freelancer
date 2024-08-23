@@ -1,0 +1,171 @@
+.why-choose-container,.popular-services-container{
+    width:100%;
+    height: auto;
+    padding: 0em 4em;
+}
+
+.why-choose-left{
+    position: relative;
+    padding: 20px;
+    height: auto;
+    width: 100%;
+    background-color: #D0FFCB;
+}
+.why-choose-left ul{
+    list-style-type: none;
+}
+.why-choose-left ul li{
+    display: flex;
+}
+
+.why-choose-left .choose-img{
+    width: auto;
+    top: 0;
+    right:-160px;
+    height: 100%;
+    position: absolute;
+    z-index: 9;
+}
+.why-choose-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 20px;
+    height: 100%;
+    background-color: #1E244F;
+}
+.why-choose-right h3,.why-choose-right p,.why-choose-right h4{
+   color: #fff; 
+}
+
+.join-fingertips-container{
+    border-radius: 25px;
+    padding: 3em;
+    margin: 3em;
+    background: linear-gradient(90deg, #0E8B00 0%, #042500 100%);
+}
+
+/* video section */
+.video-play-section-container{
+  border-radius: 25px;
+  padding: 0em;
+  margin: 3em;
+}
+
+.video-section {
+    position: relative;
+  }
+  
+  .video-section img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+  }
+  
+  .client-section {
+    margin:3em;
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .section-title {
+    color: #00cc66;
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    background-color: #333;
+    border: none;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  
+  .card-title {
+    color: #00cc66;
+  }
+  
+  .btn-success {
+    background-color: #00cc66;
+    border: none;
+  }
+  .video-play-section-container{
+      position: relative;
+  }
+  .video-play-section-container::before{
+    position: absolute;
+    background-image: url('../../img/pexels-olly-840996.png');
+  }
+
+  /* find talent css */
+
+  .find-talent-way-container{
+    margin:3em;
+    padding: 3em;
+    background-image: url('../../img/pexels-olly-840996.png');
+  }
+
+  .find-talent-way-container .card-body-section{
+    padding: 25px;
+    background-color: #0E8B00;
+    border-radius: 15px;
+  }
+
+  .find-talent-way-container .card-body-section .card-title-talent{
+    font-size:24px;
+    color: #fff;
+  }
+  .find-talent-way-container .card-body-section .card-text-talent{
+    font-size:18px;
+    color: #fff;
+  }
+  .find-talent-way-container .card-body-section:hover{
+    color: #0E8B00;
+    background-color: #fff;
+    transition:0.5s all ease-in;
+  }
+
+  .card-body-section:hover .card-title-talent,
+  .card-body-section:hover .card-text-talent {
+    color:#0E8B00; /* Ensures that specific text within the section remains visible */
+}
+
+/* testimonial-container css */
+
+.testimonial-container{
+ margin:3em;
+ padding:1em;
+ background-color: #073402;
+}
+
+.testimonial-container .testimonial-profile{
+  border-radius: 15px;
+  text-align: center;
+  padding: 40px;
+  left: 150px;
+  bottom: -64px;
+  position: absolute;
+  width: 65%;
+  height: auto;
+  background-color: #D9FFD4;
+}
+
+.testimonial-container .testimonial-profile .profile-icon{
+  position: absolute;
+  top:-30px;
+ width: 45px;
+ height: 45px;
+ background-color: #fff;
+ padding: 10px;
+ border-radius: 50px;
+
+}
