@@ -70,8 +70,8 @@ const TestimonialSection = () => {
 
             </Carousel>
           </div>
-          <div className="col-md-6">
-            <Mainheading title=" What we have done & 
+          <div className="col-md-6 testimonial-right">
+            <Mainheading title=" What we have done &  
             what our Customers say" color="#fff"  size="30px"/>
             <p className="text-white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus enim, distinctio necessitatibus earum reiciendis explicabo perspiciatis aliquid, veniam itaque ad hic accusamus sequi adipisci, consequuntur maxime laborum reprehenderit nihil nobis?</p>
           </div>

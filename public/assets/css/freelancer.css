@@ -9,13 +9,19 @@
 .main-heading {
   font-family: Lato;
   font-size: 42px;
-  font-weight: 500;
-  line-height: 50px;
+  font-weight: 600;
+  line-height: 75px;
   text-align: left;
   color: #2b2525;
 }
 .main-heading span {
   color: var(--secondary-color);
+}
+.para-graph{
+  line-height: 35px;
+}
+.counter{
+  color: #000;
 }
 
 .freelancer-dark-btn {
@@ -472,7 +478,13 @@
 @media screen and (max-width: 767px) {
   /* main-heading css */
   .main-heading {
-    font-size: 24px;
+    font-size: 24px !important;
+  }
+  .how-should-container,.why-choose-container, .popular-services-container{
+    padding: 1em !important;
+  }
+  .how-should-container{
+    margin:15em 0em 0em 0em;
   }
 
   

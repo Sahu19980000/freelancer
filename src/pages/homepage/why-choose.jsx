@@ -1,6 +1,7 @@
 import React from "react";
 import startcircle from "../../img/mdi_star-circle.png";
 import smartobject from "../../img/SmartObject 2.png";
+import Mainheading from "../../components/Mainheading";
 
 const Whychoose = () => {
   return (
@@ -11,11 +12,9 @@ const Whychoose = () => {
             <div class="why-choose-left">
               <ul class="py-4">
                 <li>
-                  <b>
-                    <h1 class="font-bold">Why Choose Us </h1>
-                  </b>
+                 <Mainheading title="Why Choose Us" color="#000"  />
                 </li>
-                <li className="py-4">
+                <li className="py-2">
                   <img
                     src={startcircle}
                     width="15px"
@@ -23,43 +22,44 @@ const Whychoose = () => {
                     class="my-1 mx-1"
                   />
                   <div>
-                    <h4>Proof of Quality</h4>
+                    <h4><strong>Proof of Quality</strong></h4>
                     <p>
                       Check any pro’s work samples, client reviews, and identity
                       verification
                     </p>
                   </div>
                 </li>
-                <li>
+                <li className="py-2">
                   <img
                     src={startcircle}
                     width="15px"
-                    height="15px"
+                    height="15px "
                     class="my-1 mx-1"
                   />
                   <div>
-                    <h4>Proof of Quality</h4>
+                    <h4><strong>Proof of Quality</strong></h4>
                     <p>
                       Check any pro’s work samples, client reviews, and identity
                       verification
                     </p>
                   </div>
                 </li>
-                <li>
+                <li className="py-2">
                   <img
                     src={startcircle}
                     width="15px"
-                    height="15px"
+                    height="15px "
                     class="my-1 mx-1"
                   />
                   <div>
-                    <h4>Proof of Quality</h4>
+                    <h4><strong>Proof of Quality</strong></h4>
                     <p>
                       Check any pro’s work samples, client reviews, and identity
                       verification
                     </p>
                   </div>
                 </li>
+               
               </ul>
               <img src={smartobject} class="choose-img img-fluid" />
             </div>

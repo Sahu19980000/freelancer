@@ -10,33 +10,33 @@ const HowShouldWork = () => {
         <div className="row">
 
           <div className="col-md-6 col-12">
-            <Mainheading title="How Work Should Work" />
-            <p>
+            <Mainheading title="How Work Should Work" size="78px" color="#000" />
+            <p className="h5 py-4 para-graph">
               Work with the largest network of independent professionals and get
               things done efficiently.
             </p>
             <Button title="Get started" classname="freelancer-dark-btn rounded-pill" />
             <div className="row py-5">
 
-              <div className="col-md-4">
-                <p className="h2 text-black">
-                  <b>98k +</b>
+              <div className="col-md-4 col-4">
+                <p className="h2 ">
+                  <strong className="counter">98k +</strong>
                   <br />
                   Artwork
                 </p>
               </div>
 
-              <div className="col-md-4">
+              <div className="col-md-4 col-4">
                 <p className="h2 text-black">
-                  <b>13k + </b>
+                <strong className="counter">13k + </strong>
                   <br />
                   Auction
                 </p>
               </div>
 
-              <div className="col-md-4">
+              <div className="col-md-4 col-4">
                 <p className="h2 text-black">
-                  <b>16k +</b>
+                  <strong className="counter">16k +</strong>
                   <br />
                   Artist
                 </p>

@@ -9,20 +9,8 @@ function Footer() {
         <div className="footer-top">
           <div className="container">
             <div className="row">
-              <div className="container" data-aos="fade-up">
-                <div className="section-title">
-                  <p></p>
-                </div>
-
-                <div className="row mb-5">
-                  <div className="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content">
-                    <FooterImg />
-                  </div>
-                </div>
-              </div>
-
               <div className="col-lg-3 col-md-6 footer-contact">
-                <h3 className="text-white">LOGO</h3>
+                <h3 className="text-black">LOGO</h3>
                 <p>
                   A108 Adam Street <br />
                   New York, NY 535022
@@ -34,10 +22,27 @@ function Footer() {
                   <strong>Email:</strong> info@example.com
                   <br />
                 </p>
+                <div className="social-links text-start text-md-left my-4 py-3 pt-md-0">
+                  <a href="https://twitter.com" className="twitter">
+                    <i className="bx bxl-twitter"></i>
+                  </a>
+                  <a href="https://facebook.com" className="facebook">
+                    <i className="bx bxl-facebook"></i>
+                  </a>
+                  <a href="https://instagram.com" className="instagram">
+                    <i className="bx bxl-instagram"></i>
+                  </a>
+                  <a href="https://skype.com" className="google-plus">
+                    <i className="bx bxl-skype"></i>
+                  </a>
+                  <a href="https://linkedin.com" className="linkedin">
+                    <i className="bx bxl-linkedin"></i>
+                  </a>
+                </div>
               </div>
 
               <div className="col-lg-2 col-md-6 footer-links">
-                <h4>Useful Links</h4>
+                <h4 className="">Useful Links</h4>
                 <ul>
                   <li key="home">
                     <i className="bx bx-chevron-right"></i> <a href="/">Home</a>
@@ -89,7 +94,7 @@ function Footer() {
 
               <div className="col-lg-4 col-md-6 footer-newsletter">
                 <h4>Join Our Newsletter</h4>
-                <p className="text-white">
+                <p className="text-black">
                   Tamen quem nulla quae legam multos aute sint culpa legam
                   noster magna
                 </p>
@@ -102,37 +107,21 @@ function Footer() {
           </div>
         </div>
 
-        <div className="container d-md-flex py-4">
+        {/* <div className="container d-md-flex py-4">
           <div className="mr-md-auto text-center text-md-left">
-            <div className="copyright text-white">
+            <div className="copyright text-black">
               &copy; Copyright{" "}
               <strong>
                 <span>Logo</span>
               </strong>
               . All Rights Reserved
             </div>
-            <div className="credits text-white">
+            <div className="credits text-black">
               Designed by <a href="#">Alpine Technology</a>
             </div>
           </div>
-          <div className="social-links text-center text-md-right pt-3 pt-md-0">
-            <a href="https://twitter.com" className="twitter">
-              <i className="bx bxl-twitter"></i>
-            </a>
-            <a href="https://facebook.com" className="facebook">
-              <i className="bx bxl-facebook"></i>
-            </a>
-            <a href="https://instagram.com" className="instagram">
-              <i className="bx bxl-instagram"></i>
-            </a>
-            <a href="https://skype.com" className="google-plus">
-              <i className="bx bxl-skype"></i>
-            </a>
-            <a href="https://linkedin.com" className="linkedin">
-              <i className="bx bxl-linkedin"></i>
-            </a>
-          </div>
-        </div>
+         
+        </div> */}
       </footer>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import videbg from "../../img/pexels-polina-zimmerman-3747454.png"
 import videoplay from "../../img/video-play.png"
+import Mainheading from "../../components/Mainheading";
 
 const Joinvideosection = () => {
   return (
@@ -8,11 +9,9 @@ const Joinvideosection = () => {
       <div class="join-fingertips-container" >
         <div class="row">
           <div class="col-12">
-            <h1 class="text-white text-center">
-              Freelance services at your fingertips!{" "}
-            </h1>
+            <Mainheading title="Freelance services at your fingertips!" color="#fff" textalign="center" />
             <div class="d-flex justify-content-center my-3">
-              <button class="bg-white px-5 py-3 rounded-pill border-0">Join</button>
+              <button class="bg-white px-5 py-3 rounded-pill border-0 h3"><strong>Join</strong></button>
             </div>
           </div>
         </div>
