@@ -13,7 +13,7 @@ const Popularservices = () => {
                 <div class="col-12">
                     <Mainheading title="Popular Services" color="#000"  />
                 </div>
-                <div class="col-md-4 col-12">
+                <div class="col-md-4 col-12 my-3">
                     <div class="row">
                         <div class="col-8">
                             <img src={main_image} class="img-fluid rounded" />
@@ -26,11 +26,11 @@ const Popularservices = () => {
                             </div>
                         </div>
                         <div class="col-12">
-                            <p className='h4 text-center p-3'><strong>Application Development</strong></p>
+                        <h4 className='text-center p-3'><strong>Application Development</strong></h4>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-12">
+                <div class="col-md-4 col-12 my-3">
                     <div class="row">
                         <div class="col-8">
                         <img src={main_image} class="img-fluid rounded" />
@@ -43,11 +43,11 @@ const Popularservices = () => {
                             </div>
                         </div>
                         <div class="col-12">
-                        <p className='h4 text-center p-3'><strong>Application Development</strong></p>
+                        <h4 className='text-center p-3'><strong>Application Development</strong></h4>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-12">
+                <div class="col-md-4 col-12 my-3">
                     <div class="row">
                         <div class="col-8">
                         <img src={main_image} class="img-fluid rounded" />
@@ -60,7 +60,7 @@ const Popularservices = () => {
                             </div>
                         </div>
                         <div class="col-12">
-                        <p className='h4 text-center p-3'><strong>Application Development</strong></p>
+                        <h4 className='text-center p-3'><strong>Application Development</strong></h4>
                         </div>
                     </div>
                 </div>

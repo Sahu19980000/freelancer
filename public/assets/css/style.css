@@ -85,14 +85,17 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid var(--primary-color);
+  /* border: 6px solid var(--primary-color);
   border-top-color: #fff;
   border-bottom-color: #fff;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  -webkit-animation: animate-preloader 1s linear infinite;
-  animation: animate-preloader 1s linear infinite;
+  border-radius: 50%; */
+  width: 50px;
+  height: 50px;
+  background-image: url('../img/loader.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite; */
 }
 
 @-webkit-keyframes animate-preloader {
@@ -137,7 +140,7 @@ h6 {
   font-size: 32px;
   margin: 0;
   padding: 0;
-  line-height: 1;
+
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -491,6 +494,14 @@ h6 {
     font-size: 18px;
     line-height: 24px;
   }
+  h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 21px;
+}
 }
 
 /*--------------------------------------------------------------

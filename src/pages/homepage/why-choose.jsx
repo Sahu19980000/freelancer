@@ -10,9 +10,9 @@ const Whychoose = () => {
         <div class="row">
           <div class="col-md-8">
             <div class="why-choose-left">
-              <ul class="py-4">
+              <ul class="p-2">
                 <li>
-                 <Mainheading title="Why Choose Us" color="#000"  />
+                  <Mainheading title="Why Choose Us" color="#000" />
                 </li>
                 <li className="py-2">
                   <img
@@ -22,7 +22,9 @@ const Whychoose = () => {
                     class="my-1 mx-1"
                   />
                   <div>
-                    <h4><strong>Proof of Quality</strong></h4>
+                    <h4>
+                      <strong>Proof of Quality</strong>
+                    </h4>
                     <p>
                       Check any pro’s work samples, client reviews, and identity
                       verification
@@ -37,7 +39,9 @@ const Whychoose = () => {
                     class="my-1 mx-1"
                   />
                   <div>
-                    <h4><strong>Proof of Quality</strong></h4>
+                    <h4>
+                      <strong>Proof of Quality</strong>
+                    </h4>
                     <p>
                       Check any pro’s work samples, client reviews, and identity
                       verification
@@ -52,14 +56,15 @@ const Whychoose = () => {
                     class="my-1 mx-1"
                   />
                   <div>
-                    <h4><strong>Proof of Quality</strong></h4>
+                    <h4>
+                      <strong>Proof of Quality</strong>
+                    </h4>
                     <p>
                       Check any pro’s work samples, client reviews, and identity
                       verification
                     </p>
                   </div>
                 </li>
-               
               </ul>
               <img src={smartobject} class="choose-img img-fluid" />
             </div>

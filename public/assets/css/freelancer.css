@@ -477,15 +477,41 @@
 
 @media screen and (max-width: 767px) {
   /* main-heading css */
+
   .main-heading {
+    line-height: 35px;
     font-size: 24px !important;
   }
   .how-should-container,.why-choose-container, .popular-services-container{
     padding: 1em !important;
   }
   .how-should-container{
-    margin:15em 0em 0em 0em;
+    margin:11em 0em 0em 0em;
   }
+  .why-choose-left{
+      padding: 10px;
+  }
+  /* menu bar mobile css */
+  .mobile-menu {
+    left: 0;
+    /* padding: 0; */
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    z-index: 99;
+}
+
+.mobile-menu .cross-icon {
+  border-radius: 5px;
+  margin: 15px 10px;
+  /* color: #fff; */
+  padding: 5px 10px;
+  float: right;
+  width: 50px;
+  height: 50px;
+  
+}
 
   
 
@@ -514,10 +540,19 @@
 }
 
 @media screen and (min-width: 767px) and (max-width: 1199px) {
-
+  .main-heading {
+    line-height: 35px;
+    font-size: 32px !important;
+  }
 }
 
 @media screen and (min-width:1200px) {
+
+  .main-heading {
+    line-height: 65px;
+    font-size: 45px !important;
+  }
+  
   .search_box{
     border-style: none;
     outline: none;

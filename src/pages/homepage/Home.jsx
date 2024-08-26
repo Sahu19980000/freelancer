@@ -52,11 +52,11 @@ function Home() {
             <div class="col-12">
                 <div class="">
                   <Mainheading title="Find talent your way" color="#fff" />
-                    <h2 class="section-title text-white"></h2>
-                    <p className="text-white w-25">Work with the largest network of independent professionals and get things done—from quick
+
+                    <p className="text-white find-talent-para">Work with the largest network of independent professionals and get things done—from quick
                         turnarounds to big transformations.</p>
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-12 my-3">
                                 <div class="card-body-section">
                                     <p class="card-title-talent">Post a job and hire a professional</p>
                                     <p class="card-text-talent">Talent Marketplace™ </p>
@@ -76,13 +76,13 @@ function Home() {
                                 </div>
                             </div>
                         </div> */}
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-12 my-3">
                                 <div class="card-body-section">
                                     <p class="card-title-talent">Browse and buy some projects</p>
                                     <p class="card-text-talent">Talent Marketplace™ </p>
                                 </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-12 my-3">
                                 <div class="card-body-section">
                                     <p class="card-title-talent">Post a job and hire a professional</p>
                                     <p class="card-text-talent">Talent Marketplace™ </p>
@@ -95,19 +95,6 @@ function Home() {
          </div>
 
           {/* <!---testimonial slider --> */}
-
-          {/* <div className="testimonial-container p-5" data-aos="fade-up">
-            <div className="container mt-5">
-              <div className="row">
-                <div className="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content">
-                  <Mainheading title="Clients Testimonial" textalign="center" />
-                  <div className="p-5">
-                    <Slidercard />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
          <TestimonialSection />
           
           {/* 
