@@ -75,6 +75,8 @@
 
 /* video section */
 .video-play-section-container{
+  width: 100%;
+  height: auto;
   border-radius: 25px;
   padding: 0em;
   margin: 3em;
@@ -90,11 +92,12 @@
   background-image: url('../../img/pexels-olly-840996.png');
 }
   .video-section img {
-    width: 100%;
+    width: 92%;
     border-radius: 8px;
   }
   
   .play-button {
+    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -229,10 +232,14 @@
  padding: 5em;
 }
 
-.testimonial-container .carousel-inner{
+/* .testimonial-container .carousel-inner{
   overflow: unset;
-}
+} */
 
+/* video and join css */
+.btn-join{
+  font-size: 32px;
+}
 
 @media screen and (min-width:320px) and (max-width:767px) {
 
@@ -258,10 +265,23 @@
    .find-talent-way-container .find-talent-para{
     width: 75%;
   }
+  .btn-join{
+    font-size: 24px;
+  }
   .video-play-section-container,.testimonial-container
   {
      margin:1.2em;
   }
+
+  .video-play-section-container .video-section .play-button img{
+    height: 50%;
+    width: 50%;
+  }
+  .video-section img {
+    width: 90%;
+    border-radius: 8px;
+  }
+
   .testimonial-container .testimonial-profile {
     width: -webkit-fill-available;
  }

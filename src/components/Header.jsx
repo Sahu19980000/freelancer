@@ -118,7 +118,7 @@ function Header() {
                 ) : (
                   <div className="dropdown w-100">
                     <button
-                      className="btn btn-secondary dropdown-toggle d-flex align-items-center"
+                      className="btn btn-profile dropdown-toggle d-flex align-items-center"
                       type="button"
                       id="dropdownMenuButton"
                       aria-expanded="false"
@@ -215,7 +215,7 @@ function Header() {
                       ) : (
                         <div className="dropdown w-100">
                           <button
-                            className="btn btn-secondary dropdown-toggle d-flex align-items-center"
+                            className="btn btn-profile dropdown-toggle d-flex align-items-center"
                             type="button"
                             id="dropdownMenuButton"
                             aria-expanded="false"

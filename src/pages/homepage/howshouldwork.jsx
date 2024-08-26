@@ -9,7 +9,6 @@ const HowShouldWork = () => {
     <div className="how-should-container bg-white">
       <div className="container-fluid">
         <div className="row">
-         
           <div className="col-md-6 col-12">
             <Mainheading
               title="How Work Should Work"
