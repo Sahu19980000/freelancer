@@ -73,7 +73,8 @@
     margin: 3em;
     background: linear-gradient(90deg, #0E8B00 0%, #042500 100%);
 }
-.popular-services-container::before{
+
+/* .popular-services-container::before{
   content: '';
   position: absolute;
   top: 0;
@@ -83,8 +84,8 @@
   background-image: url('../../../public/assets/img/vector-2.avif');
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.1; /* Set the background image opacity */
-}
+  opacity: 0.1; 
+} */
 
 /* video section */
 .video-play-section-container{

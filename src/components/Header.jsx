@@ -61,7 +61,7 @@ function Header() {
     <>
       <div>
         <header id="header" className="fixed-top ">
-          <div className="container-fluid align-items-center px-5 d-none d-md-block">
+          <div className="container-fluid align-items-center px-5 d-none d-lg-block">
             <div className="row">
               <div className="col-md-3">
                 <h1 className="logo mr-auto">
@@ -118,7 +118,7 @@ function Header() {
                 ) : (
                   <div className="dropdown w-100">
                     <button
-                      className="btn btn-profile dropdown-toggle d-flex align-items-center"
+                      className="btn dropdown-toggle d-flex align-items-center"
                       type="button"
                       id="dropdownMenuButton"
                       aria-expanded="false"
@@ -130,7 +130,7 @@ function Header() {
                         style={{ width: "40px" }}
                       />
                       <p
-                        style={{ color: "#ffffff" }}
+                        style={{ color: "#000" }}
                         className="text-bold mx-4"
                       >
                         Hello, {userName}{" "}
@@ -144,18 +144,13 @@ function Header() {
                         <Link to="/profile">Profile</Link>
                       </li>
                       <li>
-                        <button
-                          type="button"
-                          className="dropdown-item"
-                          onClick={() => {
+                        <Link to="/profile"  onClick={() => {
                             localStorage.clear();
                             navigate("/");
                             window.location.reload();
-                          }}
-                        >
-                          Logout
-                        </button>
+                          }}>Logout</Link>
                       </li>
+                      
                     </ul>
                   </div>
                 )}
@@ -165,7 +160,7 @@ function Header() {
 
           {/* -------mobile nav menu------- */}
 
-          <nav className="navbar navbar-expand-lg navbar-light bg-white d-block d-md-none">
+          <nav className="navbar navbar-expand-lg navbar-light bg-white d-block d-lg-none">
             <div className="container-fluid px-0">
               <div className="col-6">
                 <h1 className="logo mr-auto">
@@ -227,11 +222,11 @@ function Header() {
                               style={{ width: "40px" }}
                             />
                             <p
-                              style={{ color: "#ffffff" }}
-                              className="text-bold mx-4"
-                            >
-                              Hello, {userName}{" "}
-                            </p>
+                        style={{ color: "#000" }}
+                        className="text-bold mx-4"
+                      >
+                        Hello, {userName}{" "}
+                      </p>
                           </button>
                           <ul
                             className="dropdown-menu pl-4"
