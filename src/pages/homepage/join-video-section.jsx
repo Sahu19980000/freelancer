@@ -15,7 +15,7 @@ const Joinvideosection = () => {
               textalign="center"
             />
             <div class="d-flex justify-content-center my-3">
-              <button class="bg-white px-5 py-1 rounded-pill border-0 h3">
+              <button class="bg-white px-5 py-1 rounded-pill border-0 btn-join">
                 <strong>Join</strong>
               </button>
             </div>
@@ -27,7 +27,7 @@ const Joinvideosection = () => {
         <div class="row mb-2">
           <div class="col-12">
             <div class="video-section">
-              <img src={videbg} alt="Video Thumbnail" class="img-fluid" />
+              <img src={videbg} alt="Video Thumbnail" class="img-fluid "  />
               <div class="play-button">
                 <img src={videoplay} />
               </div>
