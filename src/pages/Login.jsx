@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { Form } from 'react-bootstrap';
 import axios from "axios";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Login_icon from "../img/Computer login-rafiki 1.png";
+import Login_icon from "../img/login-bg.png";
 import Mainheading from "../components/Mainheading";
 import Buttton from "../components/Buttton";
+import ToggleSwitch from "../components/toggle/Togglecomponent";
 
 function Login() {
   const [token, setToken] = useState(null);
@@ -40,19 +42,39 @@ function Login() {
 
   return (
     <>
-      <div>
         <Header />
-        <div className="login-container" data-aos="fade-up">
-          <div className="container py-5" >
+        <div className="login-container " data-aos="fade-up">
+          <div className="container bg-white my-5">
             <div className="row">
-              <div className="col-lg-6 order-1 order-lg-2">
-                <div className="card login-box">
-                  <div className="card-body pt-3">
-                    <Mainheading title="Sign in to your account" color="#0800CF" />
-                    <p>
-                      Hey, Enter your details to get sign in to your account{" "}
-                    </p>
+              <div className="col-lg-6 col-12">
+                <div className="login-box">
+                  <div className="card-body pt-3 d-flex justify-content-center flex-column">
+                    <Mainheading
+                      title="Welcome back"
+                      color="#000000"
+                      textalign="center"
+                    />
+                    <p className="text-center">Login into your account</p>
+
+                    <div className="w-100 d-flex justify-content-center">
+                      <span className="d-flex justify-content-center rounded align-items-center border border-2 w-50">
+                        <a href="" className="px-2 py-2">
+                          <img
+                            src="https://ouch-cdn2.icons8.com/VGHyfDgzIiyEwg3RIll1nYupfj653vnEPRLr0AeoJ8g/rs:fit:456:456/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvODg2/LzRjNzU2YThjLTQx/MjgtNGZlZS04MDNl/LTAwMTM0YzEwOTMy/Ny5wbmc.png"
+                            style={{ width: "40px" }}
+                          />
+                        </a>
+                        Google
+                      </span>
+                    </div>
                     <br />
+
+                    <div>
+                      <div class="divider">
+                        <span class="divider-text">Or continue with</span>
+                      </div>
+                    </div>
+
                     {/* <form> */}
                     <div className="form-group">
                       <input
@@ -79,47 +101,35 @@ function Login() {
                         }}
                         value={password}
                       />
-                        <a href="#" className="float-right">
-                      Forgot Password?
-                    </a>
+                      <div className="d-flex justify-content-between">
+                       <ToggleSwitch />
+
+                        <a href="#" className="float-right py-2">
+                          Forgot Password?
+                        </a>
+                      </div>
                     </div>
-                  
+
                     <center>
-                    <div className="row">
+                      <div className="row">
                         <div className="col-md-12">
-                        <Buttton title="Login" classname="freelancer-dark-btn" onclick={handleSubmit}/>
-                        <p>Or Sign in With</p>
-                          <a href="">
-                            <img
-                              src="https://static.vecteezy.com/system/resources/previews/023/986/613/original/facebook-logo-facebook-logo-transparent-facebook-icon-transparent-free-free-png.png"
-                              style={{ width: "40px" }}
-                            />
-                          </a>
-                          &nbsp;
-                          <a href="">
-                            <img
-                              src="https://ouch-cdn2.icons8.com/VGHyfDgzIiyEwg3RIll1nYupfj653vnEPRLr0AeoJ8g/rs:fit:456:456/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvODg2/LzRjNzU2YThjLTQx/MjgtNGZlZS04MDNl/LTAwMTM0YzEwOTMy/Ny5wbmc.png"
-                              style={{ width: "40px" }}
-                            />
-                          </a>
-                          &nbsp;
-                          <a href="">
-                            <img
-                              src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
-                              style={{ width: "35px" }}
-                            />
-                          </a>
-                          
+                          <Buttton
+                            title="Login"
+                            classname="freelancer-dark-btn px-5 shadow"
+                            onclick={handleSubmit}
+                          />
                         </div>
                       </div>
                       <p className="mt-4">
-                        Don’t have an account? <Link to="/signup">Sign up now</Link>
+                        Don’t have an account?{" "}
+                        <Link to="/signup">Sign up now</Link>
                       </p>
                     </center>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+
+              <div className="col-lg-6 col-12 pt-4 pt-lg-0 text-end content">
                 <img src={Login_icon} className="img-fluid" alt="" />
               </div>
             </div>
@@ -127,7 +137,6 @@ function Login() {
         </div>
 
         <Footer />
-      </div>
     </>
   );
 }

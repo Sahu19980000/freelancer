@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Mainheading from "../../components/Mainheading";
-
 import Brand_card from "../../components/Brand_carousal";
 import Howshouldwork from "./howshouldwork";
 import "./home.css";
@@ -12,9 +11,10 @@ import Joinvideosection from "./join-video-section";
 import TestimonialSection from "./TestimonialSection";
 import image_bg from "../../img/vector-1.jpg"
 
-function Home() {
+function Home() 
+{
   return (
-    <div>
+    <>
       <Header />
       <Howshouldwork />
       <main id="main">
@@ -116,7 +116,7 @@ function Home() {
         </section>
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
 

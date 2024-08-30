@@ -17,7 +17,6 @@ import Package_box from "../pages/client_workflow/package_show";
 
 function Routes_page() {
   return (
-    <div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/welcome" element={<WelcomUser />} />
@@ -33,7 +32,6 @@ function Routes_page() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/Signup" element={<Signup />} />
       </Routes>
-    </div>
   );
 }
 

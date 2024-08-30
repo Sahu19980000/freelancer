@@ -58,8 +58,6 @@ function Header() {
   };
 
   return (
-    <>
-      <div>
         <header id="header" className="fixed-top ">
           <div className="container-fluid align-items-center px-5 d-none d-lg-block">
             <div className="row">
@@ -318,8 +316,6 @@ function Header() {
             </div>
           </div>
         </header>
-      </div>
-    </>
   );
 }
 
