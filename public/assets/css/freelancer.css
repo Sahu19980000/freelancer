@@ -3,6 +3,7 @@
   --secondary-color:#06D001;
   --light-color:#ffffff;
   --light-bg:#e0f3e2;
+  --third-color:#95FC89;
 }
 /* shared css */
 
@@ -137,8 +138,8 @@
 .upwork-game-container{
   border-radius: 25px;
   padding: 40px;
- width: 100%;
- background-color: var(--light-bg);
+  width: 100%;
+  background-color: var(--light-bg);
 }
 
 /* home page other-section */
@@ -257,7 +258,7 @@
 }
 
 /* login css */
-.login-container{
+.login-container ,#signup-container{
   margin:4em 0em;
   padding: 80px 0px;
 }
@@ -298,6 +299,7 @@
 /* sign up css */
 #signup-container{
   padding:120px 0px;
+  background-color: #fff;
 }
 .signup_box{
   position: relative;
@@ -308,6 +310,18 @@
     bottom: 0;
     left: 0;
     position: absolute;
+}
+.signup-input{
+  background-color: var(--third-color);
+}
+.signup-input:hover{
+  background-color: #fff;
+}
+.signup-input-others{
+ background-color: #fff;
+}
+.signup-input-others:hover{
+  background-color: var(--third-color);
 }
 
 .uploadFile {
@@ -499,6 +513,14 @@
   padding: 5em 0;
 }
 
+/* email verify css */
+.email_verify-container{
+  padding: 4em;
+  margin: 7em 0px 0px 0px;
+  width: 100%;
+  height: auto;
+}
+
 /* responsive css */
 
 @media screen and (max-width: 320px) {
@@ -592,7 +614,7 @@
 
   .main-heading {
     line-height: 65px;
-    font-size: 45px !important;
+    font-size: 36px !important;
   }
   
   .search_box{

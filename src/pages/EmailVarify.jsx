@@ -5,6 +5,9 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import axios from "axios";
 import Button from "../components/Buttton";
+import Login_icon from "../img/login-bg.png";
+import email_icon from "../img/email.png";
+import Mainheading from "../components/Mainheading";
 
 function EmailVarfy() {
   const navigate = useNavigate();
@@ -12,7 +15,6 @@ function EmailVarfy() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
-
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -53,7 +55,7 @@ function EmailVarfy() {
         `https://ubm.annapurnadhamagro.com/api/send-verify-email/${email}`,
         {
           headers: {
-            Accept:"application/json",
+            Accept: "application/json",
             Authorization: `Bearer ${token}`,
           },
         }
@@ -75,81 +77,76 @@ function EmailVarfy() {
 
   return (
     <>
-      <div>
-        {/* <Header /> */}
-        <div className="container mb-5" data-aos="fade-up">
-          <div className="section-title">
-            <p></p>
-          </div>
-
+      <Header />
+      <section className="email_verify-container">
+        <div className="container mb-5 shadow" data-aos="fade-up">
           <div className="row">
-            <div className="col-lg-6  order-lg-2">
-              <div className="card">
-                <div className="card-body">
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <center>
-                    <div className="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-                      <img
-                        src="assets/img/mail.png"
-                        className="img-fluid"
-                        alt=""
-                        style={{ width: "70px" }}
-                      />
-                    </div>
-                  </center>
-                  <br />
-                  <center>
-                    <h2 style={{ color: "#0800CF" }}>
-                      Please verify your email
-                    </h2>
-                  </center>
-                 
-                  <p>
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered alteration in some
-                    form, by injected humour, or randomised words which don't
-                    look even slightly believable.{" "}
-                  </p>
-                  <br />
-                  <input type="hidden" value={email} />
-                  <center>
-                    <Button className="freelancer-dark-btn"  onclick={handleVerifyEmail}> 
-                    Send again
-                    </Button>
-                 
-                    <a
-                      href="https://accounts.google.com/InteractiveLogin/signinchooser?ifkv=AaSxoQw4zKLGl-5I_GvZb6GlK5-Yw29j9rZbm0gemRPdMCA3euUUC4P0pCsg1amz1pqSuOwh_h6KDw&ddm=0&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
-                      onClick={handleVerifyEmail}
-                      className="get-started-btn"
-                      target="_blank"
-                    >
-                      Go to Gmail inbox
-                    </a>
-                  </center>
-                  {/* {message && <p>{message}</p>} */}
-
-                  <center>
-                    {/* {loading ? <span style={{color: "red"}}>Loading...</span> : <p style={{color: "#0800cf"}}>{message}</p>} */}
-                    <br />
-                    {loading && <p style={{ color: "red" }}>Loading...</p>}
-                    {message && <p style={{ color: "blue " }}>{message}</p>}
-                  </center>
-
-                 
+            <div className="col-lg-6 bg-white d-flex align-items-center flex-column justify-content-center">
+              <br />
+              <center>
+                <div className="col-lg-6 content">
+                  <img
+                    src={email_icon}
+                    className="img-fluid"
+                    alt="email_icon"
+                    style={{ width: "150px" }}
+                  />
                 </div>
-              </div>
+              </center>
+              <br />
+              <center>
+                <Mainheading
+                  title="Please verify your email"
+                  color="#000000"
+                  size="24px"
+                  textalign="center"
+                />
+              </center>
+
+              <p>
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by
+                injected humour, or randomised words which don't look even
+                slightly believable.{" "}
+              </p>
+              <br />
+              <input type="hidden" value={email} />
+              <center>
+                <div className="d-flex">
+                  <Button
+                    title="Send again"
+                    classname="freelancer-light-btn px-2 p-0 shadow w-50 h6 font-weight-bold"
+                    onclick={handleVerifyEmail}
+                  />
+                  <a
+                    href="https://accounts.google.com/InteractiveLogin/signinchooser?ifkv=AaSxoQw4zKLGl-5I_GvZb6GlK5-Yw29j9rZbm0gemRPdMCA3euUUC4P0pCsg1amz1pqSuOwh_h6KDw&ddm=0&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+                    target="_blank"
+                  >
+                    <Button
+                      title="Gmail Inbox"
+                      classname="freelancer-dark-btn mx-2 px-2 p-0 shadow w-100 h6 font-weight-bold"
+                      onclick={handleVerifyEmail}
+                    />
+                  </a>
+                </div>
+              </center>
+              {/* {message && <p>{message}</p>} */}
+
+              <center>
+                {/* {loading ? <span style={{color: "red"}}>Loading...</span> : <p style={{color: "#0800cf"}}>{message}</p>} */}
+                <br />
+                {loading && <p style={{ color: "red" }}>Loading...</p>}
+                {message && <p style={{ color: "blue " }}>{message}</p>}
+              </center>
             </div>
 
-            <div className="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-              <img src="assets/img/log.png" className="img-fluid" alt="" />
+            <div className="col-lg-6 content p-0">
+              <img src={Login_icon} className="img-fluid" alt="" />
             </div>
           </div>
         </div>
-        {/* <Footer /> */}
-      </div>
+      </section>
+      <Footer />
     </>
   );
 }

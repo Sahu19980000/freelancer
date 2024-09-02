@@ -55,7 +55,7 @@ function Login() {
       <div className="login-container " data-aos="fade-up">
         <div className="container bg-white my-5">
           <div className="row">
-            <div className="col-lg-6 col-12">
+            <div className="col-lg-6 col-12 ">
               <div className="login-box">
                 <div className="card-body pt-3 d-flex justify-content-center flex-column">
                   <Mainheading
@@ -129,6 +129,7 @@ function Login() {
                   </div>
 
                   <center>
+                    
                     <div className="row">
                       <div className="col-md-12">
                         <Buttton
@@ -138,6 +139,7 @@ function Login() {
                         />
                       </div>
                     </div>
+
                     <p className="mt-4">
                       Don’t have an account?{" "}
                       <Link to="/signup">Sign up now</Link>
