@@ -100,7 +100,7 @@
   border:1px solid #000;
   border-radius: 25px;
   padding: 5px;
-  padding-left: 45px;
+  width:-webkit-fill-available;
 }
 .my-custom-class{
     top:5px;
@@ -259,8 +259,8 @@
 
 /* login css */
 .login-container ,#signup-container{
-  margin:4em 0em;
-  padding: 80px 0px;
+  padding: 10px 0px;
+  height: 50%;
 }
 .login-box .login-container{
     border-radius: 10px;
@@ -274,6 +274,11 @@
   height: 100%;
 }
 
+.left-login-box , .left-signup-box{
+  background-image: url('../img/login-bg.png');
+  background-size: cover;
+  background-position: center;
+}
 /* divider css */
 .divider {
   display: flex;
@@ -298,7 +303,6 @@
 
 /* sign up css */
 #signup-container{
-  padding:120px 0px;
   background-color: #fff;
 }
 .signup_box{
@@ -515,10 +519,23 @@
 
 /* email verify css */
 .email_verify-container{
-  padding: 4em;
-  margin: 7em 0px 0px 0px;
+  padding: 1em;
   width: 100%;
   height: auto;
+}
+
+/* welcome css */
+
+#welcome-section{
+  width: 100%;
+  height: auto;
+}
+
+/* post-project-section */
+.post-project-section{
+  width: 100%;
+  height: auto;
+  margin:12em 0px;
 }
 
 /* responsive css */

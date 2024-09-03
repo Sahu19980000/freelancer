@@ -51,9 +51,8 @@ function Login() {
 
   return (
     <>
-      <Header />
       <div className="login-container " data-aos="fade-up">
-        <div className="container bg-white my-5">
+        <div className="container bg-white">
           <div className="row">
             <div className="col-lg-6 col-12 ">
               <div className="login-box">
@@ -62,6 +61,7 @@ function Login() {
                     title="Welcome back"
                     color="#000000"
                     textalign="center"
+                    size="32px"
                   />
                   <p className="text-center">Login into your account</p>
 
@@ -71,13 +71,12 @@ function Login() {
                         <img
                           src="https://ouch-cdn2.icons8.com/VGHyfDgzIiyEwg3RIll1nYupfj653vnEPRLr0AeoJ8g/rs:fit:456:456/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvODg2/LzRjNzU2YThjLTQx/MjgtNGZlZS04MDNl/LTAwMTM0YzEwOTMy/Ny5wbmc.png"
                           style={{ width: "40px" }}
+                          className="img-fluid"
                         />
                       </a>
                       Google
                     </span>
                   </div>
-                  <br />
-
                   <div>
                     <div class="divider">
                       <span class="divider-text">Or continue with</span>
@@ -88,7 +87,7 @@ function Login() {
                   <div className="form-group">
                     <input
                       type="email"
-                      className="form-control form-control-lg"
+                      className="form-control form-control-sm"
                       id="exampleInputEmail1"
                       aria-describedby="emailHelp"
                       placeholder="Enter Email"
@@ -102,7 +101,7 @@ function Login() {
                   <div className="form-group input-password">
                     <input
                       type={type}
-                      className="form-control form-control-lg"
+                      className="form-control form-control-sm"
                       id="exampleInputPassword1"
                       placeholder="Password"
                       autoComplete="current-password"
@@ -112,10 +111,10 @@ function Login() {
                       value={password}
                     />
                       <span
-                        className="px-3 py-2 bg-gray-100 cursor-pointer psd-icon "
+                        className="px-3 py-0 bg-gray-100 cursor-pointer psd-icon "
                         onClick={handleToggle}
                       >
-                        {isVisible ? <Eye size={24} /> : <EyeOff size={24} />}
+                        {isVisible ? <Eye size={18} /> : <EyeOff size={18} />}
                       </span>
                     
 
@@ -134,13 +133,13 @@ function Login() {
                       <div className="col-md-12">
                         <Buttton
                           title="Login"
-                          classname="freelancer-dark-btn px-5 p-0 shadow w-100 h3 font-weight-bold" 
+                          classname="freelancer-dark-btn px-5 p-0 shadow w-100 h5 font-weight-bold" 
                           onclick={handleSubmit}
                         />
                       </div>
                     </div>
 
-                    <p className="mt-4">
+                    <p className="mt-1">
                       Don’t have an account?{" "}
                       <Link to="/signup">Sign up now</Link>
                     </p>
@@ -149,14 +148,13 @@ function Login() {
               </div>
             </div>
 
-            <div className="col-lg-6 col-12 pt-4 pt-lg-0 p-0">
-              <img src={Login_icon} className="img-fluid" alt="" />
+            <div className="col-lg-6 col-12 pt-4 pt-lg-0 p-0 left-login-box">
+              
             </div>
+            
           </div>
         </div>
       </div>
-
-      <Footer />
     </>
   );
 }

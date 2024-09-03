@@ -77,11 +77,10 @@ function EmailVarfy() {
 
   return (
     <>
-      <Header />
       <section className="email_verify-container">
         <div className="container mb-5 shadow" data-aos="fade-up">
           <div className="row">
-            <div className="col-lg-6 bg-white d-flex align-items-center flex-column justify-content-center">
+            <div className="col-lg-6 py-5 bg-white d-flex align-items-center flex-column justify-content-center">
               <br />
               <center>
                 <div className="col-lg-6 content">
@@ -140,13 +139,12 @@ function EmailVarfy() {
               </center>
             </div>
 
-            <div className="col-lg-6 content p-0">
-              <img src={Login_icon} className="img-fluid" alt="" />
+            <div className="col-lg-6 p-0 left-signup-box">
+              {/* <img src={Login_icon} className="img-fluid" alt="" /> */}
             </div>
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 }

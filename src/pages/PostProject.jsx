@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 import Icon from "../img/Icon.png";
 import Header from "../components/Header";
@@ -9,7 +9,7 @@ import Button from "../components/Buttton";
 import Category_card from "../components/Category_card";
 
 function PostProject() {
-  const[uploadFile,Setfileupload] = useState('attach your file here')
+  const [uploadFile, Setfileupload] = useState("attach your file here");
 
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
@@ -48,9 +48,12 @@ function PostProject() {
     console.log("Form submitted", formData);
   };
 
-  const get_value = (e)=>{
+  const get_value = (e) => {
     Setfileupload(e.target.files[0].name);
-    
+  };
+
+  const cancel = ()=>{
+    <NavLink to="/" />
   }
 
   const [token, setToken] = useState(null);
@@ -70,8 +73,8 @@ function PostProject() {
       <div>
         <Header />
         <main id="main">
-          <section id="about" className="about">
-            <div className="container-fluid" id="grad1">
+          <section id="post-project" className="post-project-section">
+            <div className="container" id="grad1">
               <div className="row justify-content-center mt-0">
                 <div className="col-md-12 mt-3 mb-2">
                   <div className="card px-0 pt-4 pb-0 mt-3 mb-3">
@@ -115,11 +118,30 @@ function PostProject() {
                                     </div>
                                     <div class="form-group"></div>
                                     <br />
-                                    <Button
-                                      classname="freelancer-dark-btn"
-                                      onclick={nextStep}
-                                      title="continue"
-                                    />
+
+                                    
+                                    <div className="d-flex">
+                                      <a
+                                        href="https://accounts.google.com/InteractiveLogin/signinchooser?ifkv=AaSxoQw4zKLGl-5I_GvZb6GlK5-Yw29j9rZbm0gemRPdMCA3euUUC4P0pCsg1amz1pqSuOwh_h6KDw&ddm=0&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+                                        target="_blank"
+                                      >
+                                        <Button
+                                          title="Cancel"
+                                          classname="freelancer-light-btn px-2 p-0 shadow w-50 h6 font-weight-bold"
+                                          onclick={cancel}
+                                        />
+                                      </a>
+                                      <a
+                                        href="https://accounts.google.com/InteractiveLogin/signinchooser?ifkv=AaSxoQw4zKLGl-5I_GvZb6GlK5-Yw29j9rZbm0gemRPdMCA3euUUC4P0pCsg1amz1pqSuOwh_h6KDw&ddm=0&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+                                        target="_blank"
+                                      >
+                                        <Button
+                                          title="Continue"
+                                          classname="freelancer-dark-btn mx-2 px-2 p-0 shadow w-100 h6 font-weight-bold"
+                                          onclick={nextStep}
+                                        />
+                                      </a>
+                                    </div>
                                   </form>
                                 </div>
                               </div>
@@ -400,15 +422,15 @@ function PostProject() {
                             </textarea>
                             <br />
                             <div className="">
-                            <label class="uploadFile">
-                              <span class="filename">{uploadFile}</span>
-                              <input
-                                type="file"
-                                class="inputfile-post-project form-control"
-                                onChange={get_value}
-                                name="file"
-                              />
-                            </label>
+                              <label class="uploadFile">
+                                <span class="filename">{uploadFile}</span>
+                                <input
+                                  type="file"
+                                  class="inputfile-post-project form-control"
+                                  onChange={get_value}
+                                  name="file"
+                                />
+                              </label>
                             </div>
 
                             <input

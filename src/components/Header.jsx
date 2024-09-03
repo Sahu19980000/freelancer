@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Search } from "lucide-react";
 import crossicon from "../img/cross.png";
+import Button from "./Buttton";
 
 function Header() {
   const navigate = useNavigate();
@@ -100,15 +101,21 @@ function Header() {
 
               <div className="col-md-3">
                 {!token ? (
-                  <>
-                    <Link to="/login" className="get-started-btn">
-                      Login
-                    </Link>
+                  <div className="d-flex">
+                  <Link to="/login" >
+                    <Button
+                          title="Login"
+                          classname="freelancer-dark-btn mx-2 my-0 px-4 w-auto h6 font-weight-bold" 
+                    />
+                   </Link>
 
-                    <Link to="/signup" className="get-started-btn">
-                      SignUp
-                    </Link>
-                  </>
+                   <Link to="/signup" >
+                    <Button
+                          title="signup"
+                          classname="freelancer-light-btn mx-2 my-0 px-4 w-auto h6 font-weight-bold" 
+                    />
+                   </Link>
+                  </div>
                 ) : loading ? (
                   <p className="loader" style={{ color: "red" }}>
                     Loading...

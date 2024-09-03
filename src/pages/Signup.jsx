@@ -51,7 +51,7 @@ function Signup() {
         password: password,
         c_password: password,
         country: country,
-        joinas: joinas,
+        joinas: joinas, 
       })
 
       .then((result) => {
@@ -86,6 +86,7 @@ function Signup() {
 
   const nextStep = () => {
     setStep(step + 1);
+    alert(joinas);
   };
 
   const prevStep = () => {
@@ -94,31 +95,29 @@ function Signup() {
 
   return (
     <>
-      <Header />
       <section id="signup-container" className="signup-container-box">
         <div className="container" id="grad1">
           <div className="row justify-content-center mt-0">
-            <div className="col-md-12 shadow ">
+            <div className="col-md-12">
+
               {step === 1 && (
                 <fieldset>
-                  <div className="container" data-aos="fade-up">
+                  <div className="container shadow" data-aos="fade-up">
                     <div className="row">
                       <div className="col-lg-6 py-5 d-flex justify-content-center flex-column ">
                         <Mainheading
                           title="Join as a client or Company"
                           color="#000000"
                           textalign="center"
+                          size="32px"
                         />
                         <p className="text-center">
                           Please select the option to go ahead.
                         </p>
 
-                        <br />
-
                         <div className="row">
                           <div className="col-md-12">
-                            <div className="row ml-5 mr-5">
-
+                            <div className="row">
                               <div className="col-md-6">
                                 <div className=" rounded border signup-input">
                                   <div className="card-body">
@@ -181,14 +180,12 @@ function Signup() {
                                   </div>
                                 </div>
                               </div>
-
                             </div>
-
-                            <br />
+                            
                             <center>
                               <Buttton
                                 title="Create Account"
-                                classname="freelancer-dark-btn px-5 p-0 shadow w-100 h5 font-weight-bold"
+                                classname="freelancer-dark-btn px-5 p-0 shadow w-100 h6 font-weight-bold"
                                 onclick={nextStep}
                               />
 
@@ -202,11 +199,7 @@ function Signup() {
                         </div>
                       </div>
 
-                      <div className="col-lg-6 content">
-                        <div className="signup_box">
-                          <img src={Login_icon} className="img-fluid" alt="" />
-                          <img src={arrow_icon} className="arrow-icon" />
-                        </div>
+                      <div className="col-lg-6 p-0 left-signup-box">
                       </div>
                     </div>
                   </div>
@@ -214,7 +207,7 @@ function Signup() {
               )}
               {step === 2 && (
                 <fieldset>
-                  <div className="container mb-5" data-aos="fade-up">
+                  <div className="container mb-5 shadow" data-aos="fade-up">
                     <div className="row">
                       <div className="col-lg-6 p-0 ">
                         <div className="card-body h-100 w-100 flex-column d-flex justify-content-center">
@@ -222,12 +215,12 @@ function Signup() {
                             title=" Sign up to hire talent"
                             color="#000000"
                             textalign="center"
+                            size="32px"
                           />
                           <p>
                             Please help us with below details to onboard you to
                             our platform.
                           </p>
-                          <br />
                           <div className="w-100 d-flex justify-content-center">
                             <span className="d-flex justify-content-center rounded align-items-center border border-2 w-50">
                               <a href="" className="px-2 py-2">
@@ -239,7 +232,6 @@ function Signup() {
                               Google
                             </span>
                           </div>
-                          <br />
 
                           <div>
                             <div class="divider">
@@ -282,6 +274,30 @@ function Signup() {
                               className="form-control"
                               id="exampleInputPassword1"
                               placeholder="Password"
+                              autoComplete="current-password"
+                              onChange={(e) => {
+                                setPassword(e.target.value);
+                              }}
+                              value={password}
+                            />
+                            <span
+                              className="px-3 py-2 bg-gray-100 cursor-pointer psd-icon "
+                              onClick={handleToggle}
+                            >
+                              {isVisible ? (
+                                <Eye size={24} />
+                              ) : (
+                                <EyeOff size={24} />
+                              )}
+                            </span>
+                          </div>
+
+                          <div className="form-group input-password">
+                            <input
+                              type={type}
+                              className="form-control"
+                              id="exampleInputPassword1"
+                              placeholder="Confirm Password"
                               autoComplete="current-password"
                               onChange={(e) => {
                                 setPassword(e.target.value);
@@ -678,24 +694,19 @@ function Signup() {
                             </select>
                           </div>
 
-                          <br />
                           <center>
                             <Buttton
                               title="SignUp"
                               classname="freelancer-dark-btn"
                               onclick={handleSubmit}
                             />
-                            <br />
-                            <br />
                           </center>
                           {/* </form> */}
                         </div>
                       </div>
 
-                      <div className="col-lg-6 content p-0">
-                        <div className="signup_box p-0">
-                          <img src={Login_icon} className="img-fluid" alt="" />
-                        </div>
+                      <div className="col-lg-6 p-0 left-signup-box">
+                        
                       </div>
                     </div>
                   </div>
@@ -705,7 +716,6 @@ function Signup() {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 }
