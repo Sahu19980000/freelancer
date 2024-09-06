@@ -10,11 +10,13 @@ function ExplorePages() {
     <div>
       <Header />
       <div className="image-container">
+        
         <img
           src="assets/img/explore.png"
           class="img-fluid"
           alt="Responsive image"
         />
+
         <div className="overlay">
           <div className="overlay-content">
             <h1>Website Design</h1>
@@ -25,6 +27,7 @@ function ExplorePages() {
           </div>
         </div>
       </div>
+
       <section id="about" className="about">
         <div className="container mt-5" data-aos="fade-up">
           <div className="row">
@@ -279,7 +282,9 @@ function ExplorePages() {
             </div>
           </div>
         </div>
+
       </section>
+
       <Footer />
     </div>
   );

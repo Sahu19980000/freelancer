@@ -43,7 +43,7 @@ function Signup() {
 
   const handleSubmit = () => {
     console.log(name, email, password, country, joinas);
-
+    
     axios
       .post("https://ubm.annapurnadhamagro.com/api/register", {
         name: name,
@@ -181,7 +181,7 @@ function Signup() {
                                 </div>
                               </div>
                             </div>
-                            
+                             
                             <center>
                               <Buttton
                                 title="Create Account"

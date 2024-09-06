@@ -188,6 +188,9 @@ h6 {
   white-space: nowrap;
   padding: 10px 0 10px 24px;
 }
+.nav-menu > ul > li >div{
+  padding: 0px;
+}
 
 .nav-menu a {
   display: block;
@@ -1824,7 +1827,7 @@ section {
 /* # slick...... */
 
 body {
-  background: #eee;
+  background: #fff;
 }
 .news {
   width: 160px;

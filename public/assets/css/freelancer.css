@@ -61,8 +61,12 @@
   color: #ffffff;
 }
 
+.post_project_container{
+
+}
+
 .freelancer-category-card {
-  width: auto;
+  width: 50%;
   height: auto;
 }
 .freelancer-category-card .card-title {
@@ -170,7 +174,7 @@
    box-shadow: 29px 27px 0px -6px #0E8B00;
  }
  .dropdown:hover .dropdown-menu {
-  width: 85%;
+  width: auto;
   display: block;
   margin-top: 0; /* Removes the gap so it’s connected to the button */
 }
@@ -256,6 +260,10 @@
   display: flex;
   justify-content: space-between;
 }
+
+.testimonial-left .carousel-control-prev .visually-hidden ,  .testimonial-left .carousel-control-next .visually-hidden{
+  display: none;
+ }
 
 /* login css */
 .login-container ,#signup-container{
@@ -535,7 +543,18 @@
 .post-project-section{
   width: 100%;
   height: auto;
-  margin:12em 0px;
+  margin: 9em 0px 1em 0em;
+}
+.post_project_container{
+
+ width: 100%;
+ height: auto;
+}
+
+.post-project-right{
+  background-size: cover;
+  background-image: url('../img/postproject.png');
+  
 }
 
 /* responsive css */
@@ -567,7 +586,7 @@
     padding: 1em !important;
   }
   .how-should-container{
-    margin:11em 0em 0em 0em;
+    margin:4em 0em 0em 0em;
   }
   .why-choose-left{
       padding: 10px;
@@ -581,7 +600,11 @@
     width: 100vw;
     top: 0;
     z-index: 99;
-}
+   }
+
+  .all_categories{
+     display: none;
+   }
 
 .mobile-menu .cross-icon {
   border-radius: 5px;
@@ -600,6 +623,7 @@
   .swiper-container {
     padding: 0px;
   }
+
 
   /* category css */
   .freelancer-category-card .card-title{
@@ -641,8 +665,4 @@
     width: 65%;
   }
 }
-/* .search_box {
-  padding: 10px;
-  border: 1px solid #80808061;
-  width: 65%;
-} */
+

@@ -52,9 +52,9 @@ function PostProject() {
     Setfileupload(e.target.files[0].name);
   };
 
-  const cancel = ()=>{
-    <NavLink to="/" />
-  }
+  const cancel = () => {
+    <NavLink to="/" />;
+  };
 
   const [token, setToken] = useState(null);
   const navigate = useNavigate();
@@ -77,25 +77,31 @@ function PostProject() {
             <div className="container" id="grad1">
               <div className="row justify-content-center mt-0">
                 <div className="col-md-12 mt-3 mb-2">
-                  <div className="card px-0 pt-4 pb-0 mt-3 mb-3">
-                    <form id="msform" onSubmit={handleSubmit}>
+                  <div className="px-0 pt-4 pb-0 mt-3 mb-3">
+                    <form id="msform" onSubmit={handleSubmit} className="">
                       {step === 1 && (
                         <fieldset>
-                          <div className="row">
-                            <div className="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-                              <div className="card">
+                          <div className="row shadow">
+                            <div className="col-lg-6 pt-lg-0 content">
+                              <div className="">
                                 <div className="card-body">
+                                  <img src={Icon} />
+
                                   <form>
                                     <Mainheading
                                       title="Post a project"
-                                      color="#0800cf"
+                                      color="#000"
+                                      size="center"
                                     />
 
-                                    <br />
+                                    <p className="text-center">
+                                      Lorem Ipsum is simply dummy text.{" "}
+                                    </p>
+
                                     <div class="form-group">
                                       <input
                                         type="text"
-                                        className="form-control form-control-lg"
+                                        className="form-control form-control-sm"
                                         placeholder="I want to create new project."
                                       />
                                       <small
@@ -104,8 +110,7 @@ function PostProject() {
                                       >
                                         <br />
                                         OR
-                                        <br />
-                                        <select className="form-control form-control-lg mt-5">
+                                        <select className="form-control form-control-sm mt-2">
                                           <option>
                                             Rework on Previous Project
                                           </option>
@@ -116,10 +121,9 @@ function PostProject() {
                                         </select>
                                       </small>
                                     </div>
-                                    <div class="form-group"></div>
-                                    <br />
 
-                                    
+                                    <div class="form-group"></div>
+
                                     <div className="d-flex">
                                       <a
                                         href="https://accounts.google.com/InteractiveLogin/signinchooser?ifkv=AaSxoQw4zKLGl-5I_GvZb6GlK5-Yw29j9rZbm0gemRPdMCA3euUUC4P0pCsg1amz1pqSuOwh_h6KDw&ddm=0&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
@@ -127,7 +131,7 @@ function PostProject() {
                                       >
                                         <Button
                                           title="Cancel"
-                                          classname="freelancer-light-btn px-2 p-0 shadow w-50 h6 font-weight-bold"
+                                          classname="freelancer-light-btn mx-5 px-2 p-0 shadow w-50 h6 font-weight-bold"
                                           onclick={cancel}
                                         />
                                       </a>
@@ -147,108 +151,120 @@ function PostProject() {
                               </div>
                             </div>
 
-                            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-                              <img
+                            <div class="col-lg-6 pt-4 pt-lg-0 post-project-right">
+                              {/* <img
                                 src="assets/img/postproject.png"
                                 className="img-fluid"
                                 alt=""
-                              />
+                              /> */}
                             </div>
                           </div>
                         </fieldset>
                       )}
+
                       {step === 2 && (
-                        <fieldset>
-                          <div className="form-card r-5 ml-5">
-                            <Mainheading
-                              title="Post a project"
-                              color="#0800CF"
-                              size="32px"
-                            />
-                            <Mainheading
-                              title="Select project categories"
-                              size="24px"
-                            />
-                            <p></p>
-                            <nav class="navbar navbar-light bg-light">
-                              <form class="form-inline">
-                                <input
-                                  class="form-control mr-sm-2"
-                                  type="search"
-                                  placeholder="Search"
-                                  aria-label="Search"
+                        <div className="post_project_container">
+                          <div className="row">
+                            <div className="col-md-8">
+                            <fieldset>
+                            <div className="form-card r-5 ml-5">
+                              <Mainheading
+                                title="Post a project"
+                                color="#000000"
+                                size="32px"
+                              />
+                              <p>Select project categories</p>
+                              <nav class="navbar">
+                                <form class="form-inline">
+                                  <input
+                                    class="form-control mr-sm-2"
+                                    type="search"
+                                    placeholder="Search"
+                                    aria-label="Search"
+                                  />
+                                  <button
+                                    class="btn btn-outline-primary my-2 my-sm-0"
+                                    type="submit"
+                                  >
+                                    Search
+                                  </button>
+                                </form>
+                              </nav>
+
+                              <div className="all-category mb-2">
+                                <Category_card
+                                  img={Icon}
+                                  maintitle="Development & IT"
+                                  skillscounter="1853 skills"
+                                  rating="4.85/5"
                                 />
-                                <button
-                                  class="btn btn-outline-primary my-2 my-sm-0"
-                                  type="submit"
-                                >
-                                  Search
-                                </button>
-                              </form>
-                            </nav>
 
-                            <div className="all-category mb-2">
-                              <Category_card
-                                img={Icon}
-                                maintitle="Development & IT"
-                                skillscounter="1853 skills"
-                                rating="4.85/5"
-                              />
+                                <Category_card
+                                  img={Icon}
+                                  maintitle="Development & IT"
+                                  skillscounter="1853 skills"
+                                  rating="4.85/5"
+                                />
 
-                              <Category_card
-                                img={Icon}
-                                maintitle="Development & IT"
-                                skillscounter="1853 skills"
-                                rating="4.85/5"
-                              />
+                                <Category_card
+                                  img={Icon}
+                                  maintitle="Development & IT"
+                                  skillscounter="1853 skills"
+                                  rating="4.85/5"
+                                />
 
-                              <Category_card
-                                img={Icon}
-                                maintitle="Development & IT"
-                                skillscounter="1853 skills"
-                                rating="4.85/5"
-                              />
+                                <Category_card
+                                  img={Icon}
+                                  maintitle="Development & IT"
+                                  skillscounter="1853 skills"
+                                  rating="4.85/5"
+                                />
 
-                              <Category_card
-                                img={Icon}
-                                maintitle="Development & IT"
-                                skillscounter="1853 skills"
-                                rating="4.85/5"
-                              />
+                                <Category_card
+                                  img={Icon}
+                                  maintitle="Development & IT"
+                                  skillscounter="1853 skills"
+                                  rating="4.85/5"
+                                />
 
-                              <Category_card
-                                img={Icon}
-                                maintitle="Development & IT"
-                                skillscounter="1853 skills"
-                                rating="4.85/5"
-                              />
+                                <Category_card
+                                  img={Icon}
+                                  maintitle="Development & IT"
+                                  skillscounter="1853 skills"
+                                  rating="4.85/5"
+                                />
+                              </div>
 
-                              <Category_card
-                                img={Icon}
-                                maintitle="Development & IT"
-                                skillscounter="1853 skills"
-                                rating="4.85/5"
-                              />
+                              <div
+                                style={{ marginRight: "880px" }}
+                                className="mb-5 mt-5 d-flex"
+                              >
+                                <Button
+                                  title="previous"
+                                  classname="freelancer-dark-btn"
+                                  onclick={prevStep}
+                                ></Button>
+                                &nbsp;&nbsp;
+                                <Button
+                                  title="Continue"
+                                  classname="freelancer-dark-btn"
+                                  onclick={nextStep}
+                                ></Button>
+                              </div>
                             </div>
-                            <div
-                              style={{ marginRight: "880px" }}
-                              className="mb-5 mt-5"
-                            >
-                              <Button
-                                title="previous"
-                                classname="freelancer-dark-btn"
-                                onclick={prevStep}
-                              ></Button>
-                              &nbsp;&nbsp;
-                              <Button
-                                title="Continue"
-                                classname="freelancer-dark-btn"
-                                onclick={nextStep}
-                              ></Button>
+                          </fieldset>
+                            </div>
+                            <div class="col-md-4 pt-4 pt-lg-0 post-project-right">
+                              {/* <img
+                                src="assets/img/postproject.png"
+                                className="img-fluid"
+                                alt=""
+                              /> */}
                             </div>
                           </div>
-                        </fieldset>
+                        </div>
                       )}
+
                       {step === 3 && (
                         <fieldset>
                           <div className="form-card mr-5 ml-5">
@@ -398,6 +414,7 @@ function PostProject() {
                           </div>
                         </fieldset>
                       )}
+
                       {step === 4 && (
                         <fieldset>
                           <div className="form-card mr-5 ml-5">

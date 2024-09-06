@@ -64,20 +64,6 @@ function Home()
                                     <p class="card-text-talent">Talent Marketplace™ </p>
                                 </div>
                         </div>
-                        {/* <div class="col-md-4">
-                                <div class="card-body-section">
-                                    <h5 class="card-title-talent">Browse and buy some projects</h5>
-                                    <p class="card-text">Project Catalog™</p>
-                                </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <div class="card-body-section">
-                                    <h5 class="card-title-talent">Let us help you find the right talent</h5>
-                                    <p class="card-text">Talent Scout™</p>
-                                </div>
-                            </div>
-                        </div> */}
                         <div class="col-md-4 col-12 my-3">
                                 <div class="card-body-section">
                                     <p class="card-title-talent">Browse and buy some projects</p>
