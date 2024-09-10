@@ -118,10 +118,10 @@ function Signup() {
                         <div className="row">
                           <div className="col-md-12">
                             <div className="row">
-                              <div className="col-md-6">
+                              <div className="col-6">
                                 <div className=" rounded border signup-input">
                                   <div className="card-body">
-                                    <img src={client_img} className="rounded"/>
+                                    <img src={client_img} className="rounded py-2" width="35%" height="35%" />
                                     <br />
                                     <div className="form-check">
                                       <input
@@ -150,10 +150,10 @@ function Signup() {
                                 </div>
                               </div>
 
-                              <div className="col-md-6">
+                              <div className="col-6">
                                 <div className="signup-input-others rounded border">
                                   <div className="card-body">
-                                  <img src={company_img} className="p-2 rounded"/>
+                                  <img src={company_img} className="p-2 rounded " width="45%" height="45%"/>
                                     <br />
                                     <div className="form-check">
                                       <input

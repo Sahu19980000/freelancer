@@ -177,17 +177,12 @@ function PostProject() {
                               <nav class="navbar">
                                 <form class="form-inline">
                                   <input
-                                    class="form-control mr-sm-2"
+                                    class="form-control mr-sm-2 w-100"
                                     type="search"
                                     placeholder="Search"
                                     aria-label="Search"
                                   />
-                                  <button
-                                    class="btn btn-outline-primary my-2 my-sm-0"
-                                    type="submit"
-                                  >
-                                    Search
-                                  </button>
+                                  
                                 </form>
                               </nav>
 

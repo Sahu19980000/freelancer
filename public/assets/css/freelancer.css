@@ -286,6 +286,7 @@
   background-image: url('../img/login-bg.png');
   background-size: cover;
   background-position: center;
+  height: 80vh;
 }
 /* divider css */
 .divider {
@@ -543,7 +544,7 @@
 .post-project-section{
   width: 100%;
   height: auto;
-  margin: 9em 0px 1em 0em;
+  margin: 1em 0px 1em 0em;
 }
 .post_project_container{
 

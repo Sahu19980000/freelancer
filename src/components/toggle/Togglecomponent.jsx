@@ -9,7 +9,7 @@ function ToggleSwitch() {
   };
 
   return (
-    <div className='d-flex w-50 my-3'>
+    <div className='d-flex w-auto my-3'>
       <label className="switch">
         <input type="checkbox" checked={isChecked} onChange={handleToggle} />
         <span className="slider round"></span>

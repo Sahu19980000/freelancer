@@ -121,7 +121,7 @@ function Login() {
                     <div className="d-flex justify-content-between">
                       <ToggleSwitch />
 
-                      <a href="#" className="float-right py-2">
+                      <a href="#" className="float-right py-3">
                         Forgot Password?
                       </a>
                     </div>
