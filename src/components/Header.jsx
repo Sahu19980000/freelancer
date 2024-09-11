@@ -15,7 +15,7 @@ function Header() {
   useEffect(() => {
     const storedToken = localStorage.getItem("token");
     if (!storedToken) {
-      navigate("/login");
+      navigate("/");
     } else {
       setToken(storedToken);
     }

@@ -1,22 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Login_icon from "../img/login-bg.png";
 import Mainheading from "../components/Mainheading";
 import Buttton from "../components/Buttton";
-import arrow_icon from "../img/arrow-icon.png";
 import Notification from "../components/Notification";
 import { Eye, EyeOff } from "lucide-react";
 import client_img from "../img/Group-425.png"
 import company_img from "../img/image-22.png"
+import Swal from 'sweetalert2'
 
 function Signup() {
   const [token, setToken] = useState(null);
   const [type, setType] = useState("password");
   const [isVisible, setIsVisible] = useState(false);
   const navigate = useNavigate();
+
+  const Swal = require('sweetalert2')
 
   const handleToggle = () => {
     setIsVisible(!isVisible);
@@ -55,7 +54,12 @@ function Signup() {
       })
 
       .then((result) => {
-        console.log(result.data);
+        Swal.fire({
+          title: 'Success!',
+          text: 'Successful register please continue ',
+          icon: 'success',
+          confirmButtonText: 'Cool'
+        });
         <Notification value_data="success" />;
 
         localStorage.setItem("token", result.data.data.token);
@@ -66,7 +70,12 @@ function Signup() {
         console.log(err);
         if (err.response) {
           // Server responded with a status other than 200 range(err.response.data.message || err.response.statusText)
-          alert("Message: please check your details ");
+          Swal.fire({
+            title: 'Error!',
+            text: 'plese check your email and password',
+            icon: 'error',
+            confirmButtonText: 'Cool'
+          })
         } else if (err.request) {
           // Request was made but no response received
           alert("Message: No response from server. Please try again later.");
@@ -86,7 +95,7 @@ function Signup() {
 
   const nextStep = () => {
     setStep(step + 1);
-    alert(joinas);
+    // alert(joinas);
   };
 
   const prevStep = () => {

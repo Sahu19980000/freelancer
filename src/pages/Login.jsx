@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Form } from "react-bootstrap";
 import axios from "axios";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Login_icon from "../img/login-bg.png";
 import Mainheading from "../components/Mainheading";
 import Buttton from "../components/Buttton";
 import ToggleSwitch from "../components/toggle/Togglecomponent";
 import { Eye, EyeOff } from "lucide-react";
+import Swal from 'sweetalert2'
 
 function Login() {
   const [token, setToken] = useState(null);
@@ -23,6 +20,7 @@ function Login() {
     setType(isVisible ? "password" : "text");
   };
 
+  const Swal = require('sweetalert2')
 
   const handleSubmit = () => {
     axios
@@ -31,12 +29,23 @@ function Login() {
         password: password,
       })
       .then((result) => {
-        console.log(result.data);
+        
         localStorage.setItem("token", result.data.data.token);
+        Swal.fire({
+          title: 'Success!',
+          text: 'Successful login please continue ',
+          icon: 'success',
+          confirmButtonText: 'Cool'
+        });
         navigate("/");
       })
       .catch((error) => {
-        alert("Service error");
+        Swal.fire({
+          title: 'Error!',
+          text: 'plese check your details',
+          icon: 'error',
+          confirmButtonText: 'Cool'
+        })
         console.log(error);
       });
   };
