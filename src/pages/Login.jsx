@@ -148,7 +148,7 @@ function Login() {
               </div>
             </div>
 
-            <div className="col-lg-6 col-12 pt-4 pt-lg-0 p-0 left-login-box">
+            <div className="col-lg-6 col-12 pt-4 pt-lg-0 p-0 left-login-box d-md-block d-none">
               
             </div>
             
