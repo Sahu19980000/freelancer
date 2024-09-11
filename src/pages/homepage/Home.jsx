@@ -1,104 +1,114 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Mainheading from "../../components/Mainheading";
 import Brand_card from "../../components/Brand_carousal";
 import Howshouldwork from "./howshouldwork";
-import "./home.css";
 import Whychoose from "./why-choose";
 import Popularservices from "./popular-services";
 import Joinvideosection from "./join-video-section";
 import TestimonialSection from "./TestimonialSection";
-import image_bg from "../../img/vector-1.jpg"
+import "./home.css";
 
-function Home() 
-{
+function Home() {
+  // Get the scrollYProgress using useScroll hook
+  const { scrollYProgress } = useScroll();
+
+  // Transform the Y value to move the element upward as you scroll
+  const translateY = useTransform(scrollYProgress, [0, 1], [1,0]);
+
+  // Transform opacity to fade out as the user scrolls down
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+
   return (
     <>
       <Header />
       <Howshouldwork />
       <main id="main">
         <section id="about" className="about bg-white">
-          {/* <!---upyour work game --> */}
-
-          {/* <!--popular services --> */}
-          <Whychoose />
-          <Popularservices />
-
-          {/* <!---video section start --> */}
-          
-          {
-          /* <div
-            className="container-fluid"
-            data-aos="fade-up"
-            style={{ background: "#0800CF" }}
+          {/* Use Framer Motion to animate this section */}
+          <motion.div
+            style={{
+              y: translateY,
+              transition: "all 0.5s ease-in-out",
+            }}
           >
-            <div className="container py-2">
-              <iframe
-                className="responsive-iframe"
-                src="https://www.youtube.com/embed/tgbNymZ7vqY" 
-                title="video"
-              ></iframe>
-            </div>
-          </div> */}
+            {/* Popular services and why choose sections */}
+            <Whychoose />
+            <Popularservices />
+          </motion.div>
 
           <Joinvideosection />
 
-          {/* <!---end video section start --> */}
-
-          {/* <!--- other section --> */}
-
-          <div class="find-talent-way-container">
-            {/* <img src={image_bg} className="find-talent-overlay-img img-fluid" /> */}
-          <div class="row">
-            <div class="col-12">
-                <div class="">
-                  <Mainheading title="Find talent your way" color="#fff" />
-                   
-                    <p className="text-white find-talent-para">Work with the largest network of independent professionals and get things done—from quick
-                        turnarounds to big transformations.</p>
-                    <div class="row">
-                        <div class="col-md-4 col-12 my-3">
-                                <div class="card-body-section">
-                                    <p class="card-title-talent">Post a job and hire a professional</p>
-                                    <p class="card-text-talent">Talent Marketplace™ </p>
-                                </div>
-                        </div>
-                        <div class="col-md-4 col-12 my-3">
-                                <div class="card-body-section">
-                                    <p class="card-title-talent">Browse and buy some projects</p>
-                                    <p class="card-text-talent">Talent Marketplace™ </p>
-                                </div>
-                        </div>
-                        <div class="col-md-4 col-12 my-3">
-                                <div class="card-body-section">
-                                    <p class="card-title-talent">Post a job and hire a professional</p>
-                                    <p class="card-text-talent">Talent Marketplace™ </p>
-                                </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-         </div>
-
-          {/* <!---testimonial slider --> */}
-         <TestimonialSection />
-          
-          {/* 
-
-          {/* <!---brand section  --> */}
-
-          <div className="container mt-5 py-5">
+          {/* Other sections */}
+          <div className="find-talent-way-container">
             <div className="row">
-              <div className="col-md-12">
-                <div className="">
-                  <Brand_card />
+              <div className="col-12">
+                <div>
+                  <Mainheading title="Find talent your way" color="#fff" />
+                  <p className="text-white find-talent-para">
+                    Work with the largest network of independent professionals
+                    and get things done—from quick turnarounds to big
+                    transformations.
+                  </p>
+                  <div className="row">
+                    <div className="col-md-4 col-12 my-3">
+                      <div className="card-body-section">
+                        <p className="card-title-talent">
+                          Post a job and hire a professional
+                        </p>
+                        <p className="card-text-talent">Talent Marketplace™ </p>
+                      </div>
+                    </div>
+                    <div className="col-md-4 col-12 my-3">
+                      <div className="card-body-section">
+                        <p className="card-title-talent">
+                          Browse and buy some projects
+                        </p>
+                        <p className="card-text-talent">Talent Marketplace™ </p>
+                      </div>
+                    </div>
+                    <div className="col-md-4 col-12 my-3">
+                      <div className="card-body-section">
+                        <p className="card-title-talent">
+                          Post a job and hire a professional
+                        </p>
+                        <p className="card-text-talent">Talent Marketplace™ </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
+          {/* Testimonial Section */}
+          <motion.div
+            style={{
+              y: translateY,
+              transition: "all 0.5s ease-in-out",
+            }}
+          >
+            <TestimonialSection />
+          </motion.div>
+
+          {/* Brand section */}
+          <motion.div
+            className="container mt-5 py-5"
+            style={{
+              y: translateY,
+              transition: "all 0.5s ease-in-out",
+            }}
+          >
+            <div className="row">
+              <div className="col-md-12">
+                <div>
+                  <Brand_card />
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </section>
       </main>
       <Footer />

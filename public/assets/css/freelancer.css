@@ -265,6 +265,11 @@
   display: none;
  }
 
+ .testimonial-container .carousel-control-next-icon, .testimonial-container .carousel-control-prev-icon{
+  position: absolute;
+  right: 0;
+ }
+
 /* login css */
 .login-container ,#signup-container{
   display: flex;
