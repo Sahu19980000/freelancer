@@ -52,7 +52,7 @@ function Login() {
   return (
     <>
       <div className="login-container " data-aos="fade-up">
-        <div className="container bg-white">
+        <div className="container shadow bg-white">
           <div className="row">
             <div className="col-lg-6 col-12 ">
               <div className="login-box">
@@ -148,7 +148,7 @@ function Login() {
               </div>
             </div>
 
-            <div className="col-lg-6 col-12 pt-4 pt-lg-0 p-0 left-login-box d-md-block d-none">
+            <div className="col-lg-6 col-12 p-0 left-login-box d-md-block d-none">
               
             </div>
             

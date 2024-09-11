@@ -267,8 +267,10 @@
 
 /* login css */
 .login-container ,#signup-container{
+  display: flex;
   padding: 10px 0px;
-  height: 50%;
+  height: 100vh;
+  align-items: center;
 }
 .login-box .login-container{
     border-radius: 10px;
@@ -286,7 +288,7 @@
   background-image: url('../img/login-bg.png');
   background-size: cover;
   background-position: center;
-  height: 80vh;
+  height: auto;
 }
 /* divider css */
 .divider {
