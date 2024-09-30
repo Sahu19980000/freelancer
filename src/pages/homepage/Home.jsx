@@ -16,7 +16,7 @@ function Home() {
   const { scrollYProgress } = useScroll();
 
   // Transform the Y value to move the element upward as you scroll
-  const translateY = useTransform(scrollYProgress, [0, 1], [1,0]);
+  const translateY = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
   // Transform opacity to fade out as the user scrolls down
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
@@ -30,6 +30,7 @@ function Home() {
           {/* Use Framer Motion to animate this section */}
           <motion.div
             style={{
+              opacity: opacity,
               y: translateY,
               transition: "all 0.5s ease-in-out",
             }}
@@ -42,52 +43,65 @@ function Home() {
           <Joinvideosection />
 
           {/* Other sections */}
-          <div className="find-talent-way-container">
-            <div className="row">
-              <div className="col-12">
-                <div>
-                  <Mainheading title="Find talent your way" color="#fff" />
-                  <p className="text-white find-talent-para">
-                    Work with the largest network of independent professionals
-                    and get things done—from quick turnarounds to big
-                    transformations.
-                  </p>
-                  <div className="row">
-                    <div className="col-md-4 col-12 my-3">
-                      <div className="card-body-section">
-                        <p className="card-title-talent">
-                          Post a job and hire a professional
-                        </p>
-                        <p className="card-text-talent">Talent Marketplace™ </p>
+          <motion.div
+            style={{
+              y: translateY,
+              transition: "all 0.5s ease-in-out",
+            }}
+          >
+            <div className="find-talent-way-container">
+              <div className="row">
+                <div className="col-12">
+                  <div>
+                    <Mainheading title="Find talent your way" color="#fff" />
+                    <p className="text-white find-talent-para">
+                      Work with the largest network of independent professionals
+                      and get things done—from quick turnarounds to big
+                      transformations.
+                    </p>
+                    <div className="row">
+                      <div className="col-md-4 col-12 my-3">
+                        <div className="card-body-section">
+                          <p className="card-title-talent">
+                            Post a job and hire a professional
+                          </p>
+                          <p className="card-text-talent">
+                            Talent Marketplace™{" "}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="col-md-4 col-12 my-3">
-                      <div className="card-body-section">
-                        <p className="card-title-talent">
-                          Browse and buy some projects
-                        </p>
-                        <p className="card-text-talent">Talent Marketplace™ </p>
+                      <div className="col-md-4 col-12 my-3">
+                        <div className="card-body-section">
+                          <p className="card-title-talent">
+                            Browse and buy some projects
+                          </p>
+                          <p className="card-text-talent">
+                            Talent Marketplace™{" "}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="col-md-4 col-12 my-3">
-                      <div className="card-body-section">
-                        <p className="card-title-talent">
-                          Post a job and hire a professional
-                        </p>
-                        <p className="card-text-talent">Talent Marketplace™ </p>
+                      <div className="col-md-4 col-12 my-3">
+                        <div className="card-body-section">
+                          <p className="card-title-talent">
+                            Post a job and hire a professional
+                          </p>
+                          <p className="card-text-talent">
+                            Talent Marketplace™{" "}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Testimonial Section */}
           <motion.div
             style={{
               y: translateY,
-              transition: "all 0.5s ease-in-out",
+              transition: "all 0.1s ease-in-out",
             }}
           >
             <TestimonialSection />
@@ -95,7 +109,6 @@ function Home() {
 
           {/* Brand section */}
           <motion.div
-            className="container mt-5 py-5"
             style={{
               y: translateY,
               transition: "all 0.5s ease-in-out",

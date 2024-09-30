@@ -6,7 +6,7 @@ import { API_URL } from '../../config';
 import axios from 'axios';
 import Mainheading from '../../components/Mainheading';
 
-const Package_box = ({id,Setplantype,planmakeid,setplan,plan_type}) => {
+const Package_box = ({id,Setplantype,planmakeid,setplan,plan_type,setStep,step}) => {
   
     const [activeTab, setActiveTab] = useState(0);
     // const [pricingData, setPricingData] = useState([]);
@@ -52,6 +52,7 @@ const Package_box = ({id,Setplantype,planmakeid,setplan,plan_type}) => {
       console.log();
       Setplantype(plan_name);
       setplan(id);
+      setStep(step+1);
       alert(plan_type);
     };
 
@@ -90,8 +91,6 @@ const Package_box = ({id,Setplantype,planmakeid,setplan,plan_type}) => {
           </div>
         ))}
         </div>
-        
-
       </div>
     </div>
   );

@@ -42,7 +42,7 @@ const ProjectSelection = ({ id, Setid, setStep, step }) => {
     Setid(index);
     // alert(index);
     setStep(step + 1);
-    alert(step);
+    // alert(step);
   };
 
   return (

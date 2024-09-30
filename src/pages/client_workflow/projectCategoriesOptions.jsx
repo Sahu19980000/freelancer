@@ -20,7 +20,7 @@ function ProjectCategoriesOptions({ id, Setid,setStep,step }) {
           }
         )
         .then((result) => {
-          alert(id);
+          // alert(id);
           // alert("show categories");
           Setsubcategories(result.data);
 
@@ -54,7 +54,7 @@ function ProjectCategoriesOptions({ id, Setid,setStep,step }) {
           <div className="row">
             <div className="col-lg-12 order-2 order-lg-1 content my-2">
               <div className="my-4">
-              <Mainheading title="Browse by Web Devlopement" color="#0800cf" />
+              <Mainheading title="Browse by Web Devlopement" color="#06d001" />
               </div>
              
               <div className="card-deck">
@@ -63,12 +63,12 @@ function ProjectCategoriesOptions({ id, Setid,setStep,step }) {
                     <div className="card-section ">
                       <div
                         key={index}
-                        className="col-lg-12 col-md-12 col-sm-12 col-12 my-5 mx-1 text-black rounded p-3"
+                        className="col-lg-12 col-md-12 col-sm-12 col-12 mx-1 text-black rounded p-3"
                         onClick={() => handleSelect(ele.id)}
                         style={{ cursor: "pointer" }}
                       >
                         <div className="card-content">
-                          <h5 className="card-title text-white">{ele.name}</h5>
+                          <h5 className="card-title text-black">{ele.name}</h5>
                         </div>
                       </div>
                     </div>

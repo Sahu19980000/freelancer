@@ -1,0 +1,49 @@
+.technology_container{
+ width: 100%;
+ height: auto;
+
+}
+.technology_container .card-section{
+ width:20vw;
+ margin: 10px;
+}
+/* src/VideoPlayer.css */  
+.video-container {  
+    position: relative;  
+    width: 80%;  
+    max-width: 800px;  
+    border-radius: 10px;  
+    overflow: hidden;  
+    margin: auto;  
+}  
+
+.video {  
+    width: 100%;  
+    border-radius: 10px;  
+}  
+
+.play-button {  
+    position: absolute;  
+    top: 50%;  
+    left: 50%;  
+    transform: translate(-50%, -50%);  
+    font-size: 50px;  
+    color: white;  
+    cursor: pointer;  
+    opacity: 0.8;  
+    transition: opacity 0.3s;  
+}  
+
+.play-button:hover {  
+    opacity: 1;  
+}
+
+.video-part{
+    background: linear-gradient(258.17deg, #DFE5DE 2.26%, #D0FFCB 69.41%);
+    width: 100%;
+}
+@media screen and (max-width:767px) {
+    .technology_container .card-section{
+        width: 100%;
+    } 
+}

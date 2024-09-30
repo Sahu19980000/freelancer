@@ -1,5 +1,6 @@
 import React from "react";
 import ExplorePages from "../pages/client_workflow/index";
+import Explore from "../pages/ExplorePages"
 import PostProject from "../pages/PostProject";
 import WhyBrand from "../pages/WhyBrand";
 import AboutUs from "../pages/AboutUs";
@@ -21,6 +22,7 @@ function Routes_page() {
         <Route path="/" element={<Home />} />
         <Route path="/welcome" element={<WelcomUser />} />
         <Route path="/explorepage" element={<ExplorePages />}></Route>
+        <Route path="/explore" element={<Explore />}></Route>
         <Route path="/explorepage/subcategories" element={<ProjectCategoriesOptions />} />
         <Route path="/explorepage/package_show" element={<Package_box />} />
         <Route path="/postproject" element={<PostProject />} />

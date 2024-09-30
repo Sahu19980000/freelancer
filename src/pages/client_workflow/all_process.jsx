@@ -6,6 +6,7 @@ import Package_box from './package_show';
 import Programming_skills from './show_programming_sklls';
 import Programming_skills_brif from './programming_skills_brif';
 import CompanyList from './show_list_company';
+import Technology_page from './technology_page';
 
 const Allprocess = () => {
   const [step, setStep] = useState(1);
@@ -33,18 +34,21 @@ const Allprocess = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit} className='bg-white p-5 m-0'>
+    <Form onSubmit={handleSubmit} className='bg-white p-0 py-5 m-0'>
       {/* <ProgressBar now={(step / 6) * 100} /> */}
       {step === 1 && (
         <div controlId="formStep1">
             <ProjectSelection id={id} Setid={Setid} setStep={setStep} step={step}/>
         </div>
       )}
+      {/* <div controlId="formStep1">
+            <Technology_page />
+      </div> */}
       {step === 2 && (
         <ProjectCategoriesOptions id={id} Setid={Setid} setStep={setStep} step={step}/>
       )}
       {step === 3 && (
-       <Package_box id={id} planmakeid={planmakeid} setplan={setplan} Setplantype={Setplantype} plan_type={plan_type}/>
+       <Package_box id={id} planmakeid={planmakeid} setStep={setStep} step={step} setplan={setplan} Setplantype={Setplantype} plan_type={plan_type}/>
       )}
       {step === 4 && (
        <Programming_skills planmakeid={planmakeid} plan_type={plan_type} />
@@ -55,7 +59,7 @@ const Allprocess = () => {
       {step === 6 && (
        <CompanyList />
       )}
-      {/* <div className="d-flex justify-content-between">
+      <div className="d-flex justify-content-between">
         {step > 1 && (
           <Button variant="secondary" onClick={handlePrevious}>
             Previous
@@ -70,7 +74,7 @@ const Allprocess = () => {
             Submit
           </Button>
         )}
-      </div> */}
+      </div>
     </Form>
   );
 };

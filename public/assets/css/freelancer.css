@@ -5,6 +5,7 @@
   --light-bg:#e0f3e2;
   --third-color:#95FC89;
 }
+
 /* shared css */
 
 .main-heading {
@@ -23,6 +24,12 @@
 }
 .counter{
   color: #000;
+}
+
+.platform-option{
+  border-style: none;
+  word-wrap: normal;
+  background-color: #d4ffcf;
 }
 
 .freelancer-dark-btn {
@@ -61,8 +68,9 @@
   color: #ffffff;
 }
 
-.post_project_container{
-
+.category-card:hover{
+  width:100%;
+  box-shadow: 0px 0px 5px rgb(201, 201, 201);
 }
 
 .freelancer-category-card {
@@ -130,10 +138,10 @@
   padding: 10px;
 }
 .categories-list:hover{
-
   border-radius: 50px;
   background-color: #059212;
   color: #fff;
+  transition: all 0.5s ease-in-out;
   
 }
 
@@ -229,7 +237,6 @@
 }
 .testimonial-container {
   padding: 20px;
-  width: 100%;
   height: 100%;
   background-color: #f9f9ff;
 }
@@ -424,7 +431,7 @@
   width: 23%;
   border-radius: 10px;
   background-size: cover;
-  background-color:#e9fadf ;
+  background-color:#d4ffcf ;
   padding: 10px;
   /* background-image: linear-gradient(120deg, #28286e, #9191b1); */
   overflow: hidden; /* Ensure content doesn't overflow the card */
@@ -551,7 +558,7 @@
 .post-project-section{
   width: 100%;
   height: auto;
-  margin: 1em 0px 1em 0em;
+  margin: 7em 0px 1em 0em;
 }
 .post_project_container{
 
