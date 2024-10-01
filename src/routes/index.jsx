@@ -15,6 +15,7 @@ import { Routes, Route } from "react-router-dom";
 import ProjectSelection from "../pages/client_workflow/ProjectSelection";
 import ProjectCategoriesOptions from "../pages/client_workflow/projectCategoriesOptions";
 import Package_box from "../pages/client_workflow/package_show";
+import All_project from "../pages/client_workflow/all_project";
 
 function Routes_page() {
   return (
@@ -23,6 +24,7 @@ function Routes_page() {
         <Route path="/welcome" element={<WelcomUser />} />
         <Route path="/explorepage" element={<ExplorePages />}></Route>
         <Route path="/explore" element={<Explore />}></Route>
+        <Route path="/explore/all-project" element={<All_project />}></Route>
         <Route path="/explorepage/subcategories" element={<ProjectCategoriesOptions />} />
         <Route path="/explorepage/package_show" element={<Package_box />} />
         <Route path="/postproject" element={<PostProject />} />
