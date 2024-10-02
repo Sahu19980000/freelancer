@@ -24,12 +24,12 @@ const projectsData = [
 
 const ProjectItem = ({ title, created, closedDate, proposals, messages, hired }) => (
   <div className="row py-3 border-bottom">
-    <div className="col-md-4">
+    <div className="col-md-4 project-created">
       <h5>{title}</h5>
       <p className="text-muted">Created {created}</p>
       <p className="text-muted">Closed: {closedDate}</p>
     </div>
-    <div className="col-md-4 text-center">
+    <div className="col-md-4 d-flex gap-2 text-center">
       <p className="mb-1">{proposals} Proposals</p>
       <p className="mb-1">{messages} Messages</p>
       <p className="mb-1">{hired} Hired</p>

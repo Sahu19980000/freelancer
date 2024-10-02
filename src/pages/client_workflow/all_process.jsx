@@ -7,6 +7,7 @@ import Programming_skills from './show_programming_sklls';
 import Programming_skills_brif from './programming_skills_brif';
 import CompanyList from './show_list_company';
 import Technology_page from './technology_page';
+import All_project from './all_project';
 
 const Allprocess = () => {
   const [step, setStep] = useState(1);
@@ -36,11 +37,12 @@ const Allprocess = () => {
   return (
     <Form onSubmit={handleSubmit} className='bg-white p-0 py-5 m-0'>
       {/* <ProgressBar now={(step / 6) * 100} /> */}
-      {step === 1 && (
+      <All_project />
+      {/* {step === 1 && (
         <div controlId="formStep1">
             <ProjectSelection id={id} Setid={Setid} setStep={setStep} step={step}/>
         </div>
-      )}
+      )} */}
       {/* <div controlId="formStep1">
             <Technology_page />
       </div> */}
