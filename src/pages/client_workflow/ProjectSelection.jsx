@@ -46,7 +46,7 @@ const ProjectSelection = ({ id, Setid, setStep, step }) => {
   };
 
   return (
-    <div className="container-fluid">
+    <div className="container">
       <div className="row">
         <div className="col-12 my-4">
           <Mainheading title="Browse by category" />
@@ -61,14 +61,14 @@ const ProjectSelection = ({ id, Setid, setStep, step }) => {
                 style={{ cursor: "pointer", margin: "10px" }}
               >
                 <div className="card-content">
-                  <h2 className="card-title h2 text-start text-black">{category.name}</h2>
+                  <h3 className="card-title text-center text-black font-weight-normal">{category.name}</h3>
                   <div className="w-100 d-flex justify-content-between">
-                    <div className="rating">
+                    {/* <div className="rating">
                       <span>4.8/5</span>
                     </div>
                     <div className="skills">
                       <span>1853 skills</span>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

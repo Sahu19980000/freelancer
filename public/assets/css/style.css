@@ -1936,11 +1936,12 @@ body {
 
 
 .image-container {
-  position: relative;
-  width: 100%;
-  max-width: 1920px;
-  height: 446px;
-  overflow: hidden;
+  margin-top: 9em;
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+    overflow: hidden;
 }
 
 .img-fluid {

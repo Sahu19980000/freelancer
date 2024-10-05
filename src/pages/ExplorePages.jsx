@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import { MailCheck, Plane } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import explorebanner from "../img/explore-banner.png"
+import python from "../img/brands/python.png"
+import html from "../img/brands/html.png"
+import wp from "../img/brands/wordpress.png"
 
 const companies = [
   {
@@ -71,12 +75,12 @@ function ExplorePages() {
 
       <div className="image-container">
         <img
-          src="assets/img/explore.png"
+          src={explorebanner}
           class="img-fluid"
           alt="Responsive image"
         />
 
-        <div className="overlay">
+        {/* <div className="overlay">
           <div className="overlay-content">
             <h1>Website Design</h1>
             <p>
@@ -84,30 +88,27 @@ function ExplorePages() {
               in scelerisque leo, eget sollicitudin velit bestibulum
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <section id="about" className="about">
-        <div className="container mt-5" data-aos="fade-up">
-          <h1 className="mb-5">
+        <div className="container" data-aos="fade-up">
+          <h1 className="mb-5 my-5" style={{color:"#95cc8f"}}>
             Most Popular in{" "}
-            <span style={{ color: "#0800CF" }}> Website Design</span>
+            <span style={{ color: "#0e8b00" }}> Website Design</span>
           </h1>
           <div className="row">
             <div className="col-md-3 pt-4 pt-lg-0 order-2 order-lg-1 content">
-              <a href="#" className="card">
-                <div className="card-body category-card bg-white">
+              <a href="#" className="card" style={{textDecoration:"none"}}>
+                <div className="card-body border rounded category-card bg-white">
                   <div className="row">
                     <div className="col-md-2">
-                      <i
-                        className="ri-terminal-window-fill text-center"
-                        style={{ fontSize: "40px", color: "#0800CF" }}
-                      />
+                      <img src={python} />
                     </div>
 
                     <div className="col-md-10">
                       <p
-                        className="text-dark ml-5"
+                        className="text-dark ml-5 mt-2"
                         style={{ fontSize: "13px" }}
                       >
                         <b>Development & IT</b>
@@ -122,18 +123,15 @@ function ExplorePages() {
             </div>
 
             <div className="col-md-3 pt-4 pt-lg-0 order-2 order-lg-1 content">
-              <a href="#" className="card">
-                <div className="card-body category-card bg-white">
+              <a href="#" className="card " style={{textDecoration:"none"}}>
+                <div className="card-body border rounded category-card bg-white">
                   <div className="row">
                     <div className="col-md-2">
-                      <i
-                        className="ri-terminal-window-fill text-center"
-                        style={{ fontSize: "40px", color: "#0800CF" }}
-                      />
+                      <img src={wp} />
                     </div>
                     <div className="col-md-10">
                       <p
-                        className="text-dark ml-5"
+                        className="text-dark ml-5 mt-2"
                         style={{ fontSize: "13px" }}
                       >
                         <b>Development & IT</b>
@@ -148,18 +146,15 @@ function ExplorePages() {
             </div>
 
             <div className="col-md-3 pt-4 pt-lg-0 order-2 order-lg-1 content">
-              <a href="#" className="card">
-                <div className="card-body category-card bg-white border border-2">
+              <a href="#" className="card" style={{textDecoration:"none"}}>
+                <div className="card-body  category-card bg-white border rounded">
                   <div className="row">
                     <div className="col-md-2">
-                      <i
-                        className="ri-terminal-window-fill text-center"
-                        style={{ fontSize: "40px", color: "#0800CF" }}
-                      />
+                      <img src={html} />
                     </div>
                     <div className="col-md-10">
                       <p
-                        className="text-dark ml-5"
+                        className="text-dark ml-5 mt-2"
                         style={{ fontSize: "13px" }}
                       >
                         <b>Development & IT</b>
@@ -172,20 +167,17 @@ function ExplorePages() {
                 </div>
               </a>
             </div>
-
+            
             <div className="col-md-3 pt-4 pt-lg-0 order-2 order-lg-1 content">
-              <a href="#" className="card ">
-                <div className="card-body category-card bg-white border border-2">
+              <a href="#" className="card" style={{textDecoration:"none"}}>
+                <div className="card-body category-card bg-white border rounded">
                   <div className="row">
                     <div className="col-md-2">
-                      <i
-                        className="ri-terminal-window-fill text-center"
-                        style={{ fontSize: "40px", color: "#0800CF" }}
-                      />
+                      <img src={html} />
                     </div>
                     <div className="col-md-10">
                       <p
-                        className="text-dark ml-5"
+                        className="text-dark ml-5 mt-2"
                         style={{ fontSize: "13px" }}
                       >
                         <b>Development & IT</b>
@@ -198,6 +190,7 @@ function ExplorePages() {
                 </div>
               </a>
             </div>
+           
           </div>
         </div>
 
@@ -210,13 +203,13 @@ function ExplorePages() {
                 background: "#d0ffcb",
                 padding: "15px",
               }}>
-                <h4>Website Design</h4>
+                <h6><strong>Website Design</strong></h6>
 
                 <div className="d-flex flex-column">
                   <div>
                     <input type="radio" name="ui ux design" id="" />
                     &nbsp;
-                    <label>UI/UX Design</label>
+                    <label className="fs-6">UI/UX Design</label>
                   </div>
                   <div>
                     <input type="radio" name="ui ux design" id="" />

@@ -429,13 +429,14 @@
   flex-wrap: wrap;
 }
 .card-section {
+  border:1px solid #000;
   position: relative;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   margin: 10px;
   width: 23%;
   border-radius: 10px;
   background-size: cover;
-  background-color:#d4ffcf ;
+  background-color:transparent ;
   padding: 10px;
   /* background-image: linear-gradient(120deg, #28286e, #9191b1); */
   overflow: hidden; /* Ensure content doesn't overflow the card */
@@ -573,7 +574,13 @@
 .post-project-right{
   background-size: cover;
   background-image: url('../img/postproject.png');
-  
+}
+
+.formstepone{
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-image: url('../img/banner-01.png');
 }
 
 /* responsive css */
