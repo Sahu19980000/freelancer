@@ -36,7 +36,12 @@
   margin-top:25px;
 }
 
-.freelancer-dark-btn {
+.freelancer-tabs-btn:hover{
+  background-color: #fff;
+  color: #059212;
+}
+
+.freelancer-dark-btn , .freelancer-tabs-btn {
   width: auto;
   height: 48px;
   padding: 12px 24px 12px 24px;
@@ -149,7 +154,6 @@
   
 }
 
-
 /* home page css */
 .upwork-game-container{
   border-radius: 25px;
@@ -181,10 +185,12 @@
   height: auto;
   background-color: #b3b1b1;
  }
+
  .how-should-container .image-herosection{
   border-radius: 25px;
    box-shadow: 29px 27px 0px -6px #0E8B00;
  }
+
  .dropdown:hover .dropdown-menu {
   width: auto;
   display: block;
@@ -512,10 +518,11 @@
 
 /* plan css */
 .choose-plan-box{
-  margin: 5px;
+  margin: 2px;
   padding: 10px;
-  box-shadow: 5px 5px 5px #8d89e9;
-  background-color: #cfcdff;
+  box-shadow: 1px 1px 1px 2px #dbdbdc;
+  background-color: transparent;
+  width:30%;
 }
 .plan-container {
   display: flex;
@@ -642,8 +649,6 @@
   height: 50px;
   
 }
-
-  
 
   /* testimonial css */
   .swiper-container {

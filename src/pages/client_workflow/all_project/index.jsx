@@ -9,6 +9,7 @@ const All_project = () => {
     <div>
       <div className="all-project-container">
         <div className="container">
+
           <div className="row">
             <div className="col-md-8">
               <Mainheading title="Didn’t find what you are looking for?" />
@@ -28,6 +29,7 @@ const All_project = () => {
           <div className="row">
             <ProjectsCreated />
           </div>
+          
         </div>
       </div>
     </div>

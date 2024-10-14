@@ -57,7 +57,7 @@ function ProjectCategoriesOptions({ id, Setid,setStep,step }) {
               <Mainheading title="Browse by Web Devlopement" color="#06d001" />
               </div>
              
-              <div className="card-deck">
+              <div className="card-container">
                 {subcategories.map((ele, index) => {
                   return (
                     <div className="card-section ">

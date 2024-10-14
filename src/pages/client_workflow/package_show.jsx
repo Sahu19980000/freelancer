@@ -26,7 +26,7 @@ const Package_box = ({id,Setplantype,planmakeid,setplan,plan_type,setStep,step})
             }
           )
           .then((result) => {
-            alert(id);
+            // alert(id);
             // alert("show categories");
             Setshowplan(result.data);
             
@@ -64,16 +64,16 @@ const Package_box = ({id,Setplantype,planmakeid,setplan,plan_type,setStep,step})
     }, [plan_type,planmakeid]);
 
   return (
-    <div className='container-fluid'>
+    <div className='container-fluid formstepone'>
       <div className="row">
-        <div className="col-12 py-5">
+        <div className="col-12 py-2">
           <Mainheading title="Choose the package" color="#404145" />
         </div>
         <div className="plan-container my-4">
         {showplan.map((plan, index) => (
           <div className="col-md-4 p-3 choose-plan-box" key={plan.id} >
             <Button 
-              classname={`bg-primary btn-lg btn-block font-weight-bold text-capitalize border-0 my-2 w-100 text-white p-2 rounded ${activeTab === index ? 'active' : ''}`} 
+              classname={`freelancer-tabs-btn btn-lg btn-block font-weight-bold text-capitalize border-0 my-2 w-100 p-2 rounded ${activeTab === index ? 'active' : ''}`} 
               title={plan.plan_name} 
             />
               <>
@@ -83,7 +83,7 @@ const Package_box = ({id,Setplantype,planmakeid,setplan,plan_type,setStep,step})
                   ))}
                 </ul>
                 <Button 
-                  classname="bg-primary border-0 text-white p-2 rounded" 
+                  classname="freelancer-tabs-btn border-0 p-2 rounded" 
                   title="Choose plan"
                   onclick={() => handleTabClick(++index,plan.plan_name)}
                 />

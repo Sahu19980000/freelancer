@@ -5,7 +5,7 @@ import Button from "../../../components/Buttton";
 import { API_URL } from "../../../config";
 import card_one from "../../../img/3D Design.webp"
 
-const Programming_skills = ({ planmakeid, plan_type }) => {
+const Programming_skills = ({ planmakeid, plan_type,Setid ,id }) => {
   const [show_language, Setlanguage] = useState([]);
 
   useEffect(() => {
@@ -23,8 +23,8 @@ const Programming_skills = ({ planmakeid, plan_type }) => {
           }
         )
         .then((result) => {
-          // alert(id);
-          // alert("show categories");
+          alert(id);
+          alert("show categories");
           Setlanguage(result.data);
 
           console.log("show language ", result);
@@ -46,7 +46,8 @@ const Programming_skills = ({ planmakeid, plan_type }) => {
   }, []);
 
   const handleSelect = (index) => {
-    // Setid(index);
+    Setid(index);
+    alert(index);
   };
 
   return (
@@ -54,31 +55,24 @@ const Programming_skills = ({ planmakeid, plan_type }) => {
       <div className="p-4">
         <h2>Programming Language Select</h2>
       </div>
-      <div className="container-fluid">
+      <div className="container">
         <div className="row">
           {show_language.map((ele,index) => {
             return (
               <div
                 key={index}
-                className="col-md-3 col-12 card-container mx-2 my-4 bg-success text-white rounded p-3"
+                className="col-md-3 col-12 card-container border border-dark rounded p-3 m-2"
               >
-                <div className="card-content">
-                  <h5 className="card-title ">{ele.name}</h5>
-                  <div className="card-image-container">
-                    <img
-                      src={card_one} // Assuming ele.image_url contains the image URL
-                      alt={ele.name}
-                      className="card-image img-fluid"
-                    />
-                  </div>
+                <div className="card-content p-4 " id={index} onClick={() => handleSelect(index)}>
+                  <h5 className="card-title text-dark">{ele.name}</h5>
                 </div>
-                <button
+                {/* <button
                   id={index}
                   className="bg-primary border-0 text-white m-4 p-2 rounded"
-                  onClick={() => handleSelect(index)}
+                  
                 >
                   Select Language
-                </button>
+                </button> */}
               </div>
             );
           })}

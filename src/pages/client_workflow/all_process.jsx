@@ -36,32 +36,60 @@ const Allprocess = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit} className='bg-white p-0 py-5 m-0'>
+    <Form onSubmit={handleSubmit} className='bg-white p-0 '>
       {/* <ProgressBar now={(step / 6) * 100} /> */}
-      <All_project />
+      {/* <All_project /> */}
+      
       {step === 1 && (
         <div controlId="formStep1" className='formstepone p-4' >
-            <ProjectSelection id={id} Setid={Setid} setStep={setStep} step={step}/>
+            <ProjectSelection 
+            id={id} 
+            Setid={Setid} 
+            setStep={setStep} 
+            step={step}/>
         </div>
       )}
+
       {/* <div controlId="formStep1">
             <Technology_page />
       </div> */}
       {step === 2 && (
-        <ProjectCategoriesOptions id={id} Setid={Setid} setStep={setStep} step={step}/>
+        <div controlId="formStep1" className='formstepone p-4 ' >
+        <ProjectCategoriesOptions 
+        id={id} 
+        Setid={Setid} 
+        setStep={setStep} 
+        step={step}/>
+
+        </div>
+        
       )}
+
       {step === 3 && (
-       <Package_box id={id} planmakeid={planmakeid} setStep={setStep} step={step} setplan={setplan} Setplantype={Setplantype} plan_type={plan_type}/>
+       <Package_box 
+       id={id} 
+       planmakeid={planmakeid} 
+       setStep={setStep} 
+       step={step} 
+       setplan={setplan} 
+       Setplantype={Setplantype} 
+       plan_type={plan_type}/>
       )}
+
       {step === 4 && (
-       <Programming_skills planmakeid={planmakeid} plan_type={plan_type} />
+        <div controlId="formStep1" className='formstepone p-4 '>
+        <Programming_skills planmakeid={planmakeid} plan_type={plan_type} Setid={Setid}/>
+        </div>
+       
       )}
-      {step === 5 && (
+
+      {/* {step === 5 && (
        <Programming_skills_brif />
-      )}
-      {step === 6 && (
+      )} */}
+
+      {/* {step === 6 && (
        <CompanyList />
-      )}
+      )} */}
       <div className="d-flex justify-content-between">
         {step > 1 && (
           <Button variant="secondary" onClick={handlePrevious}>

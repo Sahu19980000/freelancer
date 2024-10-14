@@ -126,7 +126,7 @@ function Signup() {
 
                         <div className="row">
                           <div className="col-md-12">
-                            <div className="row">
+                            <div className="row my-5">
                               <div className="col-6">
                                 <div className=" rounded border signup-input">
                                   <div className="card-body">
