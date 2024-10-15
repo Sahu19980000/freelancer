@@ -7,6 +7,7 @@ import Programming_skills from './show_programming_sklls';
 import Programming_skills_brif from './programming_skills_brif';
 import CompanyList from './show_list_company';
 import Technology_page from './technology_page';
+import ExplorePages from '.././ExplorePages';
 import All_project from './all_project';
 import website_banner from "../../img/explore-banner.png";
 
@@ -46,13 +47,11 @@ const Allprocess = () => {
             id={id} 
             Setid={Setid} 
             setStep={setStep} 
-            step={step}/>
+            step={step}
+            />
         </div>
       )}
 
-      {/* <div controlId="formStep1">
-            <Technology_page />
-      </div> */}
       {step === 2 && (
         <div controlId="formStep1" className='formstepone p-4 ' >
         <ProjectCategoriesOptions 
@@ -78,25 +77,55 @@ const Allprocess = () => {
 
       {step === 4 && (
         <div controlId="formStep1" className='formstepone p-4 '>
-        <Programming_skills planmakeid={planmakeid} plan_type={plan_type} Setid={Setid}/>
+        <Programming_skills 
+        planmakeid={planmakeid} 
+        plan_type={plan_type} 
+        Setid={Setid}
+        id={id}
+        setStep={setStep} 
+        step={step}
+        />
         </div>
        
       )}
 
-      {/* {step === 5 && (
-       <Programming_skills_brif />
+      {step === 5 && (
+       <Programming_skills_brif 
+       setStep={setStep} 
+        step={step}
+       />
+      )}
+
+      {step === 6 && (
+       <Technology_page setStep={setStep} 
+       step={step}/>
+      )}
+
+      {step === 7 && (
+       <ExplorePages setStep={setStep} 
+       step={step}/>
+      )}
+
+     {step === 8 && (
+       <All_project setStep={setStep} 
+       step={step}/>
+      )}
+
+      
+
+      {/* {step === 7 && (
+       <All_project setStep={setStep} 
+       step={step}/>
       )} */}
 
-      {/* {step === 6 && (
-       <CompanyList />
-      )} */}
+
       <div className="d-flex justify-content-between">
         {step > 1 && (
           <Button variant="secondary" onClick={handlePrevious}>
             Previous
           </Button>
         )}
-        {step < 6 ? (
+        {step < 9 ? (
           <Button variant="primary" onClick={handleNext}>
             Next
           </Button>

@@ -590,6 +590,37 @@
   background-image: url('../img/banner-01.png');
 }
 
+/* programming skills brif css */
+.programming-skills-brief-box {
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../img/banner-01.png');
+  flex-direction: column;
+}
+
+.landing-card-section {
+  /* display: flex; */
+  width: 100%;
+  box-shadow: 0px 0px 2px gray;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-between;
+  margin:10px;
+  padding: 10px;
+}
+
+.landing-card-content {
+  padding: 1.2rem;
+  width: 100%;
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center !important;
+  align-items: center;
+}
+
+
 /* responsive css */
 
 @media screen and (max-width: 320px) {
@@ -670,10 +701,12 @@
 
   /* card section css */
   .card-section {
-    margin: 0px 6px;
+    margin: 10px;
     width: 100%;
   }
 }
+
+
 
 @media screen and (min-width: 767px) and (max-width: 1199px) {
   .main-heading {

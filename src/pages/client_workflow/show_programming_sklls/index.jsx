@@ -5,7 +5,7 @@ import Button from "../../../components/Buttton";
 import { API_URL } from "../../../config";
 import card_one from "../../../img/3D Design.webp"
 
-const Programming_skills = ({ planmakeid, plan_type,Setid ,id }) => {
+const Programming_skills = ({ planmakeid, plan_type,Setid ,id,setStep,step }) => {
   const [show_language, Setlanguage] = useState([]);
 
   useEffect(() => {
@@ -23,8 +23,8 @@ const Programming_skills = ({ planmakeid, plan_type,Setid ,id }) => {
           }
         )
         .then((result) => {
-          alert(id);
-          alert("show categories");
+          // alert(id);
+          // alert("show categories");
           Setlanguage(result.data);
 
           console.log("show language ", result);
@@ -47,7 +47,8 @@ const Programming_skills = ({ planmakeid, plan_type,Setid ,id }) => {
 
   const handleSelect = (index) => {
     Setid(index);
-    alert(index);
+    // alert(index);
+    setStep(step+1);
   };
 
   return (

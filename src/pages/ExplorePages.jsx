@@ -71,14 +71,13 @@ const Countrylistshimmer = () => {
 function ExplorePages() {
   return (
     <div>
-      <Header />
-
+      
       <div className="image-container">
-        <img
+        {/* <img
           src={explorebanner}
           class="img-fluid"
           alt="Responsive image"
-        />
+        /> */}
 
         {/* <div className="overlay">
           <div className="overlay-content">
@@ -93,10 +92,12 @@ function ExplorePages() {
 
       <section id="about" className="about">
         <div className="container" data-aos="fade-up">
-          <h1 className="mb-5 my-5" style={{color:"#95cc8f"}}>
+
+          <h1 className="mb-5" style={{color:"#95cc8f"}}>
             Most Popular in{" "}
             <span style={{ color: "#0e8b00" }}> Website Design</span>
           </h1>
+
           <div className="row">
             <div className="col-md-3 pt-4 pt-lg-0 order-2 order-lg-1 content">
               <a href="#" className="card" style={{textDecoration:"none"}}>
@@ -192,6 +193,7 @@ function ExplorePages() {
             </div>
            
           </div>
+
         </div>
 
         <div className="container mt-5 rounded " data-aos="fade-up">
@@ -373,8 +375,6 @@ function ExplorePages() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

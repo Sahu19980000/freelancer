@@ -13,15 +13,15 @@ const Technology_page = () => {
           <Mainheading title="Most Popular in Website Design" />
           <div className="row">
             <div className="col-md-3 col-12">
-              <div className="card-section">
+              <div className="landing-card-section">
                 <div
                   className="col-lg-12 col-md-12 col-6 my-1 mx-1 text-black rounded p-0"
                   style={{ cursor: "pointer", margin: "10px" }}
                 >
-                  <div className="card-content d-md-flex justify-content-between">
+                  <div className="landing-card-content d-md-flex justify-content-between">
                     <img src={Js} className="" />
                     <div>
-                      <h2 className="card-title h2 text-start text-black">
+                      <h2 className="card-title h5 text-start text-black">
                         UI/UX Design
                       </h2>
                       <div className="w-100 d-flex justify-content-between">
@@ -34,16 +34,17 @@ const Technology_page = () => {
                 </div>
               </div>
             </div>
+
             <div className="col-md-3 col-12">
-              <div className="card-section">
+              <div className="landing-card-section">
                 <div
                   className="col-lg-12 col-md-12 col-6 my-1 mx-1 text-black rounded p-0"
                   style={{ cursor: "pointer", margin: "10px" }}
                 >
-                  <div className="card-content d-md-flex justify-content-between">
+                  <div className="landing-card-content d-md-flex justify-content-between">
                     <img src={Js} className="" />
                     <div>
-                      <h2 className="card-title h2 text-start text-black">
+                      <h2 className="card-title h5 text-start text-black">
                         UI/UX Design
                       </h2>
                       <div className="w-100 d-flex justify-content-between">
@@ -56,16 +57,17 @@ const Technology_page = () => {
                 </div>
               </div>
             </div>
+
             <div className="col-md-3 col-12">
-              <div className="card-section">
+              <div className="landing-card-section">
                 <div
                   className="col-lg-12 col-md-12 col-6 my-1 mx-1 text-black rounded p-0"
                   style={{ cursor: "pointer", margin: "10px" }}
                 >
-                  <div className="card-content d-md-flex justify-content-between">
+                  <div className="landing-card-content d-md-flex justify-content-between">
                     <img src={Js} className="" />
                     <div>
-                      <h2 className="card-title h2 text-start text-black">
+                      <h2 className="card-title h5 text-start text-black">
                         UI/UX Design
                       </h2>
                       <div className="w-100 d-flex justify-content-between">
@@ -78,16 +80,18 @@ const Technology_page = () => {
                 </div>
               </div>
             </div>
+
+
             <div className="col-md-3 col-12">
-              <div className="card-section">
+              <div className="landing-card-section">
                 <div
                   className="col-lg-12 col-md-12 col-6 my-1 mx-1 text-black rounded p-0"
                   style={{ cursor: "pointer", margin: "10px" }}
                 >
-                  <div className="card-content d-md-flex justify-content-between">
+                  <div className="landing-card-content d-md-flex justify-content-between">
                     <img src={Js} className="" />
                     <div>
-                      <h2 className="card-title h2 text-start text-black">
+                      <h2 className="card-title h5 text-start text-black">
                         UI/UX Design
                       </h2>
                       <div className="w-100 d-flex justify-content-between">
@@ -100,6 +104,7 @@ const Technology_page = () => {
                 </div>
               </div>
             </div>
+           
           </div>
         </div>
       </section>

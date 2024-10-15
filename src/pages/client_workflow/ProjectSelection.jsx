@@ -56,10 +56,11 @@ const ProjectSelection = ({ id, Setid, setStep, step }) => {
             <div className="card-section ">
               <div
                 key={index}
-                className="col-lg-12 col-md-12 col-6 my-1 mx-1 text-black rounded p-0"
+                className="col-12 my-1 mx-1 text-black rounded p-0"
                 onClick={() => handleSelect(category.id)}
                 style={{ cursor: "pointer", margin: "10px" }}
               >
+
                 <div className="card-content">
                   <h3 className="card-title text-center text-black font-weight-normal">{category.name}</h3>
                   <div className="w-100 d-flex justify-content-between">
@@ -71,6 +72,7 @@ const ProjectSelection = ({ id, Setid, setStep, step }) => {
                     </div> */}
                   </div>
                 </div>
+                
               </div>
             </div>
           ))}

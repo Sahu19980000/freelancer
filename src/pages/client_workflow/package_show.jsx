@@ -66,12 +66,12 @@ const Package_box = ({id,Setplantype,planmakeid,setplan,plan_type,setStep,step})
   return (
     <div className='container-fluid formstepone'>
       <div className="row">
-        <div className="col-12 py-2">
+        <div className="col-md-4 col-12 py-2">
           <Mainheading title="Choose the package" color="#404145" />
         </div>
         <div className="plan-container my-4">
         {showplan.map((plan, index) => (
-          <div className="col-md-4 p-3 choose-plan-box" key={plan.id} >
+          <div className="col-md-4 col-12 p-3 choose-plan-box" key={plan.id} >
             <Button 
               classname={`freelancer-tabs-btn btn-lg btn-block font-weight-bold text-capitalize border-0 my-2 w-100 p-2 rounded ${activeTab === index ? 'active' : ''}`} 
               title={plan.plan_name} 
