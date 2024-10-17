@@ -15,6 +15,7 @@
   line-height: 75px;
   text-align: left;
   color: #2b2525;
+  margin-top:50px;
 }
 .main-heading span {
   color: var(--secondary-color);
@@ -38,7 +39,7 @@
 
 .freelancer-tabs-btn:hover{
   background-color: #fff;
-  color: #059212;
+  color: #059212 !important;
 }
 
 .freelancer-dark-btn , .freelancer-tabs-btn {
@@ -49,7 +50,7 @@
   border-radius: 3px 0px 0px 0px;
   opacity: 0px;
   background-color: #059212;
-  color: #ffffff;
+  color: #fff !important;
   border-style: none;
   margin:10px 0px;
   border-radius: 10px;
@@ -57,7 +58,7 @@
 .freelancer-dark-btn:hover {
   background-color: transparent;
   border: 1px solid #059212;
-  color: #059212;
+  color: #059212 !important;
 }
 
 .freelancer-light-btn {
@@ -71,10 +72,12 @@
   color: #059212;
   margin:10px 0px;
   border-radius: 10px;
+  color: #059212 !important;
+  background-color: #fff;
 }
 .freelancer-light-btn:hover {
   background-color: #059212;
-  color: #ffffff;
+  color: #fff !important;
 }
 
 .category-card:hover{
@@ -424,10 +427,10 @@
 
 /* Card.css */
 .card-container {
-  width: 100%; /* Adjust width as needed */
+  width: 100%; 
   /* background-color: #92989d !important; */
   border-radius: 10px;
- 
+  cursor: pointer;
   overflow: hidden;
   text-align: center;
   display: flex;
@@ -452,7 +455,7 @@
 }
 
 .card-section:hover .card-title{
-  color: #fff;
+  color: #fff !important;
 }
 
 .card-section::before {

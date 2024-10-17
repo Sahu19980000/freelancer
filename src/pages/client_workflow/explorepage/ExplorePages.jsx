@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { MailCheck, Plane } from "lucide-react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import explorebanner from "../img/explore-banner.png"
-import python from "../img/brands/python.png"
-import html from "../img/brands/html.png"
-import wp from "../img/brands/wordpress.png"
+// import Header from "../../../components/Header";
+// import Footer from "../../../components/Footer";
+// import explorebanner from "../../../img/explore-banner.png"
+import python from "../../../img/brands/python.png"
+import html from "../../../img/brands/html.png"
+import wp from "../../../img/brands/wordpress.png"
+import Place_customization from "./place-customization/place_customization";
 
 const companies = [
   {
@@ -205,6 +206,7 @@ function ExplorePages() {
                 background: "#d0ffcb",
                 padding: "15px",
               }}>
+
                 <h6><strong>Website Design</strong></h6>
 
                 <div className="d-flex flex-column">
@@ -317,7 +319,7 @@ function ExplorePages() {
                           </div>
                         </div>
                         <p>{ele.description}</p>
-                        <div className="d-flex gap-2">
+                        <div className="d-flex gap-2 flex-wrap">
                           <button className="btn btn-success m-1">Chat</button>
                           <button className="btn btn-success m-1">
                             Profile
@@ -325,6 +327,12 @@ function ExplorePages() {
                           <button className="btn btn-success m-1">
                             Place Order
                           </button>
+
+                          <Place_customization />
+                          
+                          {/* <button className="  btn btn-success m-1">
+                            Place Order with customization
+                          </button> */}
                         </div>
                       </div>
                     </div>
@@ -372,6 +380,9 @@ function ExplorePages() {
                 </button>
               </div>
             </div>
+
+            {/* <button className="">next</button> */}
+
           </div>
         </div>
       </section>

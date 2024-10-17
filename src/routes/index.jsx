@@ -1,6 +1,6 @@
 import React from "react";
 import ExplorePages from "../pages/client_workflow/index";
-import Explore from "../pages/ExplorePages"
+import Explore from "../pages/client_workflow/explorepage/ExplorePages"
 import PostProject from "../pages/PostProject";
 import WhyBrand from "../pages/WhyBrand";
 import AboutUs from "../pages/AboutUs";

@@ -7,7 +7,7 @@ import Programming_skills from './show_programming_sklls';
 import Programming_skills_brif from './programming_skills_brif';
 import CompanyList from './show_list_company';
 import Technology_page from './technology_page';
-import ExplorePages from '.././ExplorePages';
+import ExplorePages from './explorepage/ExplorePages';
 import All_project from './all_project';
 import website_banner from "../../img/explore-banner.png";
 
@@ -121,18 +121,18 @@ const Allprocess = () => {
 
       <div className="d-flex justify-content-between">
         {step > 1 && (
-          <Button variant="secondary" onClick={handlePrevious}>
+          <button className='freelancer-dark-btn m-4' onClick={handlePrevious}>
             Previous
-          </Button>
+          </button>
         )}
         {step < 9 ? (
-          <Button variant="primary" onClick={handleNext}>
+          <button className='freelancer-dark-btn m-4' onClick={handleNext}>
             Next
-          </Button>
+          </button>
         ) : (
-          <Button variant="primary" type="submit">
+          <button className='freelancer-dark-btn m-4' type="submit">
             Submit
-          </Button>
+          </button>
         )}
       </div>
     </Form>
