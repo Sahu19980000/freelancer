@@ -3,7 +3,7 @@ import axios from "axios";
 import card_one from "../../img/3D Design.webp";
 import Mainheading from "../../components/Mainheading";
 
-function ProjectCategoriesOptions({ id, Setid,setStep,step }) {
+function ProjectCategoriesOptions({ id, Setid,setStep,step ,Setbreadcumb , breadcumb}) {
   const [subcategories, Setsubcategories] = useState([]);
 
   useEffect(() => {
@@ -41,10 +41,11 @@ function ProjectCategoriesOptions({ id, Setid,setStep,step }) {
     }
   }, []);
 
-  const handleSelect = (index) => {
+  const handleSelect = (index , name) => {
     // setSelected(type);
     Setid(index);
     setStep(step+1);
+    Setbreadcumb(name);
   };
 
   return (
@@ -54,6 +55,7 @@ function ProjectCategoriesOptions({ id, Setid,setStep,step }) {
           <div className="row">
             <div className="col-lg-12 order-2 order-lg-1 content my-2">
               <div className="my-4">
+                <h6>{breadcumb}\</h6>
               <Mainheading title="Browse by Web Devlopement" color="#06d001" />
               </div>
              
@@ -64,7 +66,7 @@ function ProjectCategoriesOptions({ id, Setid,setStep,step }) {
                       <div
                         key={index}
                         className="col-lg-12 col-md-12 col-sm-12 col-12 mx-1 text-black rounded p-3"
-                        onClick={() => handleSelect(ele.id)}
+                        onClick={() => handleSelect(ele.id , ele.name)}
                         style={{ cursor: "pointer" }}
                       >
                         <div className="card-content">

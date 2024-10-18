@@ -17,6 +17,7 @@ const Allprocess = () => {
   const [id,Setid] = useState(0);
   const [planmakeid, setplan] = useState(0);
   const [plan_type,Setplantype] = useState('');
+  const [breadcumb, Setbreadcumb] = useState([]);
 
   const handleNext = () => {
     setStep(step + 1);
@@ -40,7 +41,8 @@ const Allprocess = () => {
     <Form onSubmit={handleSubmit} className='bg-white p-0 '>
       {/* <ProgressBar now={(step / 6) * 100} /> */}
       {/* <All_project /> */}
-      
+
+      <h4 >category show</h4>
       {step === 1 && (
         <div controlId="formStep1" className='formstepone p-4' >
             <ProjectSelection 
@@ -48,6 +50,8 @@ const Allprocess = () => {
             Setid={Setid} 
             setStep={setStep} 
             step={step}
+            Setbreadcumb={Setbreadcumb}
+            breadcumb={breadcumb}
             />
         </div>
       )}
@@ -58,7 +62,10 @@ const Allprocess = () => {
         id={id} 
         Setid={Setid} 
         setStep={setStep} 
-        step={step}/>
+        step={step}
+        Setbreadcumb={Setbreadcumb}
+        breadcumb={breadcumb}
+        />
 
         </div>
         

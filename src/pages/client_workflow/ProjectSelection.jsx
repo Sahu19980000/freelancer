@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import card_one from "../../img/3D Design.webp";
 import Mainheading from "../../components/Mainheading";
 
-const ProjectSelection = ({ id, Setid, setStep, step }) => {
+const ProjectSelection = ({ id, Setid, setStep, step , breadcumb , Setbreadcumb }) => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -18,6 +18,7 @@ const ProjectSelection = ({ id, Setid, setStep, step }) => {
         })
         .then((response) => {
           setCategories(response.data);
+          
           console.log("response categories", response);
         })
         .catch((error) => {
@@ -38,8 +39,9 @@ const ProjectSelection = ({ id, Setid, setStep, step }) => {
     }
   }, []);
 
-  const handleSelect = (index) => {
+  const handleSelect = (index , name) => {
     Setid(index);
+    Setbreadcumb(name);
     // alert(index);
     setStep(step + 1);
     // alert(step);
@@ -49,6 +51,7 @@ const ProjectSelection = ({ id, Setid, setStep, step }) => {
     <div className="container">
       <div className="row">
         <div className="col-12 my-4">
+          <h6>{breadcumb}\</h6>
           <Mainheading title="Browse by category" />
         </div>
         <div className="card-container">
@@ -57,7 +60,7 @@ const ProjectSelection = ({ id, Setid, setStep, step }) => {
               <div
                 key={index}
                 className="col-12 my-1 mx-1 text-black rounded p-0"
-                onClick={() => handleSelect(category.id)}
+                onClick={() => handleSelect(category.id , category.name)}
                 style={{ cursor: "pointer", margin: "10px" }}
               >
 
