@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import card_one from "../../img/3D Design.webp";
 import Mainheading from "../../components/Mainheading";
 
-const ProjectSelection = ({ id, Setid, setStep, step , breadcumb , Setbreadcumb }) => {
+const ProjectSelection = ({ id, Setid, setStep, step  , Setbreadcumb }) => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -41,7 +41,7 @@ const ProjectSelection = ({ id, Setid, setStep, step , breadcumb , Setbreadcumb 
 
   const handleSelect = (index , name) => {
     Setid(index);
-    Setbreadcumb(name);
+    Setbreadcumb((prevBreadcumb) => [...prevBreadcumb, name]);
     // alert(index);
     setStep(step + 1);
     // alert(step);
@@ -51,7 +51,7 @@ const ProjectSelection = ({ id, Setid, setStep, step , breadcumb , Setbreadcumb 
     <div className="container">
       <div className="row">
         <div className="col-12 my-4">
-          <h6>{breadcumb}\</h6>
+          
           <Mainheading title="Browse by category" />
         </div>
         <div className="card-container">
@@ -65,7 +65,7 @@ const ProjectSelection = ({ id, Setid, setStep, step , breadcumb , Setbreadcumb 
               >
 
                 <div className="card-content">
-                  <h3 className="card-title text-center text-black font-weight-normal">{category.name}</h3>
+                  <h3 className="card-title text-center text-black font-weight-bold">{category.name.length > 20 ? category.name.substring(0, 20) + '...' : category.name}</h3>
                   <div className="w-100 d-flex justify-content-between">
                     {/* <div className="rating">
                       <span>4.8/5</span>

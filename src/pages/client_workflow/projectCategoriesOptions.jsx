@@ -45,7 +45,7 @@ function ProjectCategoriesOptions({ id, Setid,setStep,step ,Setbreadcumb , bread
     // setSelected(type);
     Setid(index);
     setStep(step+1);
-    Setbreadcumb(name);
+    Setbreadcumb((prevBreadcumb) => [...prevBreadcumb, name]);
   };
 
   return (

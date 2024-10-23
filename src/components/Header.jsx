@@ -94,7 +94,7 @@ function Header() {
                 type="search"
                 name=""
                 className="search-input"
-                placeholder="Search"
+                placeholder="search your project ..."
               />
             </div>
           </div>
@@ -324,7 +324,7 @@ function Header() {
       </nav>
 
       {/* show categories*/}
-      <section className="all_categories">
+      {/* <section className="all_categories">
         <div className="container-fluid mt-3 p-0">
           <div className="row">
             <div className="col-12">
@@ -352,7 +352,7 @@ function Header() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </header>
   );
 }

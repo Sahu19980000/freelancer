@@ -6,7 +6,7 @@ import { API_URL } from '../../config';
 import axios from 'axios';
 import Mainheading from '../../components/Mainheading';
 
-const Package_box = ({id,Setplantype,planmakeid,setplan,plan_type,setStep,step}) => {
+const Package_box = ({id,Setplantype,planmakeid,setplan,plan_type,setStep,step ,Setbreadcumb}) => {
   
     const [activeTab, setActiveTab] = useState(0);
     // const [pricingData, setPricingData] = useState([]);
@@ -51,9 +51,11 @@ const Package_box = ({id,Setplantype,planmakeid,setplan,plan_type,setStep,step})
     const handleTabClick = (id,plan_name) => {
       console.log();
       Setplantype(plan_name);
+      
       setplan(id);
       setStep(step+1);
-      alert(plan_type);
+      Setbreadcumb((prevBreadcumb) => [...prevBreadcumb, plan_name]);
+      alert(plan_name);
     };
 
     useEffect(() => {

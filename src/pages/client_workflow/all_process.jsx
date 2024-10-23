@@ -42,7 +42,19 @@ const Allprocess = () => {
       {/* <ProgressBar now={(step / 6) * 100} /> */}
       {/* <All_project /> */}
 
-      <h4 >category show</h4>
+      {/* Display breadcrumb */}
+      {breadcumb.length > 0 && (
+        <nav aria-label="breadcrumb" className='breadcumb-client'>
+          <ul className="breadcrumb">
+            {breadcumb.map((ele, index) => (
+              <li key={index} className="breadcrumb-item">
+                {ele}
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
+
       {step === 1 && (
         <div controlId="formStep1" className='formstepone p-4' >
             <ProjectSelection 

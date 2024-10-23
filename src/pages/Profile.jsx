@@ -108,7 +108,7 @@ function Profile() {
     <>
       <div>
         <Header />
-        <div className="container rounded bg-white mt-5 mb-5">
+        <div className="container rounded shadow bg-white mt-5 mb-5">
           <div className="row" style={{ marginTop: "100px" }}>
             <div className="col-md-3 border-right">
               <div className="d-flex flex-column align-items-center text-center p-3 py-5">
@@ -124,7 +124,7 @@ function Profile() {
               </div>
             </div>
             <div className="col-md-9 border-right">
-              <div className="p-3 py-5">
+              <div className="p-3 py-3">
                 <div className="d-flex justify-content-between align-items-center mb-3">
                   <h4 className="text-right">My Profile</h4>
                 </div>
@@ -558,7 +558,7 @@ function Profile() {
                 </div>
                 <div className="mt-5 text-center">
                   <Link
-                    className="btn btn-primary profile-button"
+                    className="freelancer-dark-btn profile-button"
                     type="button"
                     onClick={handleSubmit}
                     to="/dashboard"
